@@ -1,0 +1,11 @@
+.group-poster{position:relative;width:100%;margin:0 auto;aspect-ratio:1102/1427}
+.group-poster>img{display:block;width:100%;height:100%;border-radius:12px}
+.group-hotspot{position:absolute;left:calc(6% + var(--col)*29.7%);top:calc(12.4% + var(--row)*20.4%);width:28%;height:20.8%;border-radius:50%;text-decoration:none;transition:box-shadow .15s,background-color .15s}
+.group-hotspot:hover{background:#fff7bb18;box-shadow:inset 0 0 0 4px #f5d46c,inset 0 0 20px 5px #f5d46c77}
+.group-hotspot:focus-visible{outline:3px solid #0b6a50;outline-offset:-3px}
+.group-hotspot.is-complete{background:#48a66f20;box-shadow:inset 0 0 0 5px #48a66fcc,inset 0 0 22px 9px #48a66f88}
+.group-hotspot.is-complete:hover{box-shadow:inset 0 0 0 6px #2b8e59,inset 0 0 24px 12px #48a66f99}
+.group-hotspot-status{position:absolute;left:50%;bottom:5%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:4px;min-width:44%;max-width:95%;padding:4px 8px;border:1px solid #d9bc74;border-radius:99px;background:#fffdf2f2;color:#153f30;font-size:clamp(.55rem,.9vw,.75rem);font-weight:800;line-height:1;white-space:nowrap;box-shadow:0 2px 8px #102a3d30}
+.group-hotspot-track{display:block;width:100%;height:5px;border-radius:9px;overflow:hidden;background:#d6e1d7}
+.group-hotspot-track>span{display:block;height:100%;background:#2b8058}
+@media(max-width:600px){.group-hotspot-status{padding:3px 5px;min-width:65%;font-size:clamp(.42rem,1.8vw,.65rem)}.group-hotspot-track{height:3px}.group-hotspot.is-complete{box-shadow:inset 0 0 0 3px #48a66fcc,inset 0 0 12px 5px #48a66f88}}

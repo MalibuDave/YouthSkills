@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bishopric tools — Covenant Youth mockup</title>
+  <style>
+    :root{font-family:Arial,sans-serif;color:#10293a;background:#f7f5ef}*{box-sizing:border-box}body{margin:0}header{background:#102c40;color:white;padding:22px max(24px,calc((100vw - 1120px)/2))}header strong{font:700 28px Georgia,serif}main{max-width:1120px;margin:auto;padding:36px 24px 64px}.top{display:flex;justify-content:space-between;gap:20px;align-items:start}.eyebrow{color:#9a6c20;font-weight:800;letter-spacing:.14em;font-size:13px;text-transform:uppercase;margin:0 0 9px}h1{font:700 clamp(36px,5vw,56px) Georgia,serif;margin:0 0 10px}h2{font:700 28px Georgia,serif;margin:0 0 15px}.muted{color:#52636c;line-height:1.5}.count{background:#e7f0e8;border:1px solid #bfd7c5;border-radius:16px;padding:18px 22px;min-width:164px;text-align:center;color:#195239}.count b{display:block;font-size:34px}.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:32px 0 24px}.tabs button{border:1px solid #d7d8d1;background:white;color:#173b35;padding:12px 16px;border-radius:999px;font:700 15px Arial;cursor:pointer}.tabs button[aria-selected=true]{background:#205c42;color:white;border-color:#205c42}.panel{background:white;border:1px solid #e0dfd5;border-radius:18px;padding:26px;box-shadow:0 8px 28px #10293a0a}.request{border:1px solid #dce4dc;border-radius:12px;margin:10px 0;overflow:hidden}.request summary{list-style:none;cursor:pointer;padding:18px 20px;display:grid;grid-template-columns:24px 1fr auto auto;align-items:center;gap:14px;font-weight:700}.request summary::-webkit-details-marker{display:none}.chevron{display:inline-block;color:#236044;transition:transform .2s}.request[open] .chevron{transform:rotate(90deg)}.age{font-weight:400;color:#51636b}.status{font-size:13px;border-radius:999px;padding:7px 11px;background:#f6edd4;color:#6c4b0b}.status.active{background:#e2f1e6;color:#205d3b}.status.rejected,.status.wrong-ward{background:#fce8e3;color:#8a3528}.status.see-bishopric{background:#e8edf9;color:#354c86}.details{border-top:1px solid #e5e9e4;background:#fbfcf9;padding:18px 20px}.details dl{display:grid;grid-template-columns:155px 1fr;gap:10px;margin:0 0 20px}.details dt{color:#5b6870}.details dd{margin:0;font-weight:600}.actions{display:flex;gap:9px;flex-wrap:wrap}.actions button{border:1px solid #afc9b6;border-radius:8px;background:#e9f3eb;color:#164b33;padding:10px 14px;font:700 14px Arial;cursor:pointer}.actions button:hover{background:#d8eadb}.actions button.danger{border-color:#dfb9b0;background:#fff0ed;color:#8b3425}.activity{margin-top:24px}.activity ul{list-style:none;margin:0;padding:0;color:#40545f}.activity li{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 0;border-top:1px solid #e8ece8}.activity li:first-child{border-top:0}.activity .status{font-weight:700}.empty{color:#52636c;margin:16px 0}.note{font-size:13px;color:#59666b;margin:18px 0 0}@media(max-width:650px){.top{display:block}.count{display:inline-block;margin-top:20px}.request summary{grid-template-columns:20px 1fr auto}.request summary .age{grid-column:2}.status{grid-column:3;grid-row:1 / span 2}.details dl{grid-template-columns:1fr;gap:3px}.details dd{margin-bottom:9px}}
+  </style>
+</head>
+<body>
+
+  <main>
+    <div class="top"><div><p class="eyebrow">Bishopric tools · wireframe</p><h1>Demo Ward</h1><p class="muted">Review membership requests and manage your ward.</p></div><div class="count"><b id="pending-count">0</b>Pending requests</div></div>
+    <nav class="tabs" aria-label="Membership status" id="tabs"></nav>
+    <section class="panel" aria-live="polite"><h2 id="section-title">Pending requests</h2><p class="muted" id="section-help"></p><div id="requests"></div><p class="note">This interactive mockup uses fictional people. Decisions are kept only while this page is open.</p></section>
+    <section class="panel activity"><h2>Recent activity</h2><ul id="activity"></ul></section>
+  </main>
+  <script>
+    const people=[
+      {name:'Jordan Lee',age:15,parent:'Morgan Lee',requested:'October 2',status:'Pending',email:'jordan@example.invalid'},
+      {name:'Taylor Morgan',age:16,parent:'Casey Morgan',requested:'October 2',status:'See Bishopric',email:'taylor@example.invalid',note:'Please meet with the Bishopric before approval.'},
+      {name:'Avery Chen',age:18,parent:'—',requested:'October 1',status:'Pending',email:'avery@example.invalid'},
+      {name:'Sam Rivera',age:17,parent:'Pat Rivera',requested:'September 30',status:'Pending',email:'sam@example.invalid'},
+      {name:'Robin Patel',age:14,parent:'Riley Patel',requested:'September 29',status:'Rejected',email:'robin@example.invalid'},
+      {name:'Alex Rivera',age:19,parent:'—',requested:'September 27',status:'Active',email:'alex@example.invalid'},
+      {name:'Kai Williams',age:13,parent:'Dana Williams',requested:'September 27',status:'Pending',email:'kai@example.invalid'},
+      {name:'Drew Foster',age:17,parent:'Maya Foster',requested:'September 26',status:'See Bishopric',email:'drew@example.invalid'},
+      {name:'Riley Brooks',age:16,parent:'Jules Brooks',requested:'September 25',status:'Rejected',email:'riley@example.invalid'},
+      {name:'Jamie Park',age:14,parent:'Quinn Park',requested:'September 24',status:'Active',email:'jamie@example.invalid'}
+    ];
+    const statuses=['Pending','See Bishopric','Wrong Ward','Rejected','Active'];let selected='Pending';
+    const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    function render(){
+      document.querySelector('#pending-count').textContent=people.filter(p=>p.status==='Pending').length;
+      document.querySelector('#tabs').innerHTML=statuses.map(s=>`<button type="button" data-tab="${s}" aria-selected="${selected===s}">${s==='Active'?'Active members':s} ${people.filter(p=>p.status===s).length}</button>`).join('');
+      document.querySelector('#section-title').textContent=selected==='Active'?'Active members':selected+' requests';
+      document.querySelector('#section-help').textContent='Select a person to see their details and available actions.';
+      const shown=people.map((p,i)=>({...p,i})).filter(p=>p.status===selected);
+      document.querySelector('#requests').innerHTML=shown.length?shown.map(p=>`<details class="request"><summary><span class="chevron" aria-hidden="true">▸</span><span>${escape(p.name)}</span><span class="age">Age ${p.age}</span><span class="status ${p.status.toLowerCase().replace(' ','-')}">${escape(p.status)}</span></summary><div class="details"><dl><dt>Parent/guardian</dt><dd>${escape(p.parent)}</dd><dt>Email</dt><dd>${escape(p.email)}</dd><dt>Requested</dt><dd>${escape(p.requested)}</dd><dt>Current status</dt><dd>${escape(p.status)}</dd>${p.note?`<dt>Note</dt><dd>${escape(p.note)}</dd>`:''}</dl><div class="actions">${['Active','See Bishopric','Wrong Ward','Rejected'].filter(s=>s!==p.status).map(s=>`<button type="button" data-person="${p.i}" data-status="${s}" class="${s==='Rejected'?'danger':''}">${s==='Active'?'Approve':s==='Rejected'?'Reject':s}</button>`).join('')}</div></div></details>`).join(''):'<p class="empty">No people in this status.</p>';
+      document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{selected=b.dataset.tab;render()});
+      document.querySelectorAll('[data-person]').forEach(b=>b.onclick=()=>{const p=people[Number(b.dataset.person)],next=b.dataset.status;let note='';if(next==='Rejected'){const answer=prompt('Optional short note for this person:','');if(answer===null)return;note=answer.trim().slice(0,160)}p.status=next;p.note=note;addActivity(p.name,next,'Status changed');render()});
+    }
+    function addActivity(name,status,action){const item=document.createElement('li'),label=document.createElement('span'),badge=document.createElement('span');label.textContent=`${name} · ${action}`;badge.className=`status ${status.toLowerCase().replace(' ','-')}`;badge.textContent=status;item.append(label,badge);document.querySelector('#activity').prepend(item)}
+    addActivity('Jordan Lee','Pending','Requested to join');addActivity('Robin Patel','Rejected','Status changed');addActivity('Alex Rivera','Active','Status changed');addActivity('Morgan Ellis','Wrong Ward','Status changed');render();
+  </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Local progress transfer</title><script>
+const target=new URLSearchParams(location.search).get("target");
+if(target==="http://127.0.0.1:4174"){
+  try{
+    const ids=JSON.parse(localStorage.getItem("cy-program-completed-lessons-v1")||"[]");
+    const dates=JSON.parse(localStorage.getItem("cy-program-lesson-completion-dates-v1")||"{}");
+    parent.postMessage({type:"cy-legacy-progress",completions:Array.isArray(ids)?ids.map(id=>({lessonId:id,completedAt:dates[id]||new Date().toISOString()})):[]},target);
+  }catch{parent.postMessage({type:"cy-legacy-progress",completions:[]},target);}
+}
+</script></html>
