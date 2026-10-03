@@ -23,3 +23,48 @@ Less data = simpler engineering and less sensitive youth data to govern, retain,
 - Report list per role (youth, parent, bishopric, site admin).
 - Completion notifications to bishopric (ties to topic 06).
 - Any compliance/audit reporting needs (ties to topics 05, 09, 10).
+
+
+Number of keys completed
+    - week
+    - month
+    - year
+
+Number of groups completed
+    - month
+    - year
+Number of groups by group type
+    - month
+    - year
+
+Key Data
+    - average time to complete
+        - week
+        - month
+        - year
+
+Group Data
+    - average time to complete
+        - week
+        - month
+        - year
+
+
+Accounts
+    - approved
+        - month
+        - year
+    - rejected broken out by reason
+        - month
+        - year
+
+User Activity
+    - individual activity
+        - number of logins
+            - week
+            - month
+            - year
+        - amount of time spent per key
+            - week
+            - month
+            - year

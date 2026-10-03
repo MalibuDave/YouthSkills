@@ -76,6 +76,10 @@ test("V1 sign-up: age gate, parent names, verification, and ward approval states
     const wrongLogin=await send("/api/login","POST",{email:youth.email,password:"wrong"});assert.equal(wrongLogin.status,401);
     const login=await send("/api/login","POST",{email:youth.email,password:youth.password});assert.equal(login.status,200);
     const protectedFile=await fetch(base+"/data/test.sqlite");assert.equal(protectedFile.status,404);
+    assert.equal((await fetch(base+"/bishopric-tools-mock.html")).status,403,"guests cannot fetch the Bishopric mock");
+    assert.equal((await fetch(base+"/bishopric-tools-mock.html",{headers:{Cookie:learner.cookie}})).status,403,"members cannot fetch the Bishopric mock");
+    const grant=new DatabaseSync(dbPath);grant.prepare("UPDATE users SET role='bishopric',status='active' WHERE email=?").run(adult.email);grant.close();
+    assert.equal((await fetch(base+"/bishopric-tools-mock.html",{headers:{Cookie:leader.cookie}})).status,200,"active Bishopric accounts can fetch the mock");
     await send("/api/logout","POST",{},learner.cookie);
     const signedOut=await send("/api/session","GET",null,learner.cookie);assert.equal(signedOut.data.user,null);
   } finally {server.close();await once(server,"close");rmSync(directory,{recursive:true,force:true});}

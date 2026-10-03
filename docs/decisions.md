@@ -123,3 +123,13 @@
 - **Alternatives considered:** Keeping the under-13 approval-number flow (removed by D1 in the requirements); adding new columns without rebuilding the users table (the old role CHECK constraint would block the new roles).
 - **Consequences:** No email is sent: the verification link is shown on screen as a prototype stand-in, and bishopric notification emails are not implemented. Pending accounts stay pending until the bishopric approval page (topic 12) exists. The 30-day pending expiry and rejected-account purge are not implemented while their behavior is open. The 12-character password maximum follows the V1 decision; NIST 800-63B recommends allowing at least 64. Client route gating still is not server-side content authorization, but the lesson-completion APIs now refuse non-active members.
 
+
+### DEC-013: Bishopric tools preview in the wireframe
+
+- **Date:** 2026-10-03
+- **Status:** Accepted
+- **Context:** The product owner approved an interactive Bishopric tools mock with expandable youth requests, status actions, counts, and color-labeled recent activity, and asked to see it in the current wireframe.
+- **Decision:** Add a `#/bishopric-tools` preview route for signed-in, active Bishopric accounts and embed the existing standalone mock as a same-origin frame. Hide its navigation link from everyone else, and restrict the mock HTML file on the server. Keep all example requests fictional and all changes in memory. Include Wrong Ward in the status tabs so those requests remain visible after a change.
+- **Rationale:** Reviewers can reach the approved mock through the wireframe navigation without implying that its actions approve real accounts. Reusing the standalone mock preserves the approved visual layout during design review.
+- **Alternatives considered:** Connecting the preview buttons to SQLite now would present unverified Bishopric permissions as a working approval flow; that requires a separate role verification and authorization pass.
+- **Consequences:** The preview is navigable and interactive, but real pending accounts remain unchanged. A later implementation should replace the embedded mock with a role-gated, ward-scoped queue and recorded decisions.
