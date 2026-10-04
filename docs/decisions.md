@@ -133,3 +133,13 @@
 - **Rationale:** Reviewers can reach the approved mock through the wireframe navigation without implying that its actions approve real accounts. Reusing the standalone mock preserves the approved visual layout during design review.
 - **Alternatives considered:** Connecting the preview buttons to SQLite now would present unverified Bishopric permissions as a working approval flow; that requires a separate role verification and authorization pass.
 - **Consequences:** The preview is navigable and interactive, but real pending accounts remain unchanged. A later implementation should replace the embedded mock with a role-gated, ward-scoped queue and recorded decisions.
+
+### DEC-014: Bishopric reporting concepts preview in the wireframe
+
+- **Date:** 2026-10-04
+- **Status:** Accepted
+- **Context:** The product owner reviewed a standalone reporting mock with one fictional calendar year for 50 youth and asked to place that unchanged preview in the current wireframe.
+- **Decision:** Add a `#/bishopric-reporting` route and navigation link for signed-in, active Bishopric accounts. Embed the existing standalone mock in a same-origin frame, and restrict its HTML file on the server using the same access rule.
+- **Rationale:** Reusing the approved page preserves its current layout and interactions while giving Bishopric reviewers a place to reach it from the wireframe.
+- **Alternatives considered:** Rebuilding the charts inside the application would duplicate the mock and risk changing the approved presentation before reporting requirements are settled.
+- **Consequences:** All displayed figures are fictional and do not reflect the signed-in ward or account records. A later reporting implementation needs defined data collection, ward scoping, and validation of the proposed measures.

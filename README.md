@@ -35,6 +35,8 @@ The **My account** page provides sign-up, sign-in, sign-out, an optional profile
 
 The public home route (`#/`) shows Covenant Youth information, account creation, and sign-in. The **Bishopric tools preview** at `#/bishopric-tools` is linked only for signed-in, active Bishopric accounts. It embeds the interactive fictional ward queue from `bishopric-tools-mock.html`, including expandable requests, state actions, counts, and color-labeled recent activity. The preview changes only its in-memory example roster; it does not approve real accounts. Keys (`#/keys`), Groups, lessons, and progress are shown in the signed-in wireframe. This is client-side route gating for the prototype; static lesson image URLs are not access-controlled by the server.
 
+The **Bishopric reporting concepts preview** at `#/bishopric-reporting` is also available only to signed-in, active Bishopric accounts. It embeds the unchanged `bishopric-reporting-mock.html` page with fictional results for a year and 50 youth. Its figures do not come from the local account database. Both Bishopric mock HTML files are access-controlled by the local server.
+
 If an older preview is still running on port 4173, set `PORT` to `4174` before running the server and use the Profile page's import button to bring over its browser-only completion records. The local `progress-bridge.html` page supports that one-time preview transition.
 
 New lesson completions also save a timestamp. When the final required lesson in a Key is completed, the dashboard highlights that Key and shows the completion date beneath its icon. Keys completed before date tracking display “date unavailable” because their original completion time was not recorded.

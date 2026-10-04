@@ -6,3 +6,5 @@
 .bishopric-embed-heading h1 { margin: .25rem 0; }
 .bishopric-embed-heading p:last-child { color: #52636c; }
 #bishopric-preview { display: block; width: 100%; min-height: 900px; border: 1px solid #e0dfd5; border-radius: 16px; background: #f7f5ef; }
+.reporting-embed { width: min(100%, 1680px); }
+#reporting-preview { display: block; width: 100%; min-height: 1200px; border: 1px solid #e0dfd5; border-radius: 16px; background: #f7f5ef; }
