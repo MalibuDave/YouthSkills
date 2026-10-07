@@ -1,5 +1,5 @@
 # CY Web App / YouthSkills — context brief from ChatGPT project
-Source: ChatGPT project "YouthSkills-Dev-Bishop Porter" (11 chats, Sep 19 – Oct 1, 2026). Captured Oct 2, 2026.
+Source: ChatGPT project "YouthSkills-Dev-Bishop Porter" (11 chats, Sep 19 – Oct 1, 2026). Captured Oct 2, 2026. Topic list updated Oct 7, 2026.
 
 ## Topic docs (one per working chat)
 Each topic has its own doc with full detail. Start a chat per topic and point it at its doc.
@@ -13,6 +13,12 @@ Each topic has its own doc with full detail. Start a chat per topic and point it
 - `topics/08-bishopric-account-maintenance.md` — bishopric account lifecycle
 - `topics/09-site-admin-accounts.md` — platform admin roles, MFA, audit
 - `topics/10-governance-moderation-privacy.md` — moderation, data requests/deletion, ToS, who operates it
+- `topics/11-account-creation-requirements.md` — V1 sign-up, email verification, ward approval states, bishopric role request, account types
+- `topics/12-ward-forum.md` — proposed ward forum (General + Bishop boards), moderation, safeguarding (undecided)
+- `topics/13-ward-profiles.md` — proposed ward-only member profiles and search
+- `topics/14-ward-progress-page.md` — proposed cross-ward page with aggregate Group/Key completion counts
+- `topics/15-trophy-case-and-progress-timeline.md` — Progress page: Keys by Group, recently earned, up next, yearly timeline (mockup approved)
+- `topics/16-achievements-page.md` — Achievements page: time in app, day/week/month streaks, weekly goals, exploration badges (mockup approved)
 
 ## Product
 - Web app (wireframe → beta) teaching LDS youth practical life skills. Owner/visionary: Bishop Porter. Builder: Dave.
