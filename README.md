@@ -12,6 +12,22 @@ node server.mjs
 
 Open http://127.0.0.1:4173. Run `node --test` for data and progress checks and `node --check src/app.js` for a syntax check.
 
+## Presentation demo
+
+```sh
+npm run demo          # start the demo ward (creates it the first time)
+npm run demo:reset    # rebuild the demo data from scratch, then start
+```
+
+The demo runs on its own database, `data/demo.sqlite`, so your normal accounts in `data/accounts.sqlite` are untouched. It contains the fictional **Maple Grove Ward**:
+
+- **Bishopric:** `bishop@example.test` (Bishop Robert Hale), `counselor1@example.test`, `counselor2@example.test`, `clerk@example.test`
+- **Youth:** 50 active youth with a year of lesson history, such as `ava.dalton@example.test`. Bishopric tools lists every youth and their email.
+- **Approval queue:** 4 Pending, 1 See Bishopric, 1 Wrong Ward, 1 Rejected
+- **Password for every account:** `carwash1234`
+
+All people are fictional and every email uses the reserved `example.test` domain. Because the password is shared, run the demo only on your own computer or behind a private link.
+
 ## Structure
 
 - `src/data.js`: Keys, lessons, and reusable lesson sections

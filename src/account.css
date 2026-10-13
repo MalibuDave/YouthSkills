@@ -10,3 +10,4 @@
 #reporting-preview { display: block; width: 100%; min-height: 1200px; border: 1px solid #e0dfd5; border-radius: 16px; background: #f7f5ef; }
 .member-preview { display: block; width: 100%; min-height: 1200px; border: 1px solid #e0dfd5; border-radius: 16px; background: #f6f1e4; }
 .member-embed { width: min(100%, 1280px); }
+.account-status-note{margin:12px 0 0;padding:12px 14px;border-radius:10px;background:#fff;color:#3c3a32;line-height:1.5}.account-change-ward{display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px;margin-top:18px}.account-change-ward .account-field{margin:0;min-width:240px;flex:1 1 240px}.field-highlight select{outline:3px solid #c86b2a;outline-offset:2px}

@@ -49,7 +49,12 @@ const milestoneRows=()=>{
 const statusPanel=user=>{
   const info=STATUS[user.status]||STATUS.pending;
   const verify=user.status==="unverified"?`<div class="account-actions"><button id="resend-verification" class="account-secondary" type="button">Resend verification email</button></div>${state.verifyLink?`<p class="account-demo-note">Prototype: no email is sent. <a href="${escape(state.verifyLink)}">Open the verification link</a> to continue.</p>`:""}`:"";
-  return `<section class="account-status status-${escape(user.status)}" role="status"><p class="eyebrow">ACCOUNT STATUS</p><h2>${escape(info.label)}</h2><p>${escape(info.text.replace("{ward}",user.wardName))}</p>${verify}</section>`;
+  const note=user.statusNote&&["rejected","see_bishopric"].includes(user.status)?`<p class="account-status-note"><strong>Note from your bishopric:</strong> ${escape(user.statusNote)}</p>`:"";
+  // Pending can move the request; Wrong Ward and Rejected can send it to a different ward (topic 11 §4).
+  const canMove=["pending","wrong_ward","rejected"].includes(user.status);
+  const options=state.wards.filter(ward=>user.status==="pending"||ward.id!==user.wardId).map(ward=>`<option value="${ward.id}"${ward.id===user.wardId?" selected":""}>${escape(ward.name)}</option>`).join("");
+  const move=canMove&&options?`<form id="change-ward-form" class="account-change-ward"><label class="account-field${user.status==="wrong_ward"?" field-highlight":""}">${user.status==="pending"?"Change ward":"Choose your ward"}<select name="wardId" required>${user.status==="pending"?"":'<option value="">Choose a ward</option>'}${options}</select></label><button class="account-secondary" type="submit">${user.status==="pending"?"Move my request":"Send request"}</button></form>`:"";
+  return `<section class="account-status status-${escape(user.status)}" role="status"><p class="eyebrow">ACCOUNT STATUS</p><h2>${escape(info.label)}</h2><p>${escape(info.text.replace("{ward}",user.wardName))}</p>${note}${verify}${move}</section>`;
 };
 const bishopricRequestText={requested:"Requested — a site admin will call to verify",verified:"Verified — waiting for access",granted:"Granted",denied:"Not granted"};
 const profile=()=>{const user=state.user,active=user.status==="active",initials=`${user.firstName[0]}${user.lastName[0]}`.toUpperCase(),bishopric=user.bishopric.length?user.bishopric.map(person=>`${person.firstName} ${person.lastName}`).join(", "):"No Bishopric member listed yet",rows=active?milestoneRows():"",parents=(user.parents||[]).map(person=>`${person.firstName} ${person.lastName}`).join(", ");
@@ -80,6 +85,7 @@ export function bindAccount(rerender){
       catch(error){state.error=error.message;feedback.innerHTML=notice();}
     });
   }
+  document.querySelector("#change-ward-form")?.addEventListener("submit",async event=>{event.preventDefault();const wardId=Number(new FormData(event.currentTarget).get("wardId"));if(!wardId)return;try{state.user=(await request("/api/change-ward","POST",{wardId})).user;state.error="";state.message=`Your request was sent to ${state.user.wardName}.`;}catch(error){state.error=error.message;state.message="";}rerender();});
   document.querySelector("#resend-verification")?.addEventListener("click",async()=>{try{state.verifyLink=(await request("/api/resend-verification","POST",{})).verifyLink;state.error="";state.message="We sent a new verification link.";}catch(error){state.error=error.message;}rerender();});
   document.querySelector("#login-form")?.addEventListener("submit",async event=>{event.preventDefault();state.error="";const form=event.currentTarget;try{applySession(await request("/api/login","POST",Object.fromEntries(new FormData(form))));location.hash=state.user.status==="active"?"#/keys":"#/account";rerender();}catch(error){state.error=error.message;form.querySelector("#account-feedback").innerHTML=notice();}});
   document.querySelector("#sign-out")?.addEventListener("click",async()=>{await request("/api/logout","POST",{});applySession({user:null,completions:[]});state.verifyLink="";state.message="Signed out.";location.hash="#/";rerender();});
