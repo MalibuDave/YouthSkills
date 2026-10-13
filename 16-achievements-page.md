@@ -1,10 +1,12 @@
 # Topic 16 — Achievements Page (time in app, streaks, goals, exploration)
-Scope: a gamified page, modeled closely on the Pluralsight Skills trophy case, that rewards how much and how consistently a youth learns: learning time, day/week/month streaks, weekly goals, and exploring new and earned Keys. Captured Oct 7, 2026; split from the original topic 15 proposal. Working title "Achievements" — final name TBD.
+Scope: a gamified page, modeled closely on the Pluralsight Skills trophy case, that rewards how much and how consistently a youth learns: learning time, day/week/month streaks, weekly goals, and exploring new and earned Keys. Captured Oct 7, 2026; split from the original topic 15 proposal. Named **My Activity** (Oct 13; working title was "Achievements").
 Related: 01 (Keys), 05 (minors compliance), 06 (completion; page-open time isn't evidence), 07 (reporting/granularity), 10 (data map), 11 (account states), 13 (ward profiles), 15 (Progress page).
 
-**Mockup:** "Trophy Case Mockup" canvas, artboard **Achievements (time, streaks, exploration)** — https://claude.ai/artifact/Li73nisc6MBGUfonhT2r3Z (private; share from the page's Share menu). Standalone mockup, not part of the site code. A browser-openable copy is in the repo as `achievements-mock.html` (fictional sample data; not linked into the wireframe).
+**Mockup:** "Trophy Case Mockup" canvas, artboard **My Activity (time, streaks, exploration)** — https://claude.ai/artifact/Li73nisc6MBGUfonhT2r3Z (private; share from the page's Share menu). Standalone mockup, not part of the site code. A browser-openable copy is in the repo as `my-activity-mock.html` (fictional sample data; not linked into the wireframe).
 
 ## Status
+**Oct 13 changes (Dave):** renamed to My Activity; Learning streaks shown as separate Days, Weeks and Months rows; each unearned badge fills from the bottom by its progress (e.g. 3 of 8 weeks = 38% filled) and keeps its dashed outline, so earned (solid copper) and in-progress stay distinct.
+
 Direction approved by Dave (Oct 7): "exactly what I was going for." Next: review with Bishop Porter, decide how time is measured, then spec for build.
 
 **Change from the earlier topic 15 stance:** topic 15 originally recommended against view-time badges and daily streaks. Dave has chosen to include both. The concerns are kept below as design and review items, not blockers.
@@ -69,7 +71,7 @@ Pluralsight's time, streak, and goal badges are annual. Decide: reset yearly (ca
 | **Out of scope** | Leaderboards, sharing streaks/time with the ward, push/email streak reminders |
 
 ## Questions for Bishop Porter
-1. What should we call this page? (Working title "Achievements"; other ideas: Trophy Case, Trail Log, Badges.)
+1. ~~What should we call this page?~~ Decided Oct 13: **My Activity**.
 2. Is rewarding time in the app the right signal, or should time come from completed lessons?
 3. Daily streaks: yes, or weekly/monthly only? Any Sunday rule?
 4. Should spiritual Keys count toward time and streak badges?
