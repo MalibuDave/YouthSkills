@@ -2,7 +2,7 @@
 Scope: a gamified page, modeled closely on the Pluralsight Skills trophy case, that rewards how much and how consistently a youth learns: learning time, day/week/month streaks, weekly goals, and exploring new and earned Keys. Captured Oct 7, 2026; split from the original topic 15 proposal. Working title "Achievements" — final name TBD.
 Related: 01 (Keys), 05 (minors compliance), 06 (completion; page-open time isn't evidence), 07 (reporting/granularity), 10 (data map), 11 (account states), 13 (ward profiles), 15 (Progress page).
 
-**Mockup:** "Trophy Case Mockup" canvas, artboard **Achievements (time, streaks, exploration)** — https://claude.ai/artifact/Li73nisc6MBGUfonhT2r3Z (private; share from the page's Share menu). Standalone mockup, not part of the site code.
+**Mockup:** "Trophy Case Mockup" canvas, artboard **Achievements (time, streaks, exploration)** — https://claude.ai/artifact/Li73nisc6MBGUfonhT2r3Z (private; share from the page's Share menu). Standalone mockup, not part of the site code. A browser-openable copy is in the repo as `achievements-mock.html` (fictional sample data; not linked into the wireframe).
 
 ## Status
 Direction approved by Dave (Oct 7): "exactly what I was going for." Next: review with Bishop Porter, decide how time is measured, then spec for build.
