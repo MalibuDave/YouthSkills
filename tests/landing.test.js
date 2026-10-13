@@ -22,6 +22,12 @@ test("guests see Covenant Youth landing and cannot open Keys",async()=>{
   location.hash="#/bishopric-reporting";onHashChange();
   assert.match(app.innerHTML,/Sign in to continue/);
   assert.doesNotMatch(app.innerHTML,/reporting-preview/);
+  assert.doesNotMatch(app.innerHTML,/My Activity/);
+  for(const route of ["progress-preview","my-activity"]){
+    location.hash=`#/${route}`;onHashChange();
+    assert.match(app.innerHTML,/Sign in to continue/);
+    assert.doesNotMatch(app.innerHTML,/member-preview/);
+  }
   location.hash="#/groups";onHashChange();
   assert.match(app.innerHTML,/Sign in to continue/);
   assert.doesNotMatch(app.innerHTML,/class="group-hotspot /);

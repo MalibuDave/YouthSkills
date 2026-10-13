@@ -2,7 +2,7 @@
 Scope: the youth's own progress page, centered on Keys: earned / in progress / not started by Group, recently earned, up next, and a month-by-month view of the year. Captured Oct 7, 2026; split from the original "Trophy Case & Progress Timeline" proposal. Time-in-app, streaks, goals, and exploration badges moved to **topic 16 (Achievements page)**.
 Related: 01 (Keys as collectible badges), 06 (completion rules), 07 (reporting principle, history = events), 10 (data map), 11 (account states), 13 (ward profiles), 14 (counts), 16 (Achievements page).
 
-**Mockup:** "Trophy Case Mockup" canvas, artboard **Progress page** — https://claude.ai/artifact/Li73nisc6MBGUfonhT2r3Z (private; share from the page's Share menu). Standalone mockup, not part of the site code. A browser-openable copy is in the repo as `progress-page-mock.html` (fictional sample data; not linked into the wireframe).
+**Mockup:** "Trophy Case Mockup" canvas, artboard **Progress page** — https://claude.ai/artifact/Li73nisc6MBGUfonhT2r3Z (private; share from the page's Share menu). Standalone mockup, not part of the site code. A browser-openable copy is in the repo as `progress-page-mock.html` (fictional sample data), shown in the wireframe at `#/progress-preview` for Active members (DEC-015).
 
 ## Status
 Direction approved by Dave (Oct 7). Next: review with Bishop Porter, then spec for build.

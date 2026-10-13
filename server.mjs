@@ -64,6 +64,10 @@ const server=createServer(async (request,response) => {
     const viewer=accounts.userForSession(cookie(request));
     if(!viewer||viewer.role!=="bishopric"||viewer.status!=="active")return json(response,403,{error:"Bishopric access required."});
   }
+  if(pathname==="/progress-page-mock.html"||pathname==="/my-activity-mock.html"){
+    const viewer=accounts.userForSession(cookie(request));
+    if(!viewer||viewer.status!=="active")return json(response,403,{error:"Sign in with an approved account to see this preview."});
+  }
   if(pathname==="/data"||pathname.startsWith("/data/")||pathname.split("/").some(part=>part.startsWith(".")))return json(response,404,{error:"Not found."});
   const relative = pathname === "/" ? "index.html" : pathname.slice(1);
   const target = normalize(join(root,relative));

@@ -8,3 +8,5 @@
 #bishopric-preview { display: block; width: 100%; min-height: 900px; border: 1px solid #e0dfd5; border-radius: 16px; background: #f7f5ef; }
 .reporting-embed { width: min(100%, 1680px); }
 #reporting-preview { display: block; width: 100%; min-height: 1200px; border: 1px solid #e0dfd5; border-radius: 16px; background: #f7f5ef; }
+.member-preview { display: block; width: 100%; min-height: 1200px; border: 1px solid #e0dfd5; border-radius: 16px; background: #f6f1e4; }
+.member-embed { width: min(100%, 1280px); }
