@@ -2,7 +2,7 @@
 Scope: a gamified page, modeled closely on the Pluralsight Skills trophy case, that rewards how much and how consistently a youth learns: learning time, day/week/month streaks, weekly goals, and exploring new and earned Keys. Captured Oct 7, 2026; split from the original topic 15 proposal. Named **My Activity** (Oct 13; working title was "Achievements").
 Related: 01 (Keys), 05 (minors compliance), 06 (completion; page-open time isn't evidence), 07 (reporting/granularity), 10 (data map), 11 (account states), 13 (ward profiles), 15 (Progress page).
 
-**Mockup:** "Trophy Case Mockup" canvas, artboard **My Activity (time, streaks, exploration)** — https://claude.ai/artifact/Li73nisc6MBGUfonhT2r3Z (private; share from the page's Share menu). Standalone mockup, not part of the site code. A browser-openable copy is in the repo as `my-activity-mock.html` (fictional sample data; not linked into the wireframe).
+**Mockup:** "Trophy Case Mockup" canvas, artboard **My Activity (time, streaks, exploration)** — https://claude.ai/artifact/Li73nisc6MBGUfonhT2r3Z (private; share from the page's Share menu). Standalone mockup, not part of the site code. A browser-openable copy is in the repo as `my-activity-mock.html` (fictional sample data), shown in the wireframe at `#/my-activity` for Active members (DEC-015).
 
 ## Status
 **Oct 13 changes (Dave):** renamed to My Activity; Learning streaks shown as separate Days, Weeks and Months rows; each unearned badge fills from the bottom by its progress (e.g. 3 of 8 weeks = 38% filled) and keeps its dashed outline, so earned (solid copper) and in-progress stay distinct.

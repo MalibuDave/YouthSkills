@@ -37,6 +37,8 @@ The public home route (`#/`) shows Covenant Youth information, account creation,
 
 The **Bishopric reporting concepts preview** at `#/bishopric-reporting` is also available only to signed-in, active Bishopric accounts. It embeds the unchanged `bishopric-reporting-mock.html` page with fictional results for a year and 50 youth. Its figures do not come from the local account database. Both Bishopric mock HTML files are access-controlled by the local server.
 
+The **Progress preview** (`#/progress-preview`) and **My Activity** (`#/my-activity`) pages show the approved designs from topics 15 and 16 to signed-in, active members. They embed `progress-page-mock.html` and `my-activity-mock.html` with a fictional youth's data; **My progress** still shows the member's own progress. Both mock files are access-controlled by the local server.
+
 If an older preview is still running on port 4173, set `PORT` to `4174` before running the server and use the Profile page's import button to bring over its browser-only completion records. The local `progress-bridge.html` page supports that one-time preview transition.
 
 New lesson completions also save a timestamp. When the final required lesson in a Key is completed, the dashboard highlights that Key and shows the completion date beneath its icon. Keys completed before date tracking display “date unavailable” because their original completion time was not recorded.

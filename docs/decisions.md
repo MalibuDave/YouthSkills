@@ -143,3 +143,13 @@
 - **Rationale:** Reusing the approved page preserves its current layout and interactions while giving Bishopric reviewers a place to reach it from the wireframe.
 - **Alternatives considered:** Rebuilding the charts inside the application would duplicate the mock and risk changing the approved presentation before reporting requirements are settled.
 - **Consequences:** All displayed figures are fictional and do not reflect the signed-in ward or account records. A later reporting implementation needs defined data collection, ward scoping, and validation of the proposed measures.
+
+### DEC-015: Progress page and My Activity previews in the wireframe
+
+- **Date:** 2026-10-13
+- **Status:** Accepted
+- **Context:** Dave approved the Progress page (topic 15) and My Activity page (topic 16) designs on the Trophy Case Mockup canvas and asked to add them to the site. Their standalone exports are `progress-page-mock.html` and `my-activity-mock.html`.
+- **Decision:** Add `#/progress-preview` and `#/my-activity` routes, linked as "Progress preview" and "My Activity" in the signed-in navigation for Active members of any role. Each embeds its unchanged mock in a same-origin frame that resizes to its content; the frame drops the mock's full-window minimum height so it cannot grow without limit. The server serves both mock files only to signed-in Active members. The existing My progress page stays as it is.
+- **Rationale:** Reviewers and Bishop Porter can reach the approved designs from the wireframe without implying they show the viewer's own data. It reuses the DEC-013/DEC-014 pattern and keeps the mocks identical to the canvas exports.
+- **Alternatives considered:** Replacing My progress with the new design now would show fictional data in place of the member's real progress. Rebuilding the pages from account data needs Key completion timestamps on the server (topic 15) and a learning-time measurement decision (topic 16).
+- **Consequences:** Both previews show fictional youth "Alex R." The mocks load Google Fonts, so they fall back to system fonts when offline. A later build should render these pages from account data and retire the embedded mocks.

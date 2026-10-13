@@ -61,6 +61,10 @@ test("V1 sign-up: age gate, parent names, verification, and ward approval states
     assert.equal(verified.status,200);assert.equal(verified.data.user.status,"pending");assert.ok(verified.data.user.emailVerifiedAt);
     const again=await send("/api/resend-verification","POST",{},learner.cookie);assert.equal(again.status,400);
     const stillLocked=await send("/api/completions","POST",{lessonId:"healthy-habits"},learner.cookie);assert.equal(stillLocked.status,403,"pending members cannot record lessons");
+    for(const mock of ["/progress-page-mock.html","/my-activity-mock.html"]){
+      assert.equal((await fetch(base+mock)).status,403,`guests cannot fetch ${mock}`);
+      assert.equal((await fetch(base+mock,{headers:{Cookie:learner.cookie}})).status,403,`pending members cannot fetch ${mock}`);
+    }
 
     const adult={...yearsAgo(40),firstName:"Demo",lastName:"Leader",email:"leader@example.test",password:"leader-pass",wardId,requestBishopric:true};
     const noPhone=await send("/api/register","POST",adult);assert.equal(noPhone.status,400);assert.match(noPhone.data.error,/phone/);
@@ -71,6 +75,7 @@ test("V1 sign-up: age gate, parent names, verification, and ward approval states
     // Simulate a bishopric approval until the approval page exists.
     const db=new DatabaseSync(dbPath);db.prepare("UPDATE users SET status='active' WHERE email=?").run(youth.email);db.close();
     const completion=await send("/api/completions","POST",{lessonId:"healthy-habits"},learner.cookie);assert.equal(completion.status,200);
+    for(const mock of ["/progress-page-mock.html","/my-activity-mock.html"])assert.equal((await fetch(base+mock,{headers:{Cookie:learner.cookie}})).status,200,`active members can fetch ${mock}`);
     const signedIn=await send("/api/session","GET",null,learner.cookie);assert.equal(signedIn.data.user.lastName,"O'Learner");assert.equal(signedIn.data.completions.length,1);
 
     const wrongLogin=await send("/api/login","POST",{email:youth.email,password:"wrong"});assert.equal(wrongLogin.status,401);

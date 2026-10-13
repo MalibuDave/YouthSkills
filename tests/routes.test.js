@@ -16,6 +16,16 @@ test("Groups and First Aid opening pages follow the supplied sequence",async()=>
 
   const navigation=app.innerHTML.match(/<nav class="header-nav"[^>]*>(.*?)<\/nav>/)?.[1];
   assert.ok(navigation.indexOf('href="#/groups"')<navigation.indexOf('href="#/keys"'));
+  assert.match(navigation,/href="#\/progress-preview">Progress preview</);
+  assert.match(navigation,/href="#\/my-activity">My Activity</);
+  assert.doesNotMatch(navigation,/Bishopric tools/,"members do not see Bishopric links");
+  for(const [route,src,heading] of [["progress-preview","/progress-page-mock.html","Progress page preview"],["my-activity","/my-activity-mock.html","My Activity preview"]]){
+    location.hash=`#/${route}`;onHashChange();
+    assert.match(app.innerHTML,new RegExp(`<iframe[^>]*class="member-preview" src="${src}"`));
+    assert.match(app.innerHTML,new RegExp(`<h1>${heading}</h1>`));
+    assert.match(app.innerHTML,/fictional youth/);
+  }
+  location.hash="#/groups";onHashChange();
   assert.equal((app.innerHTML.match(/class="group-hotspot /g)||[]).length,18);
   assert.equal((app.innerHTML.match(/class="group-section"/g)||[]).length,7);
   assert.match(app.innerHTML,/Group 1 - Required CK.png/);

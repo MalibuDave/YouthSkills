@@ -1,6 +1,6 @@
 # Project status
 
-_Last updated: 2026-10-02 (V1 sign-up rebuilt from topic 11 requirements)._
+_Last updated: 2026-10-13 (Progress page and My Activity previews added, DEC-015)._
 
 Covenant Youth is a working wireframe, not a production youth platform. See the
 [README](../README.md) for what it does, [architecture.md](architecture.md) for
@@ -45,6 +45,8 @@ Other decisions still needed:
   controls are required?
 
 ## Known limits
+
+- The Progress preview and My Activity pages show a fictional youth. Building them from real data needs Key completion timestamps on the server (topic 15) and a decision on how learning time is measured (topic 16).
 
 - Sign-in gating is client-side only. Static lesson images are reachable by URL
   and need server-side authorization before they can be treated as private.
