@@ -2,6 +2,7 @@ import { keys, allLessons } from "./data.js";
 import { bookOfMormonCover } from "./book-of-mormon.js";
 import { firstAidBadge, firstAidCertificate, firstAidCover } from "./first-aid.js";
 import { readProgress, markComplete, progressFor, keyCompletedAt, readSteps, setStep, readReflection, setReflection, readBishopricNotification, setBishopricNotification } from "./progress.js";
+import { bishopricPage, bindBishopric, resetBishopric } from "./bishopric-ui.js";
 import { accountPage, accountReady, currentAccount, bindAccount, loadAccount, saveLessonToAccount, verifyEmailLink } from "./account-ui.js";
 
 const app = document.querySelector("#app");
@@ -110,8 +111,10 @@ function lessonPage(k,l,completed) {
   const notifyCallout=completed.has(l.id) ? keyCompletionCallout(k,completed) : "";
   return shell(`<nav aria-label="Breadcrumb" class="breadcrumb"><a href="#/keys">All Keys</a><span aria-hidden="true">/</span><a href="${keyUrl(k.id)}">${html(k.name)}</a></nav><article class="lesson-layout ${l.sourcePage?"image-lesson":""}"><div class="lesson-header"><p class="eyebrow">${html(k.name)} • ${l.number?`PAGE ${l.number} • `:""}${html(l.estimatedDuration)}</p><h1>${html(l.title)}</h1><p>${html(l.description)}</p><span class="status">${completed.has(l.id)?"✓ Complete":l.optional?"◇ Optional":"○ Not started"}</span></div>${pageContent}${taskContent}${reflectionContent}${completePanel}${notifyCallout}${completed.has(l.id)&&next?`<a class="next-link" href="${lessonUrl(k.id,next.id)}">Continue to next page →</a>`:""}<a class="back-link" href="${keyUrl(k.id)}">← Back to ${html(k.name)}</a></article>`);
 }
+let lastRoute="";
 function render() {
   const parts=location.hash.replace(/^#\/?/,"").split("/").filter(Boolean).map(decodeURIComponent);
+  const entering=lastRoute!==parts.join("/");lastRoute=parts.join("/");
   if(!accountReady()){app.innerHTML=publicShell(`<section class="account-page account-narrow"><h1>Loading Covenant Youth…</h1></section>`);return;}
   const signedIn=Boolean(currentAccount()),active=currentAccount()?.status==="active";
   if(parts[0]==="account"&&parts[1]==="verify"&&parts[2]&&parts.length===3){app.innerHTML=publicShell(`<section class="account-page account-narrow"><h1>Verifying your email…</h1></section>`);void verifyEmailLink(parts[2]).then(()=>{location.hash="#/account";render();});return;}
@@ -119,7 +122,8 @@ function render() {
   if(!signedIn){app.innerHTML=parts.length===0?landingPage():signInGate();return;}
   // Until the ward approves the account, members only see their account page (topic 11 §4).
   if(!active){location.hash="#/account";return;}
-  if(parts.length===1&&parts[0]==="bishopric-tools"){if(currentAccount()?.role!=="bishopric"){app.innerHTML=shell(`<section class="not-found"><h1>Bishopric access required</h1><p>This page is for signed-in Bishopric members.</p><a href="#/account">Return to your account</a></section>`);return;}app.innerHTML=shell(`<section class="bishopric-embed"><div class="bishopric-embed-heading"><p class="eyebrow">BISHOPRIC TOOLS</p><h1>Ward requests preview</h1><p>Explore the interactive Bishopric tools mockup with fictional people. Changes here do not affect real accounts.</p></div><iframe id="bishopric-preview" src="/bishopric-tools-mock.html" title="Interactive Bishopric tools preview"></iframe></section>`);const frame=document.querySelector("#bishopric-preview");frame.addEventListener("load",()=>{const resize=()=>{frame.style.height=`${frame.contentDocument.body.scrollHeight+16}px`;};new ResizeObserver(resize).observe(frame.contentDocument.body);resize();});return;}
+  // Real ward approval queue (DEC-016); reload whenever the page is entered.
+  if(parts.length===1&&parts[0]==="bishopric-tools"){if(currentAccount()?.role!=="bishopric"){app.innerHTML=shell(`<section class="not-found"><h1>Bishopric access required</h1><p>This page is for signed-in Bishopric members.</p><a href="#/account">Return to your account</a></section>`);return;}if(entering)resetBishopric();app.innerHTML=shell(bishopricPage(render));bindBishopric(render);return;}
   if(parts.length===1&&parts[0]==="bishopric-reporting"){
     if(currentAccount()?.role!=="bishopric"){
       app.innerHTML=shell(`<section class="not-found"><h1>Bishopric access required</h1><p>This page is for signed-in Bishopric members.</p><a href="#/account">Return to your account</a></section>`);

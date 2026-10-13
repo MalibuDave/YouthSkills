@@ -39,6 +39,9 @@ const server=createServer(async (request,response) => {
     }
     if(!current)return json(response,401,{error:"Sign in to continue."});
     if(request.method==="POST"&&pathname==="/api/resend-verification")return json(response,200,{verifyLink:`#/account/verify/${accounts.resendVerification(current.id)}`});
+    if(request.method==="POST"&&pathname==="/api/change-ward")return json(response,200,{user:accounts.changeWard(current.id,(await readBody(request)).wardId)});
+    if(request.method==="GET"&&pathname==="/api/bishopric/queue")return json(response,200,accounts.wardQueue(current));
+    if(request.method==="POST"&&pathname==="/api/bishopric/decision"){const body=await readBody(request);return json(response,200,accounts.decide(current,body.userId,body.status,body.note));}
     if(request.method==="POST"&&pathname==="/api/photo")return json(response,200,{user:accounts.savePhoto(current.id,(await readBody(request)).photoData??null)});
     // Lessons, Keys, and progress are only for Active members (topic 11 §4).
     if((pathname==="/api/completions"||pathname==="/api/import-progress")&&current.status!=="active")return json(response,403,{error:"Lessons open once your ward approves your account."});

@@ -1,1 +1,16 @@
-{"name":"cy-program-framework","version":"0.2.0","private":true,"type":"module","engines":{"node":">=24"},"scripts":{"dev":"node server.mjs","build":"node --check src/app.js && node --check src/account-ui.js && node --check src/account-db.js && node --check src/account-rules.js && node --check src/data.js && node --check src/progress.js && node --check server.mjs","test":"node --test"}}
+{
+  "name": "cy-program-framework",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "node server.mjs",
+    "build": "node --check src/app.js && node --check src/bishopric-ui.js && node --check src/account-ui.js && node --check src/account-db.js && node --check src/account-rules.js && node --check src/data.js && node --check src/progress.js && node --check server.mjs && node --check scripts/seed-demo.mjs && node --check scripts/demo.mjs",
+    "test": "node --test",
+    "demo": "node scripts/demo.mjs",
+    "demo:reset": "node scripts/demo.mjs --reset"
+  }
+}

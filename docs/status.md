@@ -1,6 +1,6 @@
 # Project status
 
-_Last updated: 2026-10-13 (Progress page and My Activity previews added, DEC-015)._
+_Last updated: 2026-10-13 (real approval queue and seeded demo ward, DEC-016)._
 
 Covenant Youth is a working wireframe, not a production youth platform. See the
 [README](../README.md) for what it does, [architecture.md](architecture.md) for
@@ -55,7 +55,7 @@ Other decisions still needed:
 
 ## Recommended next work
 
-1. Build the bishop profile page and approval queue (topic 12) so pending members can be approved, and a site-admin step to grant bishopric requests.
+1. Demo part 2: Progress page, My Activity and Bishopric reporting on real (seeded) data, then a full walkthrough. The approval queue is done (DEC-016); a site-admin step to grant bishopric requests is still needed outside the demo.
 2. Obtain approved content and separate badge artwork for the themed groups.
 3. Define the production identity and consent model before adding real
    notifications or using real youth data.

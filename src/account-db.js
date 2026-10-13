@@ -72,7 +72,8 @@ export function openAccountDb(path) {
     const {legacyAge,parent1First,parent1Last,parent2First,parent2Last,...user}=row;
     const age=user.birthYear?ageFrom(user.birthYear,user.birthMonth):legacyAge;
     const parents=[[parent1First,parent1Last],[parent2First,parent2Last]].filter(([first])=>first).map(([firstName,lastName])=>({firstName,lastName}));
-    return {...user,age,parents,bishopric:db.prepare("SELECT first_name AS firstName,last_name AS lastName FROM users WHERE ward_id=? AND role='bishopric' ORDER BY last_name,first_name").all(user.wardId)};
+    const latest=db.prepare("SELECT note FROM membership_events WHERE user_id=? AND to_status=? ORDER BY id DESC LIMIT 1").get(id,user.status);
+    return {...user,age,parents,statusNote:latest?.note||null,bishopric:db.prepare("SELECT first_name AS firstName,last_name AS lastName FROM users WHERE ward_id=? AND role='bishopric' ORDER BY last_name,first_name").all(user.wardId)};
   };
   const logEvent=(userId,wardId,from,to,actorId=null,note=null)=>db.prepare("INSERT INTO membership_events(user_id,ward_id,from_status,to_status,actor_id,note,created_at) VALUES(?,?,?,?,?,?,?)").run(userId,wardId,from,to,actorId,note,now());
   const newVerifyToken=id=>{
@@ -147,5 +148,44 @@ export function openAccountDb(path) {
   const recordLesson=(id,lessonId,date)=>{db.prepare("INSERT OR IGNORE INTO lesson_completions(user_id,lesson_id,completed_at) VALUES(?,?,?)").run(id,lessonId,date);};
   const completions=id=>db.prepare("SELECT lesson_id AS lessonId,completed_at AS completedAt FROM lesson_completions WHERE user_id=? ORDER BY completed_at DESC").all(id);
   const membershipEvents=id=>db.prepare("SELECT from_status AS fromStatus,to_status AS toStatus,ward_id AS wardId,actor_id AS actorId,note,created_at AS createdAt FROM membership_events WHERE user_id=? ORDER BY id").all(id);
-  return {db,wards,profile,register,verifyEmail,resendVerification,login,createSession,userForSession,destroySession,savePhoto,recordLesson,completions,membershipEvents};
+
+  // Ward approval queue (topic 11 §5). Only Active Bishopric members, only their own ward.
+  const DECISIONS={pending:["active","see_bishopric","wrong_ward","rejected"],see_bishopric:["active","wrong_ward","rejected"],rejected:["active"]};
+  const requireBishopric=viewer=>{if(!viewer||viewer.role!=="bishopric"||viewer.status!=="active")fail("Bishopric access required.",403);};
+  const wardQueue=viewer=>{
+    requireBishopric(viewer);
+    const rows=db.prepare(`SELECT id FROM users WHERE ward_id=? AND role!='bishopric' AND status!='unverified' ORDER BY status_changed_at DESC,id`).all(viewer.wardId);
+    const members=rows.map(({id})=>{
+      const user=profile(id),requested=db.prepare("SELECT created_at FROM membership_events WHERE user_id=? AND ward_id=? AND to_status='pending' ORDER BY id DESC LIMIT 1").get(id,viewer.wardId);
+      return {id,firstName:user.firstName,lastName:user.lastName,age:user.age,parents:user.parents,email:user.email,status:user.status,requestedAt:requested?.created_at||user.statusChangedAt,statusChangedAt:user.statusChangedAt,note:user.statusNote,actions:DECISIONS[user.status]||[]};
+    });
+    const activity=db.prepare(`SELECT e.id,e.to_status AS status,e.from_status AS fromStatus,e.note,e.created_at AS createdAt,u.first_name||' '||u.last_name AS name,
+      CASE WHEN e.actor_id=e.user_id THEN NULL ELSE a.first_name||' '||a.last_name END AS actor
+      FROM membership_events e JOIN users u ON u.id=e.user_id LEFT JOIN users a ON a.id=e.actor_id
+      WHERE e.ward_id=? AND e.to_status!='unverified' AND u.role!='bishopric' ORDER BY e.created_at DESC,e.id DESC LIMIT 15`).all(viewer.wardId);
+    return {ward:{id:viewer.wardId,name:viewer.wardName},members,activity};
+  };
+  const decide=(viewer,userId,toStatus,note)=>{
+    requireBishopric(viewer);
+    const target=db.prepare("SELECT id,ward_id,status,role FROM users WHERE id=?").get(Number(userId));
+    if(!target||target.ward_id!==viewer.wardId||target.role==="bishopric")fail("That member is not in your ward.",404);
+    if(!(DECISIONS[target.status]||[]).includes(toStatus))fail("That change isn't available for this member.",409);
+    const text=clean(note).slice(0,160)||null;
+    db.prepare("UPDATE users SET status=?,status_changed_at=? WHERE id=?").run(toStatus,now(),target.id);
+    logEvent(target.id,target.ward_id,target.status,toStatus,viewer.id,text);
+    return wardQueue(viewer);
+  };
+  // A member who is Pending, Wrong Ward, or Rejected may send the request to another ward (topic 11 §4).
+  const changeWard=(id,wardId)=>{
+    const user=profile(id);
+    if(!["pending","wrong_ward","rejected"].includes(user.status))fail("Your ward can't be changed from here right now.",409);
+    const ward=db.prepare("SELECT id FROM wards WHERE id=?").get(Number(wardId));
+    if(!ward)fail("Choose your ward.");
+    if(ward.id===user.wardId&&user.status!=="pending")fail("Choose a different ward.");
+    if(ward.id===user.wardId)return user;
+    db.prepare("UPDATE users SET ward_id=?,status='pending',status_changed_at=? WHERE id=?").run(ward.id,now(),id);
+    logEvent(id,ward.id,user.status,"pending",id);
+    return profile(id);
+  };
+  return {db,wards,profile,register,wardQueue,decide,changeWard,verifyEmail,resendVerification,login,createSession,userForSession,destroySession,savePhoto,recordLesson,completions,membershipEvents};
 }

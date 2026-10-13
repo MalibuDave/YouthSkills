@@ -132,7 +132,7 @@
 - **Decision:** Add a `#/bishopric-tools` preview route for signed-in, active Bishopric accounts and embed the existing standalone mock as a same-origin frame. Hide its navigation link from everyone else, and restrict the mock HTML file on the server. Keep all example requests fictional and all changes in memory. Include Wrong Ward in the status tabs so those requests remain visible after a change.
 - **Rationale:** Reviewers can reach the approved mock through the wireframe navigation without implying that its actions approve real accounts. Reusing the standalone mock preserves the approved visual layout during design review.
 - **Alternatives considered:** Connecting the preview buttons to SQLite now would present unverified Bishopric permissions as a working approval flow; that requires a separate role verification and authorization pass.
-- **Consequences:** The preview is navigable and interactive, but real pending accounts remain unchanged. A later implementation should replace the embedded mock with a role-gated, ward-scoped queue and recorded decisions.
+- **Consequences:** The preview is navigable and interactive, but real pending accounts remain unchanged. A later implementation should replace the embedded mock with a role-gated, ward-scoped queue and recorded decisions. *Superseded by DEC-016 (2026-10-13): Bishopric tools now runs the real queue.*
 
 ### DEC-014: Bishopric reporting concepts preview in the wireframe
 
@@ -153,3 +153,13 @@
 - **Rationale:** Reviewers and Bishop Porter can reach the approved designs from the wireframe without implying they show the viewer's own data. It reuses the DEC-013/DEC-014 pattern and keeps the mocks identical to the canvas exports.
 - **Alternatives considered:** Replacing My progress with the new design now would show fictional data in place of the member's real progress. Rebuilding the pages from account data needs Key completion timestamps on the server (topic 15) and a learning-time measurement decision (topic 16).
 - **Consequences:** Both previews show fictional youth "Alex R." The mocks load Google Fonts, so they fall back to system fonts when offline. A later build should render these pages from account data and retire the embedded mocks.
+
+### DEC-016: Real ward approval queue and a seeded demo ward
+
+- **Date:** 2026-10-13
+- **Status:** Accepted
+- **Context:** Dave decided to turn the wireframe and prototypes into a working demo to present: 50 youth, a year of made-up data, bishopric and youth accounts with fake emails and one shared password, no email sending. Part 1 is the data and the approval queue.
+- **Decision:** Bishopric tools (`#/bishopric-tools`) now runs the topic 11 §5 queue on real accounts: Pending / See Bishopric / Wrong Ward / Rejected / Active members tabs for the viewer's own ward, with Approve, See Bishopric, Wrong Ward and Reject. Allowed changes follow topic 11 §4 (Pending → any; See Bishopric → Active, Wrong Ward or Rejected; Rejected → Active; none on Active members). Reject and See Bishopric take an optional note of up to 160 characters, which the member sees on their account page. Every decision is written to `membership_events` with the actor. Members who are Pending, Wrong Ward or Rejected can send their request to another ward; a rejected member can't resubmit to the same ward. A seeded demo database (`data/demo.sqlite`, created by `npm run demo`) holds the fictional Maple Grove Ward.
+- **Rationale:** The queue already had agreed requirements, so it's the first real bishopric workflow. Keeping the demo in its own database leaves `data/accounts.sqlite` untouched, and a deterministic seed makes every presentation start from the same state.
+- **Alternatives considered:** Seeding into the normal database would mix demo people with real test accounts. Random data on every reset would make a rehearsed walkthrough unpredictable.
+- **Consequences:** Any Active Bishopric member can approve anyone in their ward; there are still no separate bishop, counselor and clerk permissions (D9). The demo password is shared and public, so the demo must only run locally or behind a private link, with fictional data. Removing an Active member from a ward, the 30-day pending expiry, the rejected-account purge and email notifications remain open.
