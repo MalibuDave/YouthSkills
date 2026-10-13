@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Achievements — Covenant Youth mockup</title>
+<!-- Standalone mockup exported from the "Trophy Case Mockup" design canvas.
+     Fictional sample data only; not connected to accounts or the wireframe. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F6F1E4}
+a{color:#1F3D2B}a:hover{color:#14291D}
+button:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid #C9A227;outline-offset:2px}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<template id="artboard">
+<div style="background: #F6F1E4; color: #1E2420; font-family: 'Work Sans', system-ui, sans-serif; font-size: 16px; line-height: 1.5; min-height: 100vh; padding-bottom: 64px">
+
+<!-- Header -->
+<header style="background: #1F3D2B; color: #F6F1E4; padding: 40px 24px 36px">
+<div style="max-width: 1160px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: flex-end">
+<div>
+<div style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #E6CF7A">Alex R. · Sample data</div>
+<h1 style="margin: 4px 0 0; font-family: Fraunces, Georgia, serif; font-size: 40px; font-weight: 700; line-height: 1.1">Achievements</h1>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<label for="yr" style="font-size: 13px; color: #D9DED6">Year</label>
+<select id="yr" style="min-height: 44px; padding: 0 36px 0 14px; border-radius: 10px; border: 1px solid #4E6B58; background: #14291D; color: #F6F1E4; font: 500 15px 'Work Sans', system-ui, sans-serif">
+<option>2026</option>
+<option>2025</option>
+</select>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px">
+<div style="background: #14291D; border-radius: 14px; padding: 18px 20px; display: flex; gap: 14px; align-items: center">
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#E6CF7A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-6 1-9z"></path></svg>
+<div><div style="font-family: Fraunces, Georgia, serif; font-size: 28px; font-weight: 700; line-height: 1">4 days</div><div style="font-size: 14px; color: #D9DED6; margin-top: 4px">Current daily streak · best 9</div></div>
+</div>
+<div style="background: #14291D; border-radius: 14px; padding: 18px 20px; display: flex; gap: 14px; align-items: center">
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#E6CF7A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>
+<div><div style="font-family: Fraunces, Georgia, serif; font-size: 28px; font-weight: 700; line-height: 1">3 weeks</div><div style="font-size: 14px; color: #D9DED6; margin-top: 4px">Current weekly streak · best 5</div></div>
+</div>
+<div style="background: #14291D; border-radius: 14px; padding: 18px 20px; display: flex; gap: 14px; align-items: center">
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#E6CF7A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4M7 14h4M7 17h7"></path></svg>
+<div><div style="font-family: Fraunces, Georgia, serif; font-size: 28px; font-weight: 700; line-height: 1">5 months</div><div style="font-size: 14px; color: #D9DED6; margin-top: 4px">Current monthly streak</div></div>
+</div>
+<div style="background: #14291D; border-radius: 14px; padding: 18px 20px; display: flex; gap: 14px; align-items: center">
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#E6CF7A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"></circle><path d="M12 9v4l3 2M9 2h6"></path></svg>
+<div><div style="font-family: Fraunces, Georgia, serif; font-size: 28px; font-weight: 700; line-height: 1">18h 40m</div><div style="font-size: 14px; color: #D9DED6; margin-top: 4px">Learning time in 2026</div></div>
+</div>
+</div>
+</div>
+</header>
+
+<main style="max-width: 1160px; margin: 0 auto; padding: 32px 24px 0; display: flex; flex-direction: column; gap: 32px">
+
+<!-- Recently unlocked / Upcoming -->
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+<section aria-labelledby="ru-h" style="flex: 1 1 480px; min-width: 0; background: #FFFDF7; border: 1px solid #E3DCC8; border-radius: 16px; padding: 28px">
+<h2 id="ru-h" style="margin: 0 0 20px; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #1F3D2B">Recently unlocked</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<sc-for list="{{recent}}" as="b" hint-placeholder-count="3">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 112px; text-align: center">
+<svg width="88" height="88" viewBox="0 0 84 84" aria-hidden="true"><polygon points="42,4 76,23 76,61 42,80 8,61 8,23" fill="{{b.fill}}" stroke="{{b.stroke}}" stroke-width="3" stroke-dasharray="{{b.dash}}"></polygon><g transform="translate(24 24) scale(1.5)" fill="none" stroke="{{b.ink}}" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="{{b.icon}}"></path></g></svg>
+<div style="font-weight: 600; font-size: 14px">{{b.name}}</div>
+<div style="font-size: 12px; color: #4A524C">{{b.sub}}</div>
+</div>
+</sc-for>
+</div>
+</section>
+<section aria-labelledby="up-h" style="flex: 1 1 480px; min-width: 0; background: #FFFDF7; border: 1px solid #E3DCC8; border-radius: 16px; padding: 28px">
+<h2 id="up-h" style="margin: 0 0 20px; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #1F3D2B">Almost there</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<sc-for list="{{upcoming}}" as="b" hint-placeholder-count="3">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 112px; text-align: center">
+<svg width="88" height="88" viewBox="0 0 84 84" aria-hidden="true"><polygon points="42,4 76,23 76,61 42,80 8,61 8,23" fill="{{b.fill}}" stroke="{{b.stroke}}" stroke-width="3" stroke-dasharray="{{b.dash}}"></polygon><g transform="translate(24 24) scale(1.5)" fill="none" stroke="{{b.ink}}" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="{{b.icon}}"></path></g></svg>
+<div style="font-weight: 600; font-size: 14px">{{b.name}}</div>
+<div style="font-size: 12px; color: #4A524C">{{b.sub}}</div>
+</div>
+</sc-for>
+</div>
+</section>
+</div>
+
+<!-- This week -->
+<section aria-labelledby="wk-h" style="background: #FFFDF7; border: 1px solid #E3DCC8; border-radius: 16px; padding: 28px">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: flex-end; margin-bottom: 20px">
+<div>
+<h2 id="wk-h" style="margin: 0; font-family: Fraunces, Georgia, serif; font-size: 26px; font-weight: 700; color: #1F3D2B">This week</h2>
+<p style="margin: 4px 0 0; color: #4A524C; font-size: 15px">Weekly goal: 60 minutes · 42 of 60 done</p>
+</div>
+<button type="button" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 2px solid #1F3D2B; background: transparent; color: #1F3D2B; font: 600 14px 'Work Sans', system-ui, sans-serif; cursor: pointer">Change goal</button>
+</div>
+<div style="height: 10px; background: #E9E3D2; border-radius: 5px; overflow: hidden; margin-bottom: 24px"><div style="width: 70%; height: 100%; background: #A65A2A; border-radius: 5px"></div></div>
+<div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px; align-items: end; height: 150px; border-bottom: 2px solid #D5CDB6">
+<sc-for list="{{week}}" as="d" hint-placeholder-count="7">
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 6px; height: 100%">
+<span style="font-size: 13px; font-weight: 600">{{d.value}}</span>
+<div style="{{d.barStyle}}"></div>
+</div>
+</sc-for>
+</div>
+<div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px; margin-top: 8px">
+<sc-for list="{{week}}" as="d" hint-placeholder-count="7">
+<div style="{{d.labelStyle}}">{{d.label}}</div>
+</sc-for>
+</div>
+</section>
+
+<!-- Badge sections -->
+<sc-for list="{{sections}}" as="s" hint-placeholder-count="5">
+<section style="display: flex; flex-direction: column; gap: 16px; padding-top: 8px; border-top: 1px solid #E3DCC8">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px">
+<div>
+<h2 style="margin: 0; font-family: Fraunces, Georgia, serif; font-size: 24px; font-weight: 700; color: #1F3D2B">{{s.title}}</h2>
+<p style="margin: 4px 0 0; color: #4A524C; font-size: 15px">{{s.desc}}</p>
+</div>
+<span style="font-size: 14px; color: #4A524C">{{s.count}}</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px 8px">
+<sc-for list="{{s.badges}}" as="b" hint-placeholder-count="6">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 112px; text-align: center">
+<svg width="80" height="80" viewBox="0 0 84 84" aria-hidden="true"><polygon points="42,4 76,23 76,61 42,80 8,61 8,23" fill="{{b.fill}}" stroke="{{b.stroke}}" stroke-width="3" stroke-dasharray="{{b.dash}}"></polygon><g transform="translate(24 24) scale(1.5)" fill="none" stroke="{{b.ink}}" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="{{b.icon}}"></path></g></svg>
+<div style="{{b.nameStyle}}">{{b.name}}</div>
+<div style="font-size: 12px; color: #4A524C">{{b.sub}}</div>
+</div>
+</sc-for>
+</div>
+</section>
+</sc-for>
+
+<!-- Keys to explore -->
+<section aria-labelledby="ex-h" style="background: #FFFDF7; border: 1px solid #E3DCC8; border-radius: 16px; padding: 28px">
+<h2 id="ex-h" style="margin: 0 0 4px; font-family: Fraunces, Georgia, serif; font-size: 24px; font-weight: 700; color: #1F3D2B">Keep exploring</h2>
+<p style="margin: 0 0 20px; color: #4A524C; font-size: 15px">Start something new, or go back to a Key you've already earned.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="#" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #1E2420; border: 1px solid #D5CDB6; border-radius: 12px; padding: 12px 16px; min-height: 44px">
+<span style="width: 44px; height: 44px; box-sizing: border-box; border-radius: 50%; border: 2px dashed #8E968F; display: flex; align-items: center; justify-content: center; color: #6B736D"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17c2-2 4-2 6 0s4 2 6 0 4-2 6 0"></path><path d="M5 13h14l-2-4H7z"></path></svg></span>
+<span><span style="display: block; font-weight: 600">River Rafting</span><span style="font-size: 13px; color: #4A524C">New Key · Outdoors</span></span>
+</a>
+<a href="#" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #1E2420; border: 1px solid #D5CDB6; border-radius: 12px; padding: 12px 16px; min-height: 44px">
+<span style="width: 44px; height: 44px; box-sizing: border-box; border-radius: 50%; border: 2px dashed #8E968F; display: flex; align-items: center; justify-content: center; color: #6B736D"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5c3-1 6-1 8 1v14c-2-2-5-2-8-1z"></path><path d="M20 5c-3-1-6-1-8 1v14c2-2 5-2 8-1z"></path></svg></span>
+<span><span style="display: block; font-weight: 600">[Key in a new Group]</span><span style="font-size: 13px; color: #4A524C">New Group · counts toward Explorer</span></span>
+</a>
+<a href="#" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #1E2420; border: 1px solid #D5CDB6; border-radius: 12px; padding: 12px 16px; min-height: 44px">
+<span style="width: 44px; height: 44px; box-sizing: border-box; border-radius: 50%; background: #1F3D2B; border: 3px solid #C9A227; display: flex; align-items: center; justify-content: center; color: #F6F1E4"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20l7-11 4 6 3-4 6 9z"></path></svg></span>
+<span><span style="display: block; font-weight: 600">Hiking</span><span style="font-size: 13px; color: #4A524C">Revisit · earned Apr 12</span></span>
+</a>
+<a href="#" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #1E2420; border: 1px solid #D5CDB6; border-radius: 12px; padding: 12px 16px; min-height: 44px">
+<span style="width: 44px; height: 44px; box-sizing: border-box; border-radius: 50%; background: #1F3D2B; border: 3px solid #C9A227; display: flex; align-items: center; justify-content: center; color: #F6F1E4"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20L12 4l9 16z"></path><path d="M1 20h22"></path></svg></span>
+<span><span style="display: block; font-weight: 600">Camping</span><span style="font-size: 13px; color: #4A524C">Revisit · earned Jun 8</span></span>
+</a>
+</div>
+</section>
+
+</main>
+</div>
+</template>
+<script>
+
+class DCLogic { constructor(props){ this.props = props || {}; this.state = {}; } setState(patch){ Object.assign(this.state, patch); render(); } }
+class Component extends DCLogic {
+  renderVals() {
+    var ICON = {
+      clock: 'M12 21a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM12 9v4l3 2M9 2h6',
+      flame: 'M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-6 1-9z',
+      week: 'M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zM3 10h18M8 3v4M16 3v4',
+      month: 'M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zM3 10h18M8 3v4M16 3v4M7 14h4M7 17h7',
+      target: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM12 12h.01',
+      compass: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM15.5 8.5l-2 5-5 2 2-5z',
+      back: 'M4 12a8 8 0 1 0 2.3-5.7M4 4v4h4'
+    };
+    function b(name, sub, icon, earned) {
+      return {
+        name: name, sub: sub, icon: ICON[icon],
+        fill: earned ? '#A65A2A' : 'none',
+        stroke: earned ? '#7A3F1A' : '#8E968F',
+        dash: earned ? 'none' : '5 4',
+        ink: earned ? '#FBF3E6' : '#7A827C',
+        nameStyle: 'font-weight: 600; font-size: 14px; color: ' + (earned ? '#1E2420' : '#4A524C')
+      };
+    }
+    var sections = [
+      { title: 'Learning time', desc: 'Total time spent working through lessons this year.', count: '6 of 8 earned', badges: [
+        b('First Steps', '5 min', 'clock', true), b('Settling In', '30 min', 'clock', true), b('Committed', '2 hrs', 'clock', true),
+        b('Steady Climber', '5 hrs', 'clock', true), b('Trail Regular', '10 hrs', 'clock', true), b('Seasoned', '15 hrs', 'clock', true),
+        b('Summit Seeker', '25 hrs · 18h 40m so far', 'clock', false), b('Mountain Mover', '50 hrs', 'clock', false)
+      ]},
+      { title: 'Learning streaks', desc: 'Learn on back-to-back days, weeks, or months.', count: '6 of 12 earned', badges: [
+        b('2 Days in a Row', 'Days', 'flame', true), b('5 Days in a Row', 'Days', 'flame', true), b('10 Days in a Row', 'Best so far: 9', 'flame', false), b('20 Days in a Row', 'Days', 'flame', false),
+        b('2 Weeks in a Row', 'Weeks', 'week', true), b('4 Weeks in a Row', 'Weeks', 'week', true), b('8 Weeks in a Row', 'Now: 3', 'week', false), b('12 Weeks in a Row', 'Weeks', 'week', false),
+        b('2 Months in a Row', 'Months', 'month', true), b('3 Months in a Row', 'Months', 'month', true), b('6 Months in a Row', 'Now: 5', 'month', false), b('12 Months in a Row', 'Months', 'month', false)
+      ]},
+      { title: 'Weekly goals', desc: 'Set a weekly time goal and hit it.', count: '2 of 3 earned', badges: [
+        b('Goal Met 1x', 'Weekly goal', 'target', true), b('Goal Met 5x', 'Weekly goal', 'target', true), b('Goal Met 15x', '11 of 15', 'target', false)
+      ]},
+      { title: 'Expand your exploration', desc: 'Try new Keys and Groups, and come back to the ones you know.', count: '2 of 5 earned', badges: [
+        b('Trailblazer', 'Start a Key in a new Group', 'compass', true), b('Explorer', 'Keys in 3 Groups · 2 of 3', 'compass', false),
+        b('Well Rounded', 'A Key in every Group', 'compass', false), b('Second Look', 'Revisit an earned Key', 'back', true),
+        b('Return Trip', 'Revisit 3 earned Keys · 1 of 3', 'back', false)
+      ]}
+    ];
+    var recent = [
+      b('Seasoned', '15 hrs · Oct 2', 'clock', true),
+      b('Goal Met 5x', 'Sep 28', 'target', true),
+      b('Second Look', 'Sep 14', 'back', true)
+    ];
+    var upcoming = [
+      b('10 Days in a Row', '6 more days', 'flame', false),
+      b('6 Months in a Row', 'Learn in November', 'month', false),
+      b('Summit Seeker', '6h 20m to go', 'clock', false)
+    ];
+    var days = [['Sun',10],['Mon',12],['Tue',15],['Wed',5],['Thu',null],['Fri',null],['Sat',null]];
+    var today = 3;
+    var week = days.map(function (d, i) {
+      var v = d[1];
+      var barStyle = v === null
+        ? 'width: 60%; max-width: 48px; height: 6px; border: 2px dashed #B8C2BA; border-bottom: none; border-radius: 6px 6px 0 0; box-sizing: border-box'
+        : 'width: 60%; max-width: 48px; height: ' + Math.round(v / 15 * 100) + 'px; background: ' + (i === today ? '#A65A2A' : '#1F3D2B') + '; border-radius: 6px 6px 0 0';
+      return {
+        label: i === today ? d[0] + ' · today' : d[0],
+        value: v === null ? '' : v + 'm',
+        barStyle: barStyle,
+        labelStyle: 'text-align: center; font-size: 13px; ' + (i === today ? 'font-weight: 700; color: #1F3D2B' : 'color: #4A524C')
+      };
+    });
+    return { sections: sections, recent: recent, upcoming: upcoming, week: week };
+  }
+}
+const component = new Component({});
+const lookup = (scope, path) => path.trim().split(".").reduce((v, k) => v == null ? v : v[k], scope);
+const fill = (text, scope) => text.replace(/\{\{([^}]+)\}\}/g, (_, p) => { const v = lookup(scope, p); return v == null ? "" : String(v); });
+function walk(node, scope, parent) {
+  if (node.nodeType === Node.TEXT_NODE) { parent.appendChild(document.createTextNode(fill(node.nodeValue, scope))); return; }
+  if (node.nodeType !== Node.ELEMENT_NODE) return;
+  const tag = node.localName;
+  if (tag === "sc-for") {
+    const list = lookup(scope, node.getAttribute("list").replace(/[{}]/g, "")) || [];
+    const as = node.getAttribute("as");
+    list.forEach((item, index) => node.childNodes.forEach(child => walk(child, { ...scope, [as]: item, [as + "Index"]: index }, parent)));
+    return;
+  }
+  if (tag === "sc-if") {
+    if (lookup(scope, node.getAttribute("value").replace(/[{}]/g, ""))) node.childNodes.forEach(child => walk(child, scope, parent));
+    return;
+  }
+  const el = node.namespaceURI === "http://www.w3.org/2000/svg" ? document.createElementNS(node.namespaceURI, tag) : document.createElement(tag);
+  for (const attr of node.attributes) {
+    if (attr.name === "onclick") { const fn = lookup(scope, attr.value.replace(/[{}]/g, "")); if (typeof fn === "function") el.addEventListener("click", fn); continue; }
+    el.setAttribute(attr.name, fill(attr.value, scope));
+  }
+  (tag === "template" ? node.content : node).childNodes.forEach(child => walk(child, scope, el));
+  parent.appendChild(el);
+}
+function render() {
+  const root = document.getElementById("root");
+  const scroll = [window.scrollX, window.scrollY];
+  const vals = component.renderVals();
+  const frag = document.createDocumentFragment();
+  document.getElementById("artboard").content.childNodes.forEach(child => walk(child, vals, frag));
+  root.replaceChildren(frag);
+  window.scrollTo(...scroll);
+}
+render();
+</script>
+</body>
+</html>

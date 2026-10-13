@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Progress page — Covenant Youth mockup</title>
+<!-- Standalone mockup exported from the "Trophy Case Mockup" design canvas.
+     Fictional sample data only; not connected to accounts or the wireframe. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F6F1E4}
+a{color:#1F3D2B}a:hover{color:#14291D}
+button:focus-visible,a:focus-visible{outline:3px solid #C9A227;outline-offset:2px}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<template id="artboard">
+<div style="background: #F6F1E4; color: #1E2420; font-family: 'Work Sans', system-ui, sans-serif; font-size: 16px; line-height: 1.5; min-height: 100vh; padding-bottom: 64px">
+
+<!-- Profile header -->
+<header style="background: #1F3D2B; color: #F6F1E4; padding: 40px 24px 36px">
+<div style="max-width: 1160px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 32px; align-items: center; justify-content: space-between">
+<div style="display: flex; gap: 20px; align-items: center">
+<div style="width: 76px; height: 76px; border-radius: 50%; border: 3px solid #C9A227; display: flex; align-items: center; justify-content: center; font-family: Fraunces, Georgia, serif; font-size: 28px; font-weight: 700; color: #F6F1E4; flex-shrink: 0">AR</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #E6CF7A">My Trophy Case</div>
+<h1 style="margin: 0; font-family: Fraunces, Georgia, serif; font-size: 40px; font-weight: 700; line-height: 1.1">Alex R.</h1>
+<div style="font-size: 15px; color: #D9DED6">Sample Ward · Youth · Sample data</div>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<div style="background: #14291D; border-radius: 12px; padding: 14px 20px; min-width: 120px">
+<div style="font-family: Fraunces, Georgia, serif; font-size: 32px; font-weight: 700; color: #E6CF7A; line-height: 1">6</div>
+<div style="font-size: 14px; color: #D9DED6; margin-top: 6px">Keys earned</div>
+</div>
+<div style="background: #14291D; border-radius: 12px; padding: 14px 20px; min-width: 120px">
+<div style="font-family: Fraunces, Georgia, serif; font-size: 32px; font-weight: 700; color: #F6F1E4; line-height: 1">3</div>
+<div style="font-size: 14px; color: #D9DED6; margin-top: 6px">In progress</div>
+</div>
+<div style="background: #14291D; border-radius: 12px; padding: 14px 20px; min-width: 120px">
+<div style="font-family: Fraunces, Georgia, serif; font-size: 32px; font-weight: 700; color: #F6F1E4; line-height: 1">39</div>
+<div style="font-size: 14px; color: #D9DED6; margin-top: 6px">Lessons in 2026</div>
+</div>
+</div>
+</div>
+</header>
+
+<main style="max-width: 1160px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 40px">
+
+<div style="display: flex; align-items: center; gap: 8px; margin-top: 20px; font-size: 14px; color: #4A524C">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>
+<span>Your dates and timeline are visible only to you. Ward members see the Keys you've earned.</span>
+</div>
+
+<!-- Recently earned + Up next -->
+<div style="display: flex; flex-wrap: wrap; gap: 24px; margin-top: -16px">
+
+<section aria-labelledby="recent-h" style="flex: 1 1 480px; min-width: 0; background: #FFFDF7; border: 1px solid #E3DCC8; border-radius: 16px; padding: 28px">
+<h2 id="recent-h" style="margin: 0 0 20px; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #1F3D2B">Recently earned</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 20px">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 8px; width: 120px; text-align: center">
+<div style="width: 92px; height: 92px; box-sizing: border-box; border-radius: 50%; background: #1F3D2B; border: 4px solid #C9A227; box-shadow: inset 0 0 0 3px #1F3D2B, inset 0 0 0 5px #E6CF7A; display: flex; align-items: center; justify-content: center; color: #F6F1E4">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13l12-6 2 4-12 6z"></path><path d="M10 15l-3 6M12 14l3 7"></path><path d="M19 3l.5 1.5L21 5l-1.5.5L19 7l-.5-1.5L17 5l1.5-.5z"></path></svg>
+</div>
+<div style="font-weight: 600; font-size: 15px">Astronomy</div>
+<div style="font-size: 13px; color: #4A524C">Earned Oct 3</div>
+</div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 8px; width: 120px; text-align: center">
+<div style="width: 92px; height: 92px; box-sizing: border-box; border-radius: 50%; background: #1F3D2B; border: 4px solid #C9A227; box-shadow: inset 0 0 0 3px #1F3D2B, inset 0 0 0 5px #E6CF7A; display: flex; align-items: center; justify-content: center; color: #F6F1E4">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14c3 0 5-2 6-5 1-2 3-3 5-3 2 0 3 1 3 2l2 1-2 1c0 4-3 7-8 7H6l-2 2z"></path><circle cx="16" cy="8" r="0.6"></circle></svg>
+</div>
+<div style="font-weight: 600; font-size: 15px">Bird Watching</div>
+<div style="font-size: 13px; color: #4A524C">Earned Jul 19</div>
+</div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 8px; width: 120px; text-align: center">
+<div style="width: 92px; height: 92px; box-sizing: border-box; border-radius: 50%; background: #1F3D2B; border: 4px solid #C9A227; box-shadow: inset 0 0 0 3px #1F3D2B, inset 0 0 0 5px #E6CF7A; display: flex; align-items: center; justify-content: center; color: #F6F1E4">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12c3-4 9-5 13 0-4 5-10 4-13 0z"></path><path d="M16 12l5-3v6z"></path><circle cx="7" cy="11" r="0.7"></circle></svg>
+</div>
+<div style="font-weight: 600; font-size: 15px">Fishing</div>
+<div style="font-size: 13px; color: #4A524C">Earned Jun 28</div>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="next-h" style="flex: 1 1 480px; min-width: 0; background: #FFFDF7; border: 1px solid #E3DCC8; border-radius: 16px; padding: 28px">
+<h2 id="next-h" style="margin: 0 0 20px; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #1F3D2B">Up next</h2>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<a href="#" style="display: flex; gap: 16px; align-items: center; text-decoration: none; color: #1E2420; padding: 8px; margin: -8px; border-radius: 12px">
+<div style="width: 60px; height: 60px; box-sizing: border-box; border-radius: 50%; border: 3px solid #B8C2BA; background: #FFFDF7; display: flex; align-items: center; justify-content: center; color: #1F3D2B; flex-shrink: 0">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 15c4 2 16 2 20 0"></path><path d="M5 19L19 5"></path><path d="M17 3l4 4"></path><path d="M3 17l4 4"></path></svg>
+</div>
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; justify-content: space-between; gap: 12px"><span style="font-weight: 600">Kayaking</span><span style="font-size: 14px; color: #4A524C">3 of 4 lessons</span></div>
+<div style="height: 8px; background: #E9E3D2; border-radius: 4px; overflow: hidden"><div style="width: 75%; height: 100%; background: #1F3D2B; border-radius: 4px"></div></div>
+</div>
+</a>
+<a href="#" style="display: flex; gap: 16px; align-items: center; text-decoration: none; color: #1E2420; padding: 8px; margin: -8px; border-radius: 12px">
+<div style="width: 60px; height: 60px; box-sizing: border-box; border-radius: 50%; border: 3px solid #B8C2BA; background: #FFFDF7; display: flex; align-items: center; justify-content: center; color: #1F3D2B; flex-shrink: 0">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5c3-1 6-1 8 1v14c-2-2-5-2-8-1z"></path><path d="M20 5c-3-1-6-1-8 1v14c2-2 5-2 8-1z"></path></svg>
+</div>
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; justify-content: space-between; gap: 12px"><span style="font-weight: 600">[Gospel Key B]</span><span style="font-size: 14px; color: #4A524C">4 of 8 lessons</span></div>
+<div style="height: 8px; background: #E9E3D2; border-radius: 4px; overflow: hidden"><div style="width: 50%; height: 100%; background: #1F3D2B; border-radius: 4px"></div></div>
+</div>
+</a>
+<a href="#" style="display: flex; gap: 16px; align-items: center; text-decoration: none; color: #1E2420; padding: 8px; margin: -8px; border-radius: 12px">
+<div style="width: 60px; height: 60px; box-sizing: border-box; border-radius: 50%; border: 3px solid #B8C2BA; background: #FFFDF7; display: flex; align-items: center; justify-content: center; color: #1F3D2B; flex-shrink: 0">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="16" r="3.5"></circle><circle cx="18" cy="16" r="3.5"></circle><path d="M6 16l4-7h5l3 7"></path><path d="M10 9l3 7"></path><path d="M14 6h2"></path></svg>
+</div>
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; justify-content: space-between; gap: 12px"><span style="font-weight: 600">Mountain Biking</span><span style="font-size: 14px; color: #4A524C">2 of 5 lessons</span></div>
+<div style="height: 8px; background: #E9E3D2; border-radius: 4px; overflow: hidden"><div style="width: 40%; height: 100%; background: #1F3D2B; border-radius: 4px"></div></div>
+</div>
+</a>
+</div>
+</section>
+</div>
+
+<!-- Your year timeline -->
+<section aria-labelledby="year-h" style="background: #FFFDF7; border: 1px solid #E3DCC8; border-radius: 16px; padding: 28px">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: flex-end; margin-bottom: 24px">
+<div>
+<h2 id="year-h" style="margin: 0; font-family: Fraunces, Georgia, serif; font-size: 28px; font-weight: 700; color: #1F3D2B">Your 2026</h2>
+<p style="margin: 4px 0 0; color: #4A524C; font-size: 15px">{{summaryLine}}</p>
+</div>
+<div role="group" aria-label="Show" style="display: flex; gap: 0; border: 2px solid #1F3D2B; border-radius: 999px; padding: 3px">
+<button type="button" aria-pressed="{{keysPressed}}" onClick="{{showKeys}}" style="{{keysBtnStyle}}">Keys earned</button>
+<button type="button" aria-pressed="{{lessonsPressed}}" onClick="{{showLessons}}" style="{{lessonsBtnStyle}}">Lessons completed</button>
+</div>
+</div>
+
+<div style="overflow-x: auto">
+<div style="display: grid; grid-template-columns: repeat(12, minmax(48px, 1fr)); gap: 10px; align-items: end; min-width: 640px; height: 220px; border-bottom: 2px solid #D5CDB6; padding-bottom: 0">
+<sc-for list="{{months}}" as="m" hint-placeholder-count="12">
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 6px; height: 100%">
+<span style="font-size: 14px; font-weight: 600; color: #1E2420">{{m.valueLabel}}</span>
+<div style="{{m.barStyle}}"></div>
+</div>
+</sc-for>
+</div>
+<div style="display: grid; grid-template-columns: repeat(12, minmax(48px, 1fr)); gap: 10px; min-width: 640px; margin-top: 8px">
+<sc-for list="{{months}}" as="m" hint-placeholder-count="12">
+<div style="{{m.labelStyle}}">{{m.label}}</div>
+</sc-for>
+</div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px">
+<div style="flex: 1 1 200px; background: #F6F1E4; border-radius: 12px; padding: 16px 20px">
+<div style="font-size: 13px; color: #4A524C">Keys this year</div>
+<div style="font-family: Fraunces, Georgia, serif; font-size: 26px; font-weight: 700; color: #1F3D2B">6</div>
+</div>
+<div style="flex: 1 1 200px; background: #F6F1E4; border-radius: 12px; padding: 16px 20px">
+<div style="font-size: 13px; color: #4A524C">Lessons this year</div>
+<div style="font-family: Fraunces, Georgia, serif; font-size: 26px; font-weight: 700; color: #1F3D2B">39</div>
+</div>
+<div style="flex: 1 1 200px; background: #F6F1E4; border-radius: 12px; padding: 16px 20px">
+<div style="font-size: 13px; color: #4A524C">Most active month</div>
+<div style="font-family: Fraunces, Georgia, serif; font-size: 26px; font-weight: 700; color: #1F3D2B">June</div>
+</div>
+<div style="flex: 1 1 200px; background: #F6F1E4; border-radius: 12px; padding: 16px 20px">
+<div style="font-size: 13px; color: #4A524C">First Key of the year</div>
+<div style="font-family: Fraunces, Georgia, serif; font-size: 26px; font-weight: 700; color: #1F3D2B">[Gospel Key A]</div>
+</div>
+</div>
+</section>
+
+<!-- All Keys by Group -->
+<section aria-labelledby="all-h" style="display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px">
+<h2 id="all-h" style="margin: 0; font-family: Fraunces, Georgia, serif; font-size: 28px; font-weight: 700; color: #1F3D2B">All Keys</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; font-size: 14px; color: #4A524C">
+<span style="display: flex; align-items: center; gap: 8px"><span style="width: 16px; height: 16px; border-radius: 50%; background: #1F3D2B; border: 2px solid #C9A227"></span>Earned</span>
+<span style="display: flex; align-items: center; gap: 8px"><span style="width: 16px; height: 16px; box-sizing: border-box; border-radius: 50%; border: 3px solid #B8C2BA"></span>In progress</span>
+<span style="display: flex; align-items: center; gap: 8px"><span style="width: 16px; height: 16px; box-sizing: border-box; border-radius: 50%; border: 2px dashed #8E968F"></span>Not started</span>
+</div>
+</div>
+
+<!-- Group: Outdoors -->
+<div style="background: #FFFDF7; border: 1px solid #E3DCC8; border-radius: 16px; padding: 28px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 20px">
+<h3 style="margin: 0; font-size: 20px; font-weight: 600; color: #1E2420">Outdoors</h3>
+<span style="font-size: 14px; color: #4A524C">4 of 9 Keys earned</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px 12px">
+
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 112px; text-align: center">
+<div style="width: 84px; height: 84px; box-sizing: border-box; border-radius: 50%; background: #1F3D2B; border: 4px solid #C9A227; box-shadow: inset 0 0 0 3px #1F3D2B, inset 0 0 0 5px #E6CF7A; display: flex; align-items: center; justify-content: center; color: #F6F1E4"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14c3 0 5-2 6-5 1-2 3-3 5-3 2 0 3 1 3 2l2 1-2 1c0 4-3 7-8 7H6l-2 2z"></path><circle cx="16" cy="8" r="0.6"></circle></svg></div>
+<div style="font-weight: 600; font-size: 14px">Bird Watching</div>
+<div style="font-size: 12px; color: #4A524C">Earned</div>
+</div>
+
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 112px; text-align: center">
+<div style="width: 84px; height: 84px; box-sizing: border-box; border-radius: 50%; border: 3px solid #B8C2BA; background: #FFFDF7; display: flex; align-items: center; justify-content: center; color: #1F3D2B"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="16" r="3.5"></circle><circle cx="18" cy="16" r="3.5"></circle><path d="M6 16l4-7h5l3 7"></path><path d="M10 9l3 7"></path><path d="M14 6h2"></path></svg></div>
+<div style="font-weight: 600; font-size: 14px">Mountain Biking</div>
+<div style="font-size: 12px; color: #4A524C">In progress · 2/5</div>
+</div>
+
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 112px; text-align: center">
+<div style="width: 84px; height: 84px; box-sizing: border-box; border-radius: 50%; border: 3px solid #B8C2BA; background: #FFFDF7; display: flex; align-items: center; justify-content: center; color: #1F3D2B"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 15c4 2 16 2 20 0"></path><path d="M5 19L19 5"></path><path d="M17 3l4 4"></path><path d="M3 17l4 4"></path></svg></div>
+<div style="font-weight: 600; font-size: 14px">Kayaking</div>
+<div style="font-size: 12px; color: #4A524C">In progress · 3/4</div>
+</div>
+
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 112px; text-align: center">
+<div style="width: 84px; height: 84px; box-sizing: border-box; border-radius: 50%; border: 2px dashed #8E968F; display: flex; align-items: center; justify-content: center; color: #6B736D"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17c2-2 4-2 6 0s4 2 6 0 4-2 6 0"></path><path d="M2 21c2-2 4-2 6 0s4 2 6 0 4-2 6 0"></path><path d="M5 13h14l-2-4H7z"></path></svg></div>
+<div style="font-weight: 600; font-size: 14px; color: #4A524C">River Rafting</div>
+<div style="font-size: 12px; color: #4A524C">Not started</div>
+</div>
+
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 112px; text-align: center">
+<div style="width: 84px; height: 84px; box-sizing: border-box; border-radius: 50%; background: #1F3D2B; border: 4px solid #C9A227; box-shadow: inset 0 0 0 3px #1F3D2B, inset 0 0 0 5px #E6CF7A; display: flex; align-items: center; justify-content: center; color: #F6F1E4"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20L12 4l9 16z"></path><path d="M9 20l3-6 3 6"></path><path d="M1 20h22"></path></svg></div>
+<div style="font-weight: 600; font-size: 14px">Camping</div>
+<div style="font-size: 12px; color: #4A524C">Earned</div>
+</div>
+
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 112px; text-align: center">
+<div style="width: 84px; height: 84px; box-sizing: border-box; border-radius: 50%; background: #1F3D2B; border: 4px solid #C9A227; box-shadow: inset 0 0 0 3px #1F3D2B, inset 0 0 0 5px #E6CF7A; display: flex; align-items: center; justify-content: center; color: #F6F1E4"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20l7-11 4 6 3-4 6 9z"></path><path d="M7.5 11.5l1.5 1 1.5-1"></path></svg></div>
+<div style="font-weight: 600; font-size: 14px">Hiking</div>
+<div style="font-size: 12px; color: #4A524C">Earned</div>
+</div>
+
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 112px; text-align: center">
+<div style="width: 84px; height: 84px; box-sizing: border-box; border-radius: 50%; background: #1F3D2B; border: 4px solid #C9A227; box-shadow: inset 0 0 0 3px #1F3D2B, inset 0 0 0 5px #E6CF7A; display: flex; align-items: center; justify-content: center; color: #F6F1E4"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12c3-4 9-5 13 0-4 5-10 4-13 0z"></path><path d="M16 12l5-3v6z"></path><circle cx="7" cy="11" r="0.7"></circle></svg></div>
+<div style="font-weight: 600; font-size: 14px">Fishing</div>
+<div style="font-size: 12px; color: #4A524C">Earned</div>
+</div>
+
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 112px; text-align: center">
+<div style="width: 84px; height: 84px; box-sizing: border-box; border-radius: 50%; background: #1F3D2B; border: 4px solid #C9A227; box-shadow: inset 0 0 0 3px #1F3D2B, inset 0 0 0 5px #E6CF7A; display: flex; align-items: center; justify-content: center; color: #F6F1E4"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13l12-6 2 4-12 6z"></path><path d="M10 15l-3 6M12 14l3 7"></path><path d="M19 3l.5 1.5L21 5l-1.5.5L19 7l-.5-1.5L17 5l1.5-.5z"></path></svg></div>
+<div style="font-weight: 600; font-size: 14px">Astronomy</div>
+<div style="font-size: 12px; color: #4A524C">Earned</div>
+</div>
+
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 112px; text-align: center">
+<div style="width: 84px; height: 84px; box-sizing: border-box; border-radius: 50%; border: 2px dashed #8E968F; display: flex; align-items: center; justify-content: center; color: #6B736D"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 20v-8a5 5 0 0 1 10 0v8"></path><path d="M5 20h4M15 20h4"></path></svg></div>
+<div style="font-weight: 600; font-size: 14px; color: #4A524C">Horseback Riding</div>
+<div style="font-size: 12px; color: #4A524C">Not started</div>
+</div>
+
+</div>
+</div>
+
+<!-- Group: Gospel Study (placeholder) -->
+<div style="background: #FFFDF7; border: 1px solid #E3DCC8; border-radius: 16px; padding: 28px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 20px">
+<h3 style="margin: 0; font-size: 20px; font-weight: 600; color: #1E2420">[Gospel Study Group]</h3>
+<span style="font-size: 14px; color: #4A524C">2 of 4 Keys earned</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px 12px">
+
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 112px; text-align: center">
+<div style="width: 84px; height: 84px; box-sizing: border-box; border-radius: 50%; background: #1F3D2B; border: 4px solid #C9A227; box-shadow: inset 0 0 0 3px #1F3D2B, inset 0 0 0 5px #E6CF7A; display: flex; align-items: center; justify-content: center; color: #F6F1E4"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5c3-1 6-1 8 1v14c-2-2-5-2-8-1z"></path><path d="M20 5c-3-1-6-1-8 1v14c2-2 5-2 8-1z"></path></svg></div>
+<div style="font-weight: 600; font-size: 14px">[Gospel Key A]</div>
+<div style="font-size: 12px; color: #4A524C">Earned</div>
+</div>
+
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 112px; text-align: center">
+<div style="width: 84px; height: 84px; box-sizing: border-box; border-radius: 50%; border: 3px solid #B8C2BA; background: #FFFDF7; display: flex; align-items: center; justify-content: center; color: #1F3D2B"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5c3-1 6-1 8 1v14c-2-2-5-2-8-1z"></path><path d="M20 5c-3-1-6-1-8 1v14c2-2 5-2 8-1z"></path></svg></div>
+<div style="font-weight: 600; font-size: 14px">[Gospel Key B]</div>
+<div style="font-size: 12px; color: #4A524C">In progress · 4/8</div>
+</div>
+
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 112px; text-align: center">
+<div style="width: 84px; height: 84px; box-sizing: border-box; border-radius: 50%; background: #1F3D2B; border: 4px solid #C9A227; box-shadow: inset 0 0 0 3px #1F3D2B, inset 0 0 0 5px #E6CF7A; display: flex; align-items: center; justify-content: center; color: #F6F1E4"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5c3-1 6-1 8 1v14c-2-2-5-2-8-1z"></path><path d="M20 5c-3-1-6-1-8 1v14c2-2 5-2 8-1z"></path></svg></div>
+<div style="font-weight: 600; font-size: 14px">[Gospel Key C]</div>
+<div style="font-size: 12px; color: #4A524C">Earned</div>
+</div>
+
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 112px; text-align: center">
+<div style="width: 84px; height: 84px; box-sizing: border-box; border-radius: 50%; border: 2px dashed #8E968F; display: flex; align-items: center; justify-content: center; color: #6B736D"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5c3-1 6-1 8 1v14c-2-2-5-2-8-1z"></path><path d="M20 5c-3-1-6-1-8 1v14c2-2 5-2 8-1z"></path></svg></div>
+<div style="font-weight: 600; font-size: 14px; color: #4A524C">[Gospel Key D]</div>
+<div style="font-size: 12px; color: #4A524C">Not started</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Milestones (distinct from Keys) -->
+<section aria-labelledby="ms-h" style="display: flex; flex-direction: column; gap: 16px">
+<div>
+<h2 id="ms-h" style="margin: 0; font-family: Fraunces, Georgia, serif; font-size: 28px; font-weight: 700; color: #1F3D2B">Milestones</h2>
+<p style="margin: 4px 0 0; color: #4A524C; font-size: 15px">Small markers along the way. Keys are the real achievement.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<div style="display: flex; align-items: center; gap: 12px; background: #FFFDF7; border: 1px solid #E3DCC8; border-radius: 10px; padding: 12px 16px">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>
+<div><div style="font-weight: 600; font-size: 15px">First Key earned</div><div style="font-size: 13px; color: #4A524C">Feb 2026</div></div>
+</div>
+<div style="display: flex; align-items: center; gap: 12px; background: #FFFDF7; border: 1px solid #E3DCC8; border-radius: 10px; padding: 12px 16px">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>
+<div><div style="font-weight: 600; font-size: 15px">5 Keys in a year</div><div style="font-size: 13px; color: #4A524C">Jul 2026</div></div>
+</div>
+<div style="display: flex; align-items: center; gap: 12px; background: #FFFDF7; border: 1px solid #E3DCC8; border-radius: 10px; padding: 12px 16px">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>
+<div><div style="font-weight: 600; font-size: 15px">Lessons 3 months in a row</div><div style="font-size: 13px; color: #4A524C">Jun 2026</div></div>
+</div>
+<div style="display: flex; align-items: center; gap: 12px; background: transparent; border: 1px dashed #8E968F; border-radius: 10px; padding: 12px 16px">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B736D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle></svg>
+<div><div style="font-weight: 600; font-size: 15px; color: #4A524C">First Group complete</div><div style="font-size: 13px; color: #4A524C">Not yet</div></div>
+</div>
+</div>
+</section>
+
+</main>
+</div>
+</template>
+<script>
+
+class DCLogic { constructor(props){ this.props = props || {}; this.state = {}; } setState(patch){ Object.assign(this.state, patch); render(); } }
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { metric: 'keys' };
+  }
+  renderVals() {
+    const metric = this.state.metric;
+    const labels = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const keys = [0,1,0,1,0,2,1,0,0,1,null,null];
+    const lessons = [3,5,2,6,1,8,4,2,3,5,null,null];
+    const data = metric === 'keys' ? keys : lessons;
+    const max = Math.max.apply(null, data.filter(function (v) { return v !== null; }));
+    const current = 9;
+    const months = labels.map(function (label, i) {
+      const v = data[i];
+      let barStyle;
+      if (v === null) {
+        barStyle = 'width: 70%; max-width: 44px; height: 6px; border: 2px dashed #B8C2BA; border-bottom: none; border-radius: 6px 6px 0 0; box-sizing: border-box';
+      } else {
+        const h = v === 0 ? 4 : Math.round((v / max) * 150);
+        const bg = i === current ? '#C9A227' : '#1F3D2B';
+        barStyle = 'width: 70%; max-width: 44px; height: ' + h + 'px; background: ' + (v === 0 ? '#D5CDB6' : bg) + '; border-radius: 6px 6px 0 0';
+      }
+      return {
+        label: label,
+        valueLabel: v === null ? '' : String(v),
+        barStyle: barStyle,
+        labelStyle: 'text-align: center; font-size: 13px; ' + (i === current ? 'font-weight: 700; color: #1F3D2B' : 'color: #4A524C')
+      };
+    });
+    const on = 'border: none; border-radius: 999px; padding: 10px 18px; min-height: 44px; font: 600 14px "Work Sans", system-ui, sans-serif; cursor: pointer; background: #1F3D2B; color: #F6F1E4';
+    const off = 'border: none; border-radius: 999px; padding: 10px 18px; min-height: 44px; font: 600 14px "Work Sans", system-ui, sans-serif; cursor: pointer; background: transparent; color: #1F3D2B';
+    const self = this;
+    return {
+      months: months,
+      keysPressed: metric === 'keys' ? 'true' : 'false',
+      lessonsPressed: metric === 'lessons' ? 'true' : 'false',
+      keysBtnStyle: metric === 'keys' ? on : off,
+      lessonsBtnStyle: metric === 'lessons' ? on : off,
+      showKeys: function () { self.setState({ metric: 'keys' }); },
+      showLessons: function () { self.setState({ metric: 'lessons' }); },
+      summaryLine: metric === 'keys' ? 'Keys earned each month. October so far is highlighted.' : 'Lessons completed each month. October so far is highlighted.'
+    };
+  }
+}
+const component = new Component({});
+const lookup = (scope, path) => path.trim().split(".").reduce((v, k) => v == null ? v : v[k], scope);
+const fill = (text, scope) => text.replace(/\{\{([^}]+)\}\}/g, (_, p) => { const v = lookup(scope, p); return v == null ? "" : String(v); });
+function walk(node, scope, parent) {
+  if (node.nodeType === Node.TEXT_NODE) { parent.appendChild(document.createTextNode(fill(node.nodeValue, scope))); return; }
+  if (node.nodeType !== Node.ELEMENT_NODE) return;
+  const tag = node.localName;
+  if (tag === "sc-for") {
+    const list = lookup(scope, node.getAttribute("list").replace(/[{}]/g, "")) || [];
+    const as = node.getAttribute("as");
+    list.forEach((item, index) => node.childNodes.forEach(child => walk(child, { ...scope, [as]: item, [as + "Index"]: index }, parent)));
+    return;
+  }
+  if (tag === "sc-if") {
+    if (lookup(scope, node.getAttribute("value").replace(/[{}]/g, ""))) node.childNodes.forEach(child => walk(child, scope, parent));
+    return;
+  }
+  const el = node.namespaceURI === "http://www.w3.org/2000/svg" ? document.createElementNS(node.namespaceURI, tag) : document.createElement(tag);
+  for (const attr of node.attributes) {
+    if (attr.name === "onclick") { const fn = lookup(scope, attr.value.replace(/[{}]/g, "")); if (typeof fn === "function") el.addEventListener("click", fn); continue; }
+    el.setAttribute(attr.name, fill(attr.value, scope));
+  }
+  (tag === "template" ? node.content : node).childNodes.forEach(child => walk(child, scope, el));
+  parent.appendChild(el);
+}
+function render() {
+  const root = document.getElementById("root");
+  const scroll = [window.scrollX, window.scrollY];
+  const vals = component.renderVals();
+  const frag = document.createDocumentFragment();
+  document.getElementById("artboard").content.childNodes.forEach(child => walk(child, vals, frag));
+  root.replaceChildren(frag);
+  window.scrollTo(...scroll);
+}
+render();
+</script>
+</body>
+</html>
