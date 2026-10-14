@@ -142,7 +142,7 @@
 - **Decision:** Add a `#/bishopric-reporting` route and navigation link for signed-in, active Bishopric accounts. Embed the existing standalone mock in a same-origin frame, and restrict its HTML file on the server using the same access rule.
 - **Rationale:** Reusing the approved page preserves its current layout and interactions while giving Bishopric reviewers a place to reach it from the wireframe.
 - **Alternatives considered:** Rebuilding the charts inside the application would duplicate the mock and risk changing the approved presentation before reporting requirements are settled.
-- **Consequences:** All displayed figures are fictional and do not reflect the signed-in ward or account records. A later reporting implementation needs defined data collection, ward scoping, and validation of the proposed measures.
+- **Consequences:** All displayed figures are fictional and do not reflect the signed-in ward or account records. A later reporting implementation needs defined data collection, ward scoping, and validation of the proposed measures. *Superseded by DEC-017 (2026-10-13): reporting now runs on ward data.*
 
 ### DEC-015: Progress page and My Activity previews in the wireframe
 
@@ -152,7 +152,7 @@
 - **Decision:** Add `#/progress-preview` and `#/my-activity` routes, linked as "Progress preview" and "My Activity" in the signed-in navigation for Active members of any role. Each embeds its unchanged mock in a same-origin frame that resizes to its content; the frame drops the mock's full-window minimum height so it cannot grow without limit. The server serves both mock files only to signed-in Active members. The existing My progress page stays as it is.
 - **Rationale:** Reviewers and Bishop Porter can reach the approved designs from the wireframe without implying they show the viewer's own data. It reuses the DEC-013/DEC-014 pattern and keeps the mocks identical to the canvas exports.
 - **Alternatives considered:** Replacing My progress with the new design now would show fictional data in place of the member's real progress. Rebuilding the pages from account data needs Key completion timestamps on the server (topic 15) and a learning-time measurement decision (topic 16).
-- **Consequences:** Both previews show fictional youth "Alex R." The mocks load Google Fonts, so they fall back to system fonts when offline. A later build should render these pages from account data and retire the embedded mocks.
+- **Consequences:** Both previews show fictional youth "Alex R." The mocks load Google Fonts, so they fall back to system fonts when offline. A later build should render these pages from account data and retire the embedded mocks. *Superseded by DEC-017 (2026-10-13): both pages now run on account data.*
 
 ### DEC-016: Real ward approval queue and a seeded demo ward
 
@@ -163,3 +163,20 @@
 - **Rationale:** The queue already had agreed requirements, so it's the first real bishopric workflow. Keeping the demo in its own database leaves `data/accounts.sqlite` untouched, and a deterministic seed makes every presentation start from the same state.
 - **Alternatives considered:** Seeding into the normal database would mix demo people with real test accounts. Random data on every reset would make a rehearsed walkthrough unpredictable.
 - **Consequences:** Any Active Bishopric member can approve anyone in their ward; there are still no separate bishop, counselor and clerk permissions (D9). The demo password is shared and public, so the demo must only run locally or behind a private link, with fictional data. Removing an Active member from a ward, the 30-day pending expiry, the rejected-account purge and email notifications remain open.
+
+### DEC-017: Progress, My Activity and reporting on real data; active-time measurement
+
+- **Date:** 2026-10-13
+- **Status:** Accepted for the demo. The measurement choices below are defaults for Bishop Porter to confirm (topic 16 questions 2–6).
+- **Context:** Demo part 2: the Progress page (topic 15), My Activity (topic 16) and Bishopric reporting (topic 07) must show each member's and each ward's real records instead of mock data. My Activity and reporting need learning time, which wasn't recorded.
+- **Decision:**
+  - *Learning time* is **active time with an idle timeout**, the topic 16 recommended option. While an Active member is on a Key or lesson page, the browser records one minute for each minute with interaction (click, key, scroll, touch or typing) in the last 2 minutes and the tab visible. Minutes are stored per member, local day and Key (`activity_minutes`), capped at 5 per request and 720 per day, and only for today.
+  - A *learning day* is any day with at least one active minute. Weeks run Sunday–Saturday. Time, streak and goal badges are annual by **calendar year**; exploration badges are lifetime. There's no special rule for Sundays.
+  - *Weekly goal* defaults to 60 minutes; members choose 30, 60, 90, 120 or 180.
+  - *Exploration* fits the two Groups that have lessons: Trailblazer is a Key started in a second Group, Explorer is 5 Keys started, Well Rounded is a Key earned in every Group, and Second Look and Return Trip are revisits of 1 and 3 Keys earned before the day of the visit.
+  - *Sign-ins* are recorded on each successful sign-in (`logins`).
+  - *Reporting* covers the ward's last 12 months for Active youth under 18. Time to complete a Key is the active minutes on that Key up to the day it was earned.
+  - *Pages:* My progress (`#/progress`) and My Activity (`#/my-activity`) are rendered by `src/progress-ui.js` and `src/activity-ui.js` with the Key artwork from the group posters. Reporting (`#/bishopric-reporting`) is computed by `src/report.js` (`GET /api/bishopric/report`, Active Bishopric only, own ward only). The shared rules are pure functions in `src/achievements.js`. The mock HTML files stay in the repository for reference.
+- **Rationale:** Active time is hard to inflate by leaving a page open (topic 06), and one row per member, day and Key is the smallest record that powers the badges and reports (topic 07). It isn't a clickstream.
+- **Alternatives considered:** Raw page-open time is easy to game. Time credited per completed section needs an estimated duration for every lesson, which the content doesn't have yet. Storing individual sessions would collect more youth data than any report needs.
+- **Consequences:** These are new categories of youth personal data (daily minutes per Key, sign-in times) that belong in the topic 10 data map with a retention rule. Topic 16 suggests keeping daily totals for the current and previous year. Ward reporting shows each youth's sign-ins and time per Key to the bishopric; topic 07 asks whether that granularity leads to an action. Counsel review of streaks and time badges for 13–17-year-olds is still open (topic 16).
