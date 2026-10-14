@@ -1,6 +1,6 @@
 # Project status
 
-_Last updated: 2026-10-13 (Progress, My Activity and reporting on real data, DEC-017)._
+_Last updated: 2026-10-13 (38 Keys and five themed groups imported, DEC-018)._
 
 Covenant Youth is a working wireframe, not a production youth platform. See the
 [README](../README.md) for what it does, [architecture.md](architecture.md) for
@@ -55,11 +55,12 @@ Other decisions still needed:
 
 ## Recommended next work
 
-1. Full demo walkthrough with Dave, then present to Bishop Porter. Ask him the DEC-017 measurement questions (time as the signal, daily streaks and Sundays, spiritual Keys, who sees activity) and topic 07's question about per-youth reporting. A site-admin step to grant bishopric requests is still needed outside the demo.
-2. Obtain approved content and separate badge artwork for the themed groups.
-3. Define the production identity and consent model before adding real
+1. Send the bishop the questions in `docs/key-import-2026-10-13.md` (missing pages, badge choices, where Geocaching, Savanna Life and Reading belong).
+2. Full demo walkthrough with Dave, then present to Bishop Porter. Ask him the DEC-017 measurement questions (time as the signal, daily streaks and Sundays, spiritual Keys, who sees activity) and topic 07's question about per-youth reporting. A site-admin step to grant bishopric requests is still needed outside the demo.
+3. Design Covenant Advancement (six levels for Covenant Sons and Daughters, with Key minimums and leader sign-offs) as a topic doc before building it.
+4. Define the production identity and consent model before adding real
    notifications or using real youth data.
-4. Plan account-backed progress and reflections.
-5. Accessibility work (lesson image transcription).
-6. Account recovery and data retention controls.
-7. Hosting.
+5. Plan account-backed progress and reflections.
+6. Accessibility work (lesson image transcription; the bishop's Word notes are a starting point).
+7. Account recovery and data retention controls.
+8. Hosting.

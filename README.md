@@ -33,7 +33,9 @@ All people are fictional and every email uses the reserved `example.test` domain
 
 ## Structure
 
-- `src/data.js`: Keys, lessons, and reusable lesson sections
+- `src/data.js`: Keys, lessons, groups, and reusable lesson sections
+- `src/themed-keys.js`: generated from `content/keys/manifest.json` by `scripts/build-themed-keys.mjs` (38 themed Keys, DEC-018)
+- `content/keys/`: badge and page images for the themed Keys (WebP)
 - `src/book-of-mormon.js`: one lesson per supplied Book of Mormon page, in page order
 - `src/first-aid.js`: the 14 supplied First Aid guide pages and opening artwork
 - `src/app.js`: dashboard, progress overview, Key detail, lesson views, and hash navigation

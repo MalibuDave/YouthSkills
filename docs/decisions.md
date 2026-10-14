@@ -180,3 +180,19 @@
 - **Rationale:** Active time is hard to inflate by leaving a page open (topic 06), and one row per member, day and Key is the smallest record that powers the badges and reports (topic 07). It isn't a clickstream.
 - **Alternatives considered:** Raw page-open time is easy to game. Time credited per completed section needs an estimated duration for every lesson, which the content doesn't have yet. Storing individual sessions would collect more youth data than any report needs.
 - **Consequences:** These are new categories of youth personal data (daily minutes per Key, sign-in times) that belong in the topic 10 data map with a retention rule. Topic 16 suggests keeping daily totals for the current and previous year. Ward reporting shows each youth's sign-ins and time per Key to the bishopric; topic 07 asks whether that granularity leads to an action. Counsel review of streaks and time badges for 13–17-year-olds is still open (topic 16).
+
+### DEC-018: Themed groups and 38 Keys from the bishop's folders
+
+- **Date:** 2026-10-13
+- **Status:** Accepted
+- **Context:** The bishop shared his Covenant Key folders (683 files, 1.7 GB of PNG). They hold 38 Keys for the five themed groups plus three Keys on no poster, and the Covenant Advancement levels. Dave approved importing the Keys with the defaults below; details and open questions are in [key-import-2026-10-13.md](key-import-2026-10-13.md).
+- **Decision:**
+  - Images are converted to WebP at full resolution and stored in `content/keys/<key>/` (`badge.webp`, `page-NN.webp`) with a `manifest.json`. `scripts/build-themed-keys.mjs` generates `src/themed-keys.js` (Keys, lessons, groups, poster positions); `src/data.js` merges them with the required Keys and exports `groups`.
+  - Each Key opens with its cover page. Every other page is a lesson using the existing image-lesson view (steps plus a reflection), like First Aid. Requirement and sign-off pages ask the youth to complete and review them with a parent, guardian or leader; sign-offs are self-attested in V1, matching topic 06.
+  - All seven group posters are clickable. Badges without a supplied Key show "Coming soon." Keys on no poster (Geocaching, Savanna Life, Reading) go in an **Additional Keys** section until the bishop places them.
+  - Where a Key has two badge designs, the newer gold "Covenant Key" design is used.
+  - A group is complete only when every badge on its poster has a Key and all of them are earned. Sports, Outdoors and Performing Arts can't be completed until their missing Keys arrive. Explorer returns to its original rule, Keys started in 3 Groups (DEC-017 had adapted it for two groups).
+  - Demo youth now work group by group through all 56 Keys (491 lessons).
+- **Rationale:** Reusing the image-lesson pattern adds 444 lessons without new lesson UI. WebP cuts the images from 1.7 GB to 177 MB at the same resolution, small enough for the repository. Generating the data from a manifest makes the next delivery from the bishop a repeatable import, not hand edits.
+- **Alternatives considered:** Committing the PNGs would add 1.7 GB to the repository. Git LFS or external hosting can come with production hosting. Hand-writing 444 lesson entries would be slow and error-prone. Waiting for the bishop to resolve the questions would delay the demo for issues that don't block it.
+- **Consequences:** Page text is still in images, so accessibility needs HTML transcriptions; the Word notes are a starting point. Covenant Advancement (levels, Key minimums, leader sign-offs) isn't built and needs a topic doc. Lesson images are still served without server-side authorization (a known limit). Changing a poster's art means updating its geometry in the build script.

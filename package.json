@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "node server.mjs",
-    "build": "node --check src/app.js && node --check src/bishopric-ui.js && node --check src/achievements.js && node --check src/progress-ui.js && node --check src/activity-ui.js && node --check src/reporting-ui.js && node --check src/activity-tracker.js && node --check src/report.js && node --check src/account-ui.js && node --check src/account-db.js && node --check src/account-rules.js && node --check src/data.js && node --check src/progress.js && node --check server.mjs && node --check scripts/seed-demo.mjs && node --check scripts/demo.mjs",
+    "build": "node --check src/app.js && node --check src/bishopric-ui.js && node --check src/achievements.js && node --check src/progress-ui.js && node --check src/activity-ui.js && node --check src/reporting-ui.js && node --check src/activity-tracker.js && node --check src/report.js && node --check src/account-ui.js && node --check src/account-db.js && node --check src/account-rules.js && node --check src/data.js && node --check src/themed-keys.js && node --check scripts/build-themed-keys.mjs && node --check src/progress.js && node --check server.mjs && node --check scripts/seed-demo.mjs && node --check scripts/demo.mjs",
     "test": "node --test",
     "demo": "node scripts/demo.mjs",
     "demo:reset": "node scripts/demo.mjs --reset"

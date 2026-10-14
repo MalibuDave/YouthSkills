@@ -1,8 +1,11 @@
 // Shared rules for the Progress page, My Activity, and Bishopric reporting (DEC-017).
 // Pure functions: the same inputs always give the same badges, streaks, and counts.
-import { keys } from "./data.js";
+import { keys, groups } from "./data.js";
 
-export const GROUPS = [1, 2].map(sheet => ({ id: sheet, name: `Required Group ${sheet}`, keys: keys.filter(key => key.icon.sheet === sheet) }));
+// Groups that can be explored and completed (not the "Additional Keys" shelf).
+export const GROUPS = groups.filter(group => group.kind !== "additional");
+// A group is complete when every badge on its poster has a Key and all are earned.
+const completable = group => group.keys.length === group.size;
 export const required = key => key.lessons.filter(lesson => !lesson.optional);
 
 // Completion date of each earned Key: the latest of its required lessons.
@@ -17,7 +20,7 @@ export function keyDates(completions) {
 }
 export function groupDates(earned) {
   const out = new Map();
-  for (const group of GROUPS) if (group.keys.every(key => earned.has(key.id))) out.set(group.id, group.keys.map(key => earned.get(key.id)).sort().at(-1));
+  for (const group of GROUPS) if (completable(group) && group.keys.every(key => earned.has(key.id))) out.set(group.id, group.keys.map(key => earned.get(key.id)).sort().at(-1));
   return out;
 }
 export const keyProgress = (key, done) => { const lessons = required(key); const count = lessons.filter(lesson => done.has(lesson.id)).length; return { done: count, total: lessons.length, fraction: lessons.length ? count / lessons.length : 0 }; };
@@ -103,9 +106,10 @@ export function computeActivity({ days, completions, revisits, goal, year, today
   const revisited = [...new Map(revisits.filter(item => earned.has(item.keyId)).map(item => [item.keyId, item.day])).entries()].sort((a, b) => a[1].localeCompare(b[1]));
   const nth = (map, n) => [...map.values()].sort()[n - 1] || null;
   const groupCount = GROUPS.length;
+  startedGroups.delete(undefined); earnedGroups.delete(undefined); // Additional Keys don't belong to a group
   const exploration = [
     badge("Trailblazer", "Start a Key in a second Group", "compass", startedGroups.size / 2, nth(startedGroups, 2), "Start a Key in another Group"),
-    badge("Explorer", `Start 5 different Keys · ${Math.min(startedKeys.size, 5)} of 5`, "compass", startedKeys.size / 5, nth(startedKeys, 5), `${5 - startedKeys.size} more Keys to start`),
+    badge("Explorer", `Start Keys in 3 Groups · ${Math.min(startedGroups.size, 3)} of 3`, "compass", startedGroups.size / 3, nth(startedGroups, 3), `Start a Key in ${3 - startedGroups.size} more Group${3 - startedGroups.size === 1 ? "" : "s"}`),
     badge("Well Rounded", `Earn a Key in every Group · ${earnedGroups.size} of ${groupCount}`, "compass", earnedGroups.size / groupCount, earnedGroups.size >= groupCount ? nth(earnedGroups, groupCount) : null, `Earn a Key in ${groupCount - earnedGroups.size} more Group`),
     badge("Second Look", "Revisit an earned Key", "back", revisited.length, revisited[0]?.[1] || null, "Revisit an earned Key"),
     badge("Return Trip", `Revisit 3 earned Keys · ${Math.min(revisited.length, 3)} of 3`, "back", revisited.length / 3, revisited[2]?.[1] || null, `Revisit ${3 - revisited.length} more earned Key${3 - revisited.length === 1 ? "" : "s"}`)

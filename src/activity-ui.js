@@ -1,6 +1,6 @@
 // My Activity (topic 16, DEC-017): time, streaks, weekly goals, and exploration from the
 // member's recorded learning minutes. Badges are copper hexagons so they never look like Keys.
-import { keys } from "./data.js";
+import { keys, groups } from "./data.js";
 import { computeActivity, formatMinutes, keyDates, keyProgress, GROUPS, localDay } from "./achievements.js";
 import { keyArt } from "./progress-ui.js";
 
@@ -65,7 +65,7 @@ export function activityPage({ user, completions, rerender, today = localDay() }
   const done = new Set(completions.map(item => item.lessonId)), earned = keyDates(completions);
   const notStarted = keys.filter(key => !keyProgress(key, done).done).slice(0, 2);
   const revisitable = [...earned].sort((a, b) => a[1].localeCompare(b[1])).slice(0, 2).map(([id, at]) => [keys.find(key => key.id === id), at]);
-  const groupName = key => GROUPS.find(group => group.keys.includes(key))?.name || "";
+  const groupName = key => groups.find(group => group.keys.includes(key))?.name || "";
   const explore = [...notStarted.map(key => `<a href="#/keys/${encodeURIComponent(key.id)}">${keyArt(key, 44, "none")}<span><b>${escape(key.name)}</b><small>New Key · ${escape(groupName(key))}</small></span></a>`),
     ...revisitable.map(([key, at]) => `<a href="#/keys/${encodeURIComponent(key.id)}">${keyArt(key, 44, "earned")}<span><b>${escape(key.name)}</b><small>Revisit · earned ${shortDate(at)}</small></span></a>`)].join("");
 
