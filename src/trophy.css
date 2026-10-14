@@ -43,3 +43,4 @@ a.tc-badge:hover strong,a.tc-next:hover strong{text-decoration:underline}
 .tc-explore{display:flex;flex-wrap:wrap;gap:12px}.tc-explore a{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);border:1px solid #D5CDB6;border-radius:12px;padding:10px 16px;min-height:44px;background:var(--card)}.tc-explore b{display:block;font-weight:600}.tc-explore small{font-size:13px;color:var(--muted)}
 .tc button:focus-visible,.tc a:focus-visible,.tc select:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 @media(max-width:560px){.tc-hero h1{font-size:32px}.tc-card{padding:20px}.tc-badge,.tc-hex{width:96px}}
+img.tc-art{object-fit:cover;background:none}.tc-ring.progress img.tc-art{filter:saturate(.45)}.tc-ring.none img.tc-art{filter:grayscale(1);opacity:.45}

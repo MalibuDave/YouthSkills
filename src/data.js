@@ -1,5 +1,6 @@
 import { bookOfMormonLessons } from "./book-of-mormon.js";
 import { firstAidLessons } from "./first-aid.js";
+import { themedGroups, themedKeys } from "./themed-keys.js";
 // Key names and icons follow the supplied Group 1 and Group 2 reference sheets.
 // Lessons marked as samples are wireframe placeholders pending approved program copy.
 const sampleSections = (name) => [
@@ -9,7 +10,7 @@ const sampleSections = (name) => [
   { type: "activity", title: "Try it", body: "Choose one small action to practice this week. Write down what you plan to do." },
   { type: "reflection", title: "Reflect", body: "What did you learn? What would you do differently next time?" }
 ];
-const key = (id,name,description,sheet,col,row,lessons) => ({id,name,description,icon:{sheet,col,row},lessons:lessons.map(([lessonId,title,description,sections])=>({id:lessonId,keyId:id,title,description,estimatedDuration:"10–15 min",sections:sections||sampleSections(name)}))});
+const key = (id,name,description,sheet,col,row,lessons) => ({id,name,description,group:`required-${sheet}`,icon:{sheet,col,row},lessons:lessons.map(([lessonId,title,description,sections])=>({id:lessonId,keyId:id,title,description,estimatedDuration:"10–15 min",sections:sections||sampleSections(name)}))});
 export const keys = [
   {...key("first-aid","First Aid","Learn how to respond and help safely.",1,0,0,[]),lessons:firstAidLessons},
   key("physical-fitness","Physical Fitness","Build healthy movement habits.",1,1,0,[["movement-plan","Make a Movement Plan","Sample lesson: set a realistic activity goal."]]),
@@ -30,4 +31,14 @@ export const keys = [
   key("social-maturity","Social Maturity","Build respectful relationships.",2,1,2,[["respect","Show Respect","Sample lesson: reflect on another person's perspective."]]),
   key("scholar","Scholar","Develop curiosity and study habits.",2,2,2,[["learning-goal","Set a Learning Goal","Sample lesson: choose something new to learn."]])
 ];
+keys.push(...themedKeys);
 export const allLessons = keys.flatMap(key => key.lessons);
+
+// Groups in the order the Groups page shows them. Required groups use the supplied
+// reference sheets; themed groups come from the bishop's folders (DEC-018). `size` is the
+// number of badges on the poster; a group is complete only when all of them have Keys.
+const requiredGroup = sheet => ({ id: `required-${sheet}`, name: `Required Group ${sheet}`, kind: "required", poster: sheet === 1 ? "/covenantyouthprogram3/Group 1 - Required CK.png" : "/group-posters/Group 2 Required CK.png",
+  slots: keys.filter(key => key.icon.sheet === sheet).map(key => ({ row: key.icon.row, col: key.icon.col, keyId: key.id })) });
+export const groups = [requiredGroup(1), requiredGroup(2), ...themedGroups.map(group => ({ ...group, kind: group.id === "additional" ? "additional" : "themed" }))]
+  .map(group => ({ ...group, size: group.kind === "additional" ? null : group.slots.length, keys: group.slots.filter(slot => slot.keyId).map(slot => keys.find(key => key.id === slot.keyId)) }));
+export const groupOf = key => groups.find(group => group.id === key.group);

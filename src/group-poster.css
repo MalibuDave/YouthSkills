@@ -1,6 +1,6 @@
 .group-poster{position:relative;width:100%;margin:0 auto;aspect-ratio:1102/1427}
 .group-poster>img{display:block;width:100%;height:100%;border-radius:12px}
-.group-hotspot{position:absolute;left:calc(6% + var(--col)*29.7%);top:calc(12.4% + var(--row)*20.4%);width:28%;height:20.8%;border-radius:50%;text-decoration:none;transition:box-shadow .15s,background-color .15s}
+.group-hotspot{position:absolute;left:calc(var(--x0,6%) + var(--col)*var(--dx,29.7%));top:calc(var(--y0,12.4%) + var(--row)*var(--dy,20.4%));width:var(--w,28%);height:var(--h,20.8%);border-radius:50%;text-decoration:none;transition:box-shadow .15s,background-color .15s}
 .group-hotspot:hover{background:#fff7bb18;box-shadow:inset 0 0 0 4px #f5d46c,inset 0 0 20px 5px #f5d46c77}
 .group-hotspot:focus-visible{outline:3px solid #0b6a50;outline-offset:-3px}
 .group-hotspot.is-complete{background:#48a66f20;box-shadow:inset 0 0 0 5px #48a66fcc,inset 0 0 22px 9px #48a66f88}
@@ -9,3 +9,6 @@
 .group-hotspot-track{display:block;width:100%;height:5px;border-radius:9px;overflow:hidden;background:#d6e1d7}
 .group-hotspot-track>span{display:block;height:100%;background:#2b8058}
 @media(max-width:600px){.group-hotspot-status{padding:3px 5px;min-width:65%;font-size:clamp(.42rem,1.8vw,.65rem)}.group-hotspot-track{height:3px}.group-hotspot.is-complete{box-shadow:inset 0 0 0 3px #48a66fcc,inset 0 0 12px 5px #48a66f88}}
+/* Themed groups (DEC-018): badges whose Keys aren't supplied yet */
+.group-hotspot.is-coming-soon{background:#10293a66;cursor:default;display:grid;place-items:center}.group-hotspot.is-coming-soon .group-hotspot-status{position:static;transform:none}.group-hotspot.is-coming-soon:hover{box-shadow:none;background:#10293a66}
+.group-additional{margin-top:40px}.group-additional .key-grid{margin-top:16px}

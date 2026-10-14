@@ -66,7 +66,7 @@ export function wardReport(db, wardId, { months = 12, now = new Date() } = {}) {
     period: { from, to: today, months: monthList.map(month => ({ key: month, label: monthLabel(month) })), weeks: weekList.map(week => ({ key: week, label: new Date(`${week}T12:00:00`).toLocaleDateString("en-US", { month: "short", day: "numeric" }) })) },
     totals: { youth: people.length, keys: sum(keySeries.month), groups: sum(groupSeries.month), logins: sum(loginSeries.month) },
     keys: { month: keySeries.month, week: keySeries.week, year: asYears(keySeries.year) },
-    groups: { month: groupSeries.month, types: GROUPS.map(group => ({ name: group.name, value: groupTypes.get(group.id) })) },
+    groups: { month: groupSeries.month, types: GROUPS.map(group => ({ name: group.name, value: groupTypes.get(group.id), available: group.keys.length === group.size })) },
     keyTime: { average: average(keyTimes), month: monthList.map((_, m) => average(keyTimes, m)) },
     groupTime: { average: average(groupTimes), month: monthList.map((_, m) => average(groupTimes, m)) },
     approvals: { total: sum(approvals), month: approvals },

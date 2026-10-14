@@ -7,7 +7,7 @@ import { openAccountDb } from "./src/account-db.js";
 import { allLessons, keys } from "./src/data.js";
 import { wardReport } from "./src/report.js";
 const root = process.cwd();
-const types = {".html":"text/html; charset=utf-8",".js":"text/javascript; charset=utf-8",".css":"text/css; charset=utf-8",".png":"image/png"};
+const types = {".html":"text/html; charset=utf-8",".js":"text/javascript; charset=utf-8",".css":"text/css; charset=utf-8",".png":"image/png",".webp":"image/webp",".json":"application/json; charset=utf-8"};
 const validLessons=new Set(allLessons.map(item=>item.id)),validKeys=new Set(keys.map(key=>key.id));
 const keyEarned=(completions,keyId)=>{const key=keys.find(item=>item.id===keyId),done=new Set(completions.map(item=>item.lessonId));return Boolean(key)&&key.lessons.filter(lesson=>!lesson.optional).every(lesson=>done.has(lesson.id));};
 const json=(response,status,data)=>{response.writeHead(status,{"Content-Type":"application/json; charset=utf-8","Cache-Control":"no-store"});response.end(JSON.stringify(data));};

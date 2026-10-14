@@ -10,7 +10,7 @@
 // minutes per Key, sign-ins, weekly goals, and a few revisits of earned Keys.
 import { rmSync, existsSync } from "node:fs";
 import { openAccountDb } from "../src/account-db.js";
-import { keys } from "../src/data.js";
+import { keys, groups } from "../src/data.js";
 
 export const DEMO_PASSWORD = "carwash1234";
 export const DEMO_WARD = "Maple Grove Ward";
@@ -40,11 +40,11 @@ const notAfter = (date, limit) => new Date(Math.min(date.getTime(), limit.getTim
 
 // How a youth works through lessons over the year.
 const PROFILES = [
-  { name: "high", count: 6, lessons: [36, 46] },
-  { name: "steady", count: 18, lessons: [18, 32] },
-  { name: "bursty", count: 12, lessons: [12, 26] },
-  { name: "light", count: 8, lessons: [4, 12] },
-  { name: "lapsed", count: 6, lessons: [6, 14] }
+  { name: "high", count: 6, lessons: [130, 210] },
+  { name: "steady", count: 18, lessons: [60, 115] },
+  { name: "bursty", count: 12, lessons: [40, 85] },
+  { name: "light", count: 8, lessons: [12, 30] },
+  { name: "lapsed", count: 6, lessons: [15, 35] }
 ];
 
 function completionDays(rng, profile, n, start, end) {
@@ -93,7 +93,8 @@ export function seedDemo(dbPath, { now = new Date(), reset = true } = {}) {
     const parents = last => { const one = [rng.pick(PARENT_FIRST), last]; return rng.next() < 0.55 ? { parent1First: one[0], parent1Last: one[1], parent2First: rng.pick(PARENT_FIRST), parent2Last: last } : { parent1First: one[0], parent1Last: one[1] }; };
 
     // Lesson order a youth follows: Keys in a shuffled order, lessons within a Key in sequence.
-    const lessonSequence = () => rng.shuffle(keys).flatMap(key => key.lessons.filter(lesson => !lesson.optional || rng.next() < 0.3).map(lesson => lesson.id));
+    // Youth tend to work through a group before moving on: groups in a random order, Keys shuffled within each.
+    const lessonSequence = () => rng.shuffle(groups).flatMap(group => rng.shuffle(group.keys)).flatMap(key => key.lessons.filter(lesson => !lesson.optional || rng.next() < 0.3).map(lesson => lesson.id));
     const record = db.prepare("INSERT INTO lesson_completions(user_id,lesson_id,completed_at) VALUES(?,?,?)");
     const minutes = db.prepare("INSERT INTO activity_minutes(user_id,day,key_id,minutes) VALUES(?,?,?,?) ON CONFLICT(user_id,day,key_id) DO UPDATE SET minutes=minutes+excluded.minutes");
     const login = db.prepare("INSERT INTO logins(user_id,at) VALUES(?,?)");

@@ -1,0 +1,4863 @@
+[
+ {
+  "id": "football",
+  "name": "Football",
+  "group": "sports",
+  "slot": [
+   0,
+   0
+  ],
+  "badge": "/content/keys/football/badge.webp",
+  "badgeSource": "Image - Football CK.png",
+  "badgeChoice": "newer gold design",
+  "pages": [
+   {
+    "file": "/content/keys/football/page-00.webp",
+    "title": "Cover",
+    "source": "Pg 0 - Football Cover.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/football/page-01.webp",
+    "title": "Benefits",
+    "source": "Pg 1 Football Benefits.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/football/page-02.webp",
+    "title": "Overview",
+    "source": "Pg 2 - Football Overview.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/football/page-03.webp",
+    "title": "Equip & Rules",
+    "source": "Pg 3 - Football Equip & Rules.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/football/page-04.webp",
+    "title": "Skills & Drills",
+    "source": "Pg 4 - Football Skills & Drills.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/football/page-05.webp",
+    "title": "Tryouts",
+    "source": "Pg 5 - Football Tryouts.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/football/page-06.webp",
+    "title": "Fan of Game",
+    "source": "Pg 6 - Football Fan of Game.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/football/page-07.webp",
+    "title": "Penalties",
+    "source": "Pg 7 - Football Penalties.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/football/page-08.webp",
+    "title": "Tips & Quotes",
+    "source": "Pg 8 - Football Tips & Quotes.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/football/page-09.webp",
+    "title": "Injuries",
+    "source": "Pg 9 - Football Injuries.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/football/page-10.webp",
+    "title": "Strategies",
+    "source": "Pg 10 - Football Strategies.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/football/page-11.webp",
+    "title": "Requirements \u2014 Part 1",
+    "source": "pg 11 - Football Requirements A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/football/page-12.webp",
+    "title": "Requirements \u2014 Part 2",
+    "source": "Pg 12 - Football Requirements B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/football/page-13.webp",
+    "title": "Sign-offs \u2014 Part 1",
+    "source": "Pg 13 - Football Sign Offs A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/football/page-14.webp",
+    "title": "Sign-offs \u2014 Part 2",
+    "source": "Pg 14 - Football Sign Offs B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "basketball",
+  "name": "Basketball",
+  "group": "sports",
+  "slot": [
+   0,
+   1
+  ],
+  "badge": "/content/keys/basketball/badge.webp",
+  "badgeSource": "Image - Basketball CK.png",
+  "badgeChoice": "newer gold design",
+  "pages": [
+   {
+    "file": "/content/keys/basketball/page-00.webp",
+    "title": "Cover",
+    "source": "Pg 0 - Basketball Cover.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/basketball/page-01.webp",
+    "title": "Benefits",
+    "source": "Pg 1 - Basketball Benefits.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/basketball/page-02.webp",
+    "title": "Overview",
+    "source": "Pg 2 - Basketball Overview.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/basketball/page-03.webp",
+    "title": "Rules & Equip",
+    "source": "Pg 3 - Basketball Rules & Equip.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/basketball/page-04.webp",
+    "title": "Skills & Drills",
+    "source": "Pg 4 - Basketball Skills & Drills.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/basketball/page-05.webp",
+    "title": "Skills & Drills (continued)",
+    "source": "Pg 4B - Basketball Skills & Drill.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/basketball/page-06.webp",
+    "title": "Tryouts",
+    "source": "Pg 5 - Basketball Tryouts.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/basketball/page-07.webp",
+    "title": "Fan of Game",
+    "source": "Pg 6 - Basketball Fan of Game.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/basketball/page-08.webp",
+    "title": "Penalties",
+    "source": "Pg 7 - Basketball Penalties.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/basketball/page-09.webp",
+    "title": "Tips & Quotes",
+    "source": "Pg 8 - Basketball Tips & Quotes.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/basketball/page-10.webp",
+    "title": "Injuries",
+    "source": "Pg 9 - Basketball Injuries.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/basketball/page-11.webp",
+    "title": "Strategies",
+    "source": "Pg 10 - Basketball Strategies.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/basketball/page-12.webp",
+    "title": "Requirements \u2014 Part 1",
+    "source": "Pg 11 - Basketball Requirements A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/basketball/page-13.webp",
+    "title": "Requirements \u2014 Part 2",
+    "source": "Pg 12 - Basketball Requirements B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/basketball/page-14.webp",
+    "title": "Sign-offs \u2014 Part 1",
+    "source": "Pg 13 - Basketball Sign Offs A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/basketball/page-15.webp",
+    "title": "Sign-offs \u2014 Part 2",
+    "source": "Pg 14 - Basketball Sign Offs B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "golf",
+  "name": "Golf",
+  "group": "sports",
+  "slot": [
+   0,
+   2
+  ],
+  "badge": "/content/keys/golf/badge.webp",
+  "badgeSource": "CK - Golf Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/golf/page-00.webp",
+    "title": "Cover",
+    "source": "Pg 0 - Golf Cover.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/golf/page-01.webp",
+    "title": "Benefits",
+    "source": "Pg 1 - Golf Benefits.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/golf/page-02.webp",
+    "title": "Overview",
+    "source": "Pg 2 - Golf Overview.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/golf/page-03.webp",
+    "title": "Equip & Clubs",
+    "source": "Pg 3 - Golf Equip & Clubs.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/golf/page-04.webp",
+    "title": "Skills & Drills",
+    "source": "Pg 4 - Golf Skills & Drills.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/golf/page-05.webp",
+    "title": "Tryouts",
+    "source": "Pg 5 - Golf Tryouts.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/golf/page-06.webp",
+    "title": "Fan of Game",
+    "source": "Pg 6 - Golf Fan of Game.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/golf/page-07.webp",
+    "title": "Penalties",
+    "source": "Pg 7 - Golf Penalties.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/golf/page-08.webp",
+    "title": "Tips & Quotes",
+    "source": "Pg 8 - Golf Tips & Quotes.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/golf/page-09.webp",
+    "title": "Injuries",
+    "source": "Pg 9 - Golf Injuries.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/golf/page-10.webp",
+    "title": "Strategies",
+    "source": "Pg 10 - Golf Strategies.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/golf/page-11.webp",
+    "title": "Requirements \u2014 Part 1",
+    "source": "Pg 11 - Golf Requirements A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/golf/page-12.webp",
+    "title": "Requirements \u2014 Part 2",
+    "source": "Pg 12 - Golf Requirements B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/golf/page-13.webp",
+    "title": "Sign-offs \u2014 Part 1",
+    "source": "Pg 13 - Golf Sign Offs A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/golf/page-14.webp",
+    "title": "Sign-offs \u2014 Part 2",
+    "source": "Pg 14 - Golf Sign Offs B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "tennis",
+  "name": "Tennis",
+  "group": "sports",
+  "slot": [
+   1,
+   2
+  ],
+  "badge": "/content/keys/tennis/badge.webp",
+  "badgeSource": "Image - Tennis CK.png",
+  "badgeChoice": "newer gold design",
+  "pages": [
+   {
+    "file": "/content/keys/tennis/page-00.webp",
+    "title": "Cover",
+    "source": "Pg 1 - Tennis Cover.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/tennis/page-01.webp",
+    "title": "Benefits",
+    "source": "Pg 2 - Tennis Benefits.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/tennis/page-02.webp",
+    "title": "Overview",
+    "source": "Pg 3 - Tennis Overview.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/tennis/page-03.webp",
+    "title": "Equipment",
+    "source": "Pg 4 - Tennis Equipment.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/tennis/page-04.webp",
+    "title": "Skills & Drills",
+    "source": "Pg 5 - Tennis Skills & Drills.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/tennis/page-05.webp",
+    "title": "Tryouts",
+    "source": "Pg 6 - Tennis Tryouts.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/tennis/page-06.webp",
+    "title": "Fan of Game",
+    "source": "Pg 7 - Tennis Fan of Game.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/tennis/page-07.webp",
+    "title": "Penalties",
+    "source": "Pg 8 - Tennis Penalties.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/tennis/page-08.webp",
+    "title": "Tips & Quotes",
+    "source": "Pg 9 - Tennis Tips & Quotes.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/tennis/page-09.webp",
+    "title": "Injuries",
+    "source": "Pg 10B - Tennis Injuries.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/tennis/page-10.webp",
+    "title": "Strategies",
+    "source": "Pg 11 - Tennis Strategies.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/tennis/page-11.webp",
+    "title": "Requirements \u2014 Part 1",
+    "source": "Pg 12 - Tennis Requirements A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/tennis/page-12.webp",
+    "title": "Requirements \u2014 Part 2",
+    "source": "Pg 13 - Tennis Requirements B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/tennis/page-13.webp",
+    "title": "Sign-offs \u2014 Part 1",
+    "source": "Pg 14 - Tennis Sign Offs A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/tennis/page-14.webp",
+    "title": "Sign-offs \u2014 Part 2",
+    "source": "Pg 15 - Tennis Sign Offs B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "soccer",
+  "name": "Soccer",
+  "group": "sports",
+  "slot": [
+   2,
+   0
+  ],
+  "badge": "/content/keys/soccer/badge.webp",
+  "badgeSource": "ChatGPT Image Aug 25, 2026, 10_31_23 AM.png",
+  "badgeChoice": "only design (generic file name)",
+  "pages": [
+   {
+    "file": "/content/keys/soccer/page-00.webp",
+    "title": "Cover",
+    "source": "Pg 00 - Soccer Cover.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/soccer/page-01.webp",
+    "title": "Benefits",
+    "source": "Pg 0 - Soccer Benefits.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/soccer/page-02.webp",
+    "title": "Overview",
+    "source": "Pg 1 - Soccer Overview.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/soccer/page-03.webp",
+    "title": "Rules & Equip",
+    "source": "Pg 2 - Soccer Rules & Equip.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/soccer/page-04.webp",
+    "title": "Skills & Drills",
+    "source": "Pg 3 - Soccer Skills & Drills.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/soccer/page-05.webp",
+    "title": "Tryouts",
+    "source": "Pg 4 - Soccer Tryouts.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/soccer/page-06.webp",
+    "title": "Fan of Game",
+    "source": "Pg 5 - Soccer Fan of Game.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/soccer/page-07.webp",
+    "title": "Penalties",
+    "source": "Pg 6 - Soccer Penalties.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/soccer/page-08.webp",
+    "title": "Tips & Quotes",
+    "source": "Pg 7 - Soccer Tips & Quotes.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/soccer/page-09.webp",
+    "title": "Injuries",
+    "source": "Pg 8 - Soccer Injuries.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/soccer/page-10.webp",
+    "title": "Strategies",
+    "source": "Pg 9 - Soccer Strategies.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/soccer/page-11.webp",
+    "title": "Requirements \u2014 Part 1",
+    "source": "Pg 10 - Soccer Requirements A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/soccer/page-12.webp",
+    "title": "Requirements \u2014 Part 2",
+    "source": "Pg 11 - Soccer Requirements B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/soccer/page-13.webp",
+    "title": "Sign-offs \u2014 Part 1",
+    "source": "Pg 12 - Soccer Sign Offs A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/soccer/page-14.webp",
+    "title": "Sign-offs \u2014 Part 2",
+    "source": "Pg 13 - Soccer Sign Offs B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "baseball",
+  "name": "Baseball",
+  "group": "sports",
+  "slot": [
+   2,
+   1
+  ],
+  "badge": "/content/keys/baseball/badge.webp",
+  "badgeSource": "Image - Baseball CK.png",
+  "badgeChoice": "newer gold design",
+  "pages": [
+   {
+    "file": "/content/keys/baseball/page-00.webp",
+    "title": "Cover",
+    "source": "Pg 0 - Baseball Cover.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/baseball/page-01.webp",
+    "title": "Benefits",
+    "source": "Pg 1 - Baseball Benefits.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/baseball/page-02.webp",
+    "title": "Overview",
+    "source": "Pg 2 - Baseball Overview.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/baseball/page-03.webp",
+    "title": "Rules & Equip",
+    "source": "Pg 3 - Baseball Rules & Equip.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/baseball/page-04.webp",
+    "title": "Skills & Drills",
+    "source": "Pg 4 - Baseball Skills & Drills.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/baseball/page-05.webp",
+    "title": "Tryouts",
+    "source": "Pg 5 - Baseball Tryouts.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/baseball/page-06.webp",
+    "title": "Fan of Game",
+    "source": "Pg 6 - Baseball Fan of Game.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/baseball/page-07.webp",
+    "title": "Penalties A",
+    "source": "Pg 7 - Baseball Penalties A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/baseball/page-08.webp",
+    "title": "Penalties B",
+    "source": "Pg 8 - Baseball Penalites B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/baseball/page-09.webp",
+    "title": "Tips & Quotes",
+    "source": "Pg 9 - Baseball Tips & Quotes.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/baseball/page-10.webp",
+    "title": "Injuries",
+    "source": "Pg 10 - Baseball Injuries.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/baseball/page-11.webp",
+    "title": "Strategies",
+    "source": "Pg 11 - Baseball Strategies.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/baseball/page-12.webp",
+    "title": "Requirements \u2014 Part 1",
+    "source": "Pg 12 - Baseball Requirements A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/baseball/page-13.webp",
+    "title": "Requirements \u2014 Part 2",
+    "source": "Pg 13 - Baseball Requirements B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/baseball/page-14.webp",
+    "title": "Sign-offs \u2014 Part 1",
+    "source": "Pg 14 - Baseball Sign Offs A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/baseball/page-15.webp",
+    "title": "Sign-offs \u2014 Part 2",
+    "source": "Pg 15 - Baseball Sign Offs B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "track-and-field",
+  "name": "Track & Field",
+  "group": "sports",
+  "slot": [
+   2,
+   2
+  ],
+  "badge": "/content/keys/track-and-field/badge.webp",
+  "badgeSource": "Image - Track and Field CK.png",
+  "badgeChoice": "newer gold design",
+  "pages": [
+   {
+    "file": "/content/keys/track-and-field/page-00.webp",
+    "title": "Cover",
+    "source": "Pg 00 - Track Cover.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/track-and-field/page-01.webp",
+    "title": "Benefits",
+    "source": "Pg 0 - Track Benefits.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/track-and-field/page-02.webp",
+    "title": "Overview",
+    "source": "Pg 1 - Track Overview.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/track-and-field/page-03.webp",
+    "title": "Rules & Scoring",
+    "source": "Pg 2 - Track Rules & Scoring.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/track-and-field/page-04.webp",
+    "title": "Sprints A",
+    "source": "Pg 3 - Track Sprints A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/track-and-field/page-05.webp",
+    "title": "Sprints B",
+    "source": "Pg 4 - Track Sprints B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/track-and-field/page-06.webp",
+    "title": "Relay A",
+    "source": "Pg 5 - Track Relay A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/track-and-field/page-07.webp",
+    "title": "Relay B",
+    "source": "Pg 6 - Track Relay B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/track-and-field/page-08.webp",
+    "title": "Hurdles",
+    "source": "Pg 7 - Track Hurdles.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/track-and-field/page-09.webp",
+    "title": "Throws A",
+    "source": "Pg 8 - Track Throws A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/track-and-field/page-10.webp",
+    "title": "Jumps A",
+    "source": "Pg 9 - Track Jumps A.png",
+    "width": 1024,
+    "height": 1535,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/track-and-field/page-11.webp",
+    "title": "Jumps B",
+    "source": "Pg 10 - Track Jumps B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/track-and-field/page-12.webp",
+    "title": "Injuries",
+    "source": "Pg 11 - Track Injuries.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/track-and-field/page-13.webp",
+    "title": "Benchmarks",
+    "source": "Pg 12 - Track Benchmarks.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/track-and-field/page-14.webp",
+    "title": "Requirements \u2014 Part 1",
+    "source": "Pg 13 - Track Requirements A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/track-and-field/page-15.webp",
+    "title": "Requirements \u2014 Part 2",
+    "source": "Pg 14 - Track Requirements B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/track-and-field/page-16.webp",
+    "title": "Sign-offs \u2014 Part 1",
+    "source": "Pg 15 - Track Sign Offs A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/track-and-field/page-17.webp",
+    "title": "Sign-offs \u2014 Part 2",
+    "source": "Pg 16 - Track Sign Offs B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "bird-watching",
+  "name": "Bird Watching",
+  "group": "outdoors",
+  "slot": [
+   0,
+   0
+  ],
+  "badge": "/content/keys/bird-watching/badge.webp",
+  "badgeSource": "CK Bird Watching Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/bird-watching/page-00.webp",
+    "title": "Cover",
+    "source": "Pg 1 - Birdwatching Cover.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/bird-watching/page-01.webp",
+    "title": "Joy & Benefits",
+    "source": "Pg 2 - Birdwatching Joy & Benefits.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/bird-watching/page-02.webp",
+    "title": "Equipment",
+    "source": "Pg 3 - Birdwatching Equipment.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/bird-watching/page-03.webp",
+    "title": "Songbirds",
+    "source": "Pg 4 - Birdwatching Songbirds.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/bird-watching/page-04.webp",
+    "title": "Raptors",
+    "source": "Pg 5 - Birdwatching Raptors.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/bird-watching/page-05.webp",
+    "title": "Water Birds",
+    "source": "Pg 6 - Birdwatching Water Birds.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/bird-watching/page-06.webp",
+    "title": "Wading Birds",
+    "source": "Pg 7 - Birdwatching Wading Birds.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/bird-watching/page-07.webp",
+    "title": "Sea Birds",
+    "source": "Pg 8 - Birdwatching Sea Birds.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/bird-watching/page-08.webp",
+    "title": "Flightless Birds",
+    "source": "Pg 9 - Birdwatching Flightless Birds.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/bird-watching/page-09.webp",
+    "title": "Game Birds",
+    "source": "Pg 10 - Birdwatching Game Birds.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/bird-watching/page-10.webp",
+    "title": "Etiquette",
+    "source": "Pg 11 - Birdwatching Etiquette.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/bird-watching/page-11.webp",
+    "title": "Digital Collecting",
+    "source": "Pg 12 - Birdwatching Digital Collecting.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/bird-watching/page-12.webp",
+    "title": "Requirements \u2014 Part 1",
+    "source": "Pg 13 - Birdwatching Requirements A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/bird-watching/page-13.webp",
+    "title": "Requirements \u2014 Part 2",
+    "source": "Pg 14 - Birdwatching Requirements B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "mountain-biking",
+  "name": "Mountain Biking",
+  "group": "outdoors",
+  "slot": [
+   0,
+   1
+  ],
+  "badge": "/content/keys/mountain-biking/badge.webp",
+  "badgeSource": "CK Mountain Biking Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/mountain-biking/page-00.webp",
+    "title": "Cover",
+    "source": "01 - Mtn Biking Cover.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/mountain-biking/page-01.webp",
+    "title": "Joy & Benefits",
+    "source": "02 - Mtn Biking JOY & BENEFITS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/mountain-biking/page-02.webp",
+    "title": "Bike Trails",
+    "source": "03 - Mtn Biking BIKE TRAILS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/mountain-biking/page-03.webp",
+    "title": "Equip & Gear",
+    "source": "04 - Mtn Biking EQUIP & GEAR.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/mountain-biking/page-04.webp",
+    "title": "Bike Choice",
+    "source": "05 - Mtn Biking BIKE CHOICE.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/mountain-biking/page-05.webp",
+    "title": "Skills & Drills",
+    "source": "06 - Mtn Biking SKILLS & DRILLS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/mountain-biking/page-06.webp",
+    "title": "Safety",
+    "source": "07 - Mtn Biking SAFETY.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/mountain-biking/page-07.webp",
+    "title": "Repairs",
+    "source": "08 - Mtn Biking REPAIRS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/mountain-biking/page-08.webp",
+    "title": "Sign-offs \u2014 Part 1",
+    "source": "11 - Mtn Biking SIGN OFFS A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/mountain-biking/page-09.webp",
+    "title": "Sign-offs \u2014 Part 2",
+    "source": "12 - Mtn Biking SIGN OFFS B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "kayaking",
+  "name": "Kayaking",
+  "group": "outdoors",
+  "slot": [
+   0,
+   2
+  ],
+  "badge": "/content/keys/kayaking/badge.webp",
+  "badgeSource": "CK - Kayaking Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/kayaking/page-00.webp",
+    "title": "Cover",
+    "source": "01 - Kayaking COVER.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/kayaking/page-01.webp",
+    "title": "Joys & Benefits",
+    "source": "02 - Kayaking JOYS & BENEFITS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/kayaking/page-02.webp",
+    "title": "Lake, River, Ocean",
+    "source": "03 - Kayaking LAKE, RIVER, OCEAN.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/kayaking/page-03.webp",
+    "title": "Equipment",
+    "source": "04 - Kayaking EQUIPMENT.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/kayaking/page-04.webp",
+    "title": "Safety",
+    "source": "05 - Kayaking SAFETY.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/kayaking/page-05.webp",
+    "title": "Skills & Drills",
+    "source": "06 - Kayaking SKILLS & DRILLS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/kayaking/page-06.webp",
+    "title": "Learning",
+    "source": "07 - Kayaking LEARNING.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/kayaking/page-07.webp",
+    "title": "Rare Hazards",
+    "source": "08 - Kayaking RARE HAZARDS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/kayaking/page-08.webp",
+    "title": "Requirements",
+    "source": "09 - Kayaking REQUIREMENTS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "river-rafting",
+  "name": "River Rafting",
+  "group": "outdoors",
+  "slot": [
+   1,
+   0
+  ],
+  "badge": "/content/keys/river-rafting/badge.webp",
+  "badgeSource": "CK River Rafting Badge image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/river-rafting/page-00.webp",
+    "title": "Cover",
+    "source": "01 - River Rafting Cover.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/river-rafting/page-01.webp",
+    "title": "Joys",
+    "source": "02 - River Rafting JOYS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/river-rafting/page-02.webp",
+    "title": "Rapids",
+    "source": "03 - River Rafting Rapids.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/river-rafting/page-03.webp",
+    "title": "Safety & Gear",
+    "source": "04 - River Rafting Safety & Gear.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/river-rafting/page-04.webp",
+    "title": "Skills & Drills",
+    "source": "05 - River Rafting SKILLS & DRILLS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/river-rafting/page-05.webp",
+    "title": "Teamwork",
+    "source": "06 - River Rafting Teamwork.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/river-rafting/page-06.webp",
+    "title": "Etiquette",
+    "source": "07 - River Rafting Etiquette.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/river-rafting/page-07.webp",
+    "title": "Guides",
+    "source": "08 - River Rafting Guides.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/river-rafting/page-08.webp",
+    "title": "Training",
+    "source": "09 - River Rafting Training.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/river-rafting/page-09.webp",
+    "title": "Requirements \u2014 Part 1",
+    "source": "10 - River Rafting REQUIREMENTS A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/river-rafting/page-10.webp",
+    "title": "Requirements \u2014 Part 2",
+    "source": "11. River Rafting REQUIREMENTS B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/river-rafting/page-11.webp",
+    "title": "Sign-offs \u2014 Part 1",
+    "source": "12. River Rafting SIGN OFFS A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/river-rafting/page-12.webp",
+    "title": "Sign-offs \u2014 Part 2",
+    "source": "13. River Rafting SIGN OFFS B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "camping",
+  "name": "Camping",
+  "group": "outdoors",
+  "slot": [
+   1,
+   1
+  ],
+  "badge": "/content/keys/camping/badge.webp",
+  "badgeSource": "ChatGPT Image Sep 4, 2026, 09_57_36 AM.png",
+  "badgeChoice": "newest of 2 versions",
+  "pages": [
+   {
+    "file": "/content/keys/camping/page-00.webp",
+    "title": "Cover",
+    "source": "Pg 1 - Camping Cover.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/camping/page-01.webp",
+    "title": "Joys & Benefits",
+    "source": "Pg 2 - Camping Joys & Benefits.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/camping/page-02.webp",
+    "title": "Campgrounds",
+    "source": "Pg 3 - Camping Campgrounds.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/camping/page-03.webp",
+    "title": "Equipment",
+    "source": "Pg 4 - Camping Equipment.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/camping/page-04.webp",
+    "title": "Campsites",
+    "source": "Pg 5 - Camping Campsites.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/camping/page-05.webp",
+    "title": "Campfires",
+    "source": "Pg 6 - Camping Campfires.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/camping/page-06.webp",
+    "title": "Safety",
+    "source": "Pg 7 - Camping Safety.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/camping/page-07.webp",
+    "title": "Cooking",
+    "source": "Pg 8 - Camping Cooking.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/camping/page-08.webp",
+    "title": "Etiquette",
+    "source": "Pg 9 - Camping Etiquette.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/camping/page-09.webp",
+    "title": "Waste",
+    "source": "Pg 10 - Camping Waste.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/camping/page-10.webp",
+    "title": "Requirements \u2014 Part 1",
+    "source": "Pg 11 - Camping Requirements A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/camping/page-11.webp",
+    "title": "Requirements \u2014 Part 2",
+    "source": "Pg 12 - Camping Requirements B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "hiking",
+  "name": "Hiking",
+  "group": "outdoors",
+  "slot": [
+   1,
+   2
+  ],
+  "badge": "/content/keys/hiking/badge.webp",
+  "badgeSource": "CK - Hiking Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/hiking/page-00.webp",
+    "title": "Cover",
+    "source": "Pg 1 - Hiking Cover.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/hiking/page-01.webp",
+    "title": "Joys & Benefits",
+    "source": "Pg 2 - Hiking Joys & Benefits.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/hiking/page-02.webp",
+    "title": "Day Hikes A",
+    "source": "Pg 3 - Hiking Day Hikes A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/hiking/page-03.webp",
+    "title": "Day Hikes B",
+    "source": "Pg 4 - Hiking Day Hikes B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/hiking/page-04.webp",
+    "title": "Backpacking A",
+    "source": "Pg 5 - Hiking Backpacking A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/hiking/page-05.webp",
+    "title": "Backpacking B",
+    "source": "Pg 6 - Hiking Backpacking B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/hiking/page-06.webp",
+    "title": "Backpacking C",
+    "source": "Pg 7 - Hiking Backpacking C.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/hiking/page-07.webp",
+    "title": "Safety",
+    "source": "Pg 8 - Hiking Safety.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/hiking/page-08.webp",
+    "title": "Orientation",
+    "source": "Pg 9 - Hiking Orientation.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/hiking/page-09.webp",
+    "title": "Foot Care",
+    "source": "Pg 10 - Hiking Foot Care.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/hiking/page-10.webp",
+    "title": "Requirements \u2014 Part 1",
+    "source": "Pg 11 - Hiking Requirements A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/hiking/page-11.webp",
+    "title": "Requirements \u2014 Part 2",
+    "source": "Pg 12 - Hiking Requirements B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "fishing",
+  "name": "Fishing",
+  "group": "outdoors",
+  "slot": [
+   2,
+   0
+  ],
+  "badge": "/content/keys/fishing/badge.webp",
+  "badgeSource": "ChatGPT Image Sep 4, 2026, 12_00_21 PM.png",
+  "badgeChoice": "only design (generic file name)",
+  "pages": [
+   {
+    "file": "/content/keys/fishing/page-00.webp",
+    "title": "Cover",
+    "source": "Pg 1 - Fishing Cover.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/fishing/page-01.webp",
+    "title": "Joy & Benefits",
+    "source": "Pg 2 - Fishing Joy & Benefits.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/fishing/page-02.webp",
+    "title": "Lake A",
+    "source": "Pg 3 - Fishing Lake A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/fishing/page-03.webp",
+    "title": "Lake B",
+    "source": "Pg 4 - Fishing Lake B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/fishing/page-04.webp",
+    "title": "Lake C",
+    "source": "Pg 5 - Fishing Lake C.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/fishing/page-05.webp",
+    "title": "Creek A",
+    "source": "Pg 6 - Fishing Creek A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/fishing/page-06.webp",
+    "title": "Creek B",
+    "source": "Pg 7 - Fishing Creek B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/fishing/page-07.webp",
+    "title": "Creek C",
+    "source": "Pg 8 - Fishing Creek C.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/fishing/page-08.webp",
+    "title": "Ocean A",
+    "source": "Pg 9 - Fishing Ocean A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/fishing/page-09.webp",
+    "title": "Ocean B",
+    "source": "Pg 10 - Fishing Ocean B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/fishing/page-10.webp",
+    "title": "Ocean C",
+    "source": "Pg 11 - Fishing Ocean C.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/fishing/page-11.webp",
+    "title": "Fly Fishing A",
+    "source": "Pg 12 - Fishing Fly Fishing A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/fishing/page-12.webp",
+    "title": "Fly Fishing B",
+    "source": "Pg 13 - Fishing Fly Fishing B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/fishing/page-13.webp",
+    "title": "Fly Fishing C",
+    "source": "Pg 14 - Fishing Fly Fishing C.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/fishing/page-14.webp",
+    "title": "Cook vs Release",
+    "source": "Pg 15 - Fishing Cook vs Release.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/fishing/page-15.webp",
+    "title": "License & Safety",
+    "source": "Pg 16 - Fishing License & Safety.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/fishing/page-16.webp",
+    "title": "Requirements \u2014 Part 1",
+    "source": "Pg 17 - Fishing Requirements A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/fishing/page-17.webp",
+    "title": "Requirements \u2014 Part 2",
+    "source": "Pg 18 - Fishing Requirements B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/fishing/page-18.webp",
+    "title": "Sign-offs \u2014 Part 1",
+    "source": "Pg 19 - Fishing Sign offs A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/fishing/page-19.webp",
+    "title": "Sign-offs \u2014 Part 2",
+    "source": "Pg 20 - Fishing Sign Offs B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "astronomy",
+  "name": "Astronomy",
+  "group": "outdoors",
+  "slot": [
+   2,
+   1
+  ],
+  "badge": "/content/keys/astronomy/badge.webp",
+  "badgeSource": "CK Astronomy badge image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/astronomy/page-00.webp",
+    "title": "Cover",
+    "source": "Pg 1 - Astronomy Cover Pg.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/astronomy/page-01.webp",
+    "title": "Joys & Benefits",
+    "source": "Pg 2 - Astronomy Joys & Benefits.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/astronomy/page-02.webp",
+    "title": "Equipment",
+    "source": "Pg 3 - Astronomy Equipment.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/astronomy/page-03.webp",
+    "title": "Operate",
+    "source": "Pg 4 - Astronomy Operate.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/astronomy/page-04.webp",
+    "title": "Planets & Moons",
+    "source": "Pg 5 - Astronomy Planets & Moons.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/astronomy/page-05.webp",
+    "title": "Deep Sky",
+    "source": "Pg 6 - Astronomy Deep Sky.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/astronomy/page-06.webp",
+    "title": "Constellations A",
+    "source": "Pg 7 - Astronomy Constellations A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/astronomy/page-07.webp",
+    "title": "Constellations B",
+    "source": "Pg 8 - Astronomy Constellations B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/astronomy/page-08.webp",
+    "title": "Constellations C",
+    "source": "Pg 9 - Astronomy Constellations C.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/astronomy/page-09.webp",
+    "title": "Apps & Helps",
+    "source": "Pg 10 - Astronomy Apps & Helps.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/astronomy/page-10.webp",
+    "title": "Experiences A",
+    "source": "Pg 11 - Astronomy Experiences A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/astronomy/page-11.webp",
+    "title": "Experiences B",
+    "source": "Pg 12 - Astronomy Experiences B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/astronomy/page-12.webp",
+    "title": "Requirements \u2014 Part 1",
+    "source": "Pg 13 - Astronomy Requirements A.png",
+    "width": 768,
+    "height": 1024,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/astronomy/page-13.webp",
+    "title": "Requirements \u2014 Part 2",
+    "source": "Pg 14 - Astronomy Requirements B.png",
+    "width": 768,
+    "height": 1024,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "forest-life",
+  "name": "Forest Life",
+  "group": "animal-habitats",
+  "slot": [
+   0,
+   0
+  ],
+  "badge": "/content/keys/forest-life/badge.webp",
+  "badgeSource": "CK Forest Life Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/forest-life/page-00.webp",
+    "title": "Cover",
+    "source": "01 - Forest Life - COVER.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/forest-life/page-01.webp",
+    "title": "Temps & Terrain",
+    "source": "02 - Forest Life - Temps & Terrain.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/forest-life/page-02.webp",
+    "title": "Animals & Plants",
+    "source": "03 - Forest Life - Animals & Plants.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/forest-life/page-03.webp",
+    "title": "Herbivores",
+    "source": "04 - Forest Life - Herbivores.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/forest-life/page-04.webp",
+    "title": "Carnivores",
+    "source": "05 - Forest Life - Carnivores.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/forest-life/page-05.webp",
+    "title": "Apex Predators",
+    "source": "06 - Forest Life - APEX Predators.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/forest-life/page-06.webp",
+    "title": "Ecosystem",
+    "source": "07 - Forest Life - ECOSYSTEM.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/forest-life/page-07.webp",
+    "title": "Environment",
+    "source": "08 - Forest Life - ENVIRONMENT.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/forest-life/page-08.webp",
+    "title": "Endangered",
+    "source": "09 - Forest Life - ENDANGERED.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/forest-life/page-09.webp",
+    "title": "Survival",
+    "source": "10 - Forest Life - SURVIVAL.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/forest-life/page-10.webp",
+    "title": "Requirements",
+    "source": "11 - Forest Life - REQUIREMENTS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "jungle-life",
+  "name": "Jungle Life",
+  "group": "animal-habitats",
+  "slot": [
+   0,
+   1
+  ],
+  "badge": "/content/keys/jungle-life/badge.webp",
+  "badgeSource": "CK Jungle Life Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/jungle-life/page-00.webp",
+    "title": "Cover",
+    "source": "01 - Jungle Life - COVER.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/jungle-life/page-01.webp",
+    "title": "Temps & Terrain",
+    "source": "02 - Jungle Life - Temps & Terrain.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/jungle-life/page-02.webp",
+    "title": "Animals & Plants",
+    "source": "03 - Jungle Life - Animals & Plants.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/jungle-life/page-03.webp",
+    "title": "Herbivores",
+    "source": "04 - Jungle Life - Herbivores.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/jungle-life/page-04.webp",
+    "title": "Carnivores",
+    "source": "05 - Jungle Life - Carnivores.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/jungle-life/page-05.webp",
+    "title": "Apex Predators",
+    "source": "06 - Jungle Life - APEX Predators.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/jungle-life/page-06.webp",
+    "title": "Ecosystem",
+    "source": "07 - Junble Life - ECOSYSTEM.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/jungle-life/page-07.webp",
+    "title": "Environment",
+    "source": "08 - Jungle Life - ENVIRONMENT.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/jungle-life/page-08.webp",
+    "title": "Endangered",
+    "source": "09 - Jungle Life - ENDANGERED.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/jungle-life/page-09.webp",
+    "title": "Survival",
+    "source": "10 - Jungle Life - SURVIVAL.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/jungle-life/page-10.webp",
+    "title": "Requirements",
+    "source": "11 - Jungle Life - REQUIREMENTS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "polar-life",
+  "name": "Polar Life",
+  "group": "animal-habitats",
+  "slot": [
+   0,
+   2
+  ],
+  "badge": "/content/keys/polar-life/badge.webp",
+  "badgeSource": "CK Polar Life Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/polar-life/page-00.webp",
+    "title": "Cover",
+    "source": "01 - Polar Life - COVER.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/polar-life/page-01.webp",
+    "title": "Temps & Terrain",
+    "source": "02 - Polar Life - Temps & Terrain.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/polar-life/page-02.webp",
+    "title": "Animals & Plants",
+    "source": "03 - Polar Life - Animals & Plants.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/polar-life/page-03.webp",
+    "title": "Herbivores",
+    "source": "04 - Polar Life - Herbivores.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/polar-life/page-04.webp",
+    "title": "Carnivores",
+    "source": "05 - Polar Life - Carnivores.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/polar-life/page-05.webp",
+    "title": "Apex Predators",
+    "source": "06 - Polar Life - APEX Predators.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/polar-life/page-06.webp",
+    "title": "Ecosystem",
+    "source": "07 - Polar Life - ECOSYSTEM.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/polar-life/page-07.webp",
+    "title": "Environment",
+    "source": "08 - Polar Life - ENVIRONMENT.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/polar-life/page-08.webp",
+    "title": "Endangered",
+    "source": "09 - Polar Life - ENDANGERED.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/polar-life/page-09.webp",
+    "title": "Survival",
+    "source": "10 - Polar Life - SURVIVAL.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/polar-life/page-10.webp",
+    "title": "Requirements",
+    "source": "11 - Polar Life - REQUIREMENTS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "ice-age-life",
+  "name": "Ice Age Life",
+  "group": "animal-habitats",
+  "slot": [
+   1,
+   0
+  ],
+  "badge": "/content/keys/ice-age-life/badge.webp",
+  "badgeSource": "CK Ice Age Life Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/ice-age-life/page-00.webp",
+    "title": "Cover",
+    "source": "01 - Ice Age Life - COVER.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/ice-age-life/page-01.webp",
+    "title": "Temps & Terrain",
+    "source": "02 - Ice Age Life - Temps & Terrain.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/ice-age-life/page-02.webp",
+    "title": "Animals & Plants",
+    "source": "03 - Ice Age Life - Animals & Plants.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/ice-age-life/page-03.webp",
+    "title": "Herbivores",
+    "source": "04 - Ice Age Life - Herbivores.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/ice-age-life/page-04.webp",
+    "title": "Carnivores",
+    "source": "05 - Ice Age Life - Carnivores.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/ice-age-life/page-05.webp",
+    "title": "Apex Predators",
+    "source": "06 - Ice Age Life - APEX Predators.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/ice-age-life/page-06.webp",
+    "title": "Extinction",
+    "source": "07 - Ice Age Life - EXTINCTION.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/ice-age-life/page-07.webp",
+    "title": "Discovery",
+    "source": "08 - Ice Age Life - DISCOVERY.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/ice-age-life/page-08.webp",
+    "title": "Understand",
+    "source": "09 - Ice Age Life - UNDERSTAND.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/ice-age-life/page-09.webp",
+    "title": "Requirements",
+    "source": "10 - Ice Age Life - REQUIREMENTS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "insect-life",
+  "name": "Insect Life",
+  "group": "animal-habitats",
+  "slot": [
+   1,
+   1
+  ],
+  "badge": "/content/keys/insect-life/badge.webp",
+  "badgeSource": "CK Insect Life Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/insect-life/page-00.webp",
+    "title": "Cover",
+    "source": "01 - Insect Life - COVER.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/insect-life/page-01.webp",
+    "title": "Overview",
+    "source": "03 - Insect Life - OVERVIEW.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/insect-life/page-02.webp",
+    "title": "Herbivores",
+    "source": "04 - Insect Life - Herbivores.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/insect-life/page-03.webp",
+    "title": "Carnivores",
+    "source": "05 - Insect Life - Carnivores.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/insect-life/page-04.webp",
+    "title": "Apex Predators",
+    "source": "06 - Insect Life - APEX Predators.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/insect-life/page-05.webp",
+    "title": "Ecosystem",
+    "source": "07 - Insect Life - ECOSYSTEM.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/insect-life/page-06.webp",
+    "title": "Environment",
+    "source": "08 - Insect Life - ENVIRONMENT.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/insect-life/page-07.webp",
+    "title": "Endangered",
+    "source": "09 - Insect Life - ENDANGERED.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/insect-life/page-08.webp",
+    "title": "Caution",
+    "source": "10 - Insect Life - CAUTION.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/insect-life/page-09.webp",
+    "title": "Requirements",
+    "source": "11 - Insect LIfe - REQUIREMENTS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "pet-life",
+  "name": "Pet Life",
+  "group": "animal-habitats",
+  "slot": [
+   1,
+   2
+  ],
+  "badge": "/content/keys/pet-life/badge.webp",
+  "badgeSource": "CK Pets Life Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/pet-life/page-00.webp",
+    "title": "Cover",
+    "source": "01 - Pets Life - COVER.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/pet-life/page-01.webp",
+    "title": "Joys & Benefits",
+    "source": "02 - Pet Life - JOYS & BENEFITS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/pet-life/page-02.webp",
+    "title": "Choosing",
+    "source": "03 - Pet Life - CHOOSING.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/pet-life/page-03.webp",
+    "title": "Dog Care 1",
+    "source": "04 - Pet Life - DOG CARE 1.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/pet-life/page-04.webp",
+    "title": "Dog Care 2",
+    "source": "05 - Pet Life - DOG CARE 2.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/pet-life/page-05.webp",
+    "title": "Cat Care 1",
+    "source": "06 - Pet Life - CAT CARE 1.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/pet-life/page-06.webp",
+    "title": "Cat Care 2",
+    "source": "07 - Pet Life - CAT CARE 2.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/pet-life/page-07.webp",
+    "title": "Bird Care 1",
+    "source": "08 - Pet Life - BIRD CARE 1.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/pet-life/page-08.webp",
+    "title": "Bird Care 2",
+    "source": "09 - Pet Life - BIRD CARE 2.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/pet-life/page-09.webp",
+    "title": "Fish Care 1",
+    "source": "10 - Pet Life - FISH CARE 1.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/pet-life/page-10.webp",
+    "title": "Fish Care 2",
+    "source": "11 - Pet Life - FISH CARE 2.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/pet-life/page-11.webp",
+    "title": "Small Pets 1",
+    "source": "12 - Pet Life - SMALL PETS 1.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/pet-life/page-12.webp",
+    "title": "Small Pets 2",
+    "source": "13 - Pet Life - SMALL PETS 2.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/pet-life/page-13.webp",
+    "title": "Requirements",
+    "source": "ChatGPT Image Sep 25, 2026, 03_28_55 PM.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "desert-life",
+  "name": "Desert Life",
+  "group": "animal-habitats",
+  "slot": [
+   2,
+   0
+  ],
+  "badge": "/content/keys/desert-life/badge.webp",
+  "badgeSource": "CK Desert life Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/desert-life/page-00.webp",
+    "title": "Cover",
+    "source": "01 - Desert Life - COVER.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/desert-life/page-01.webp",
+    "title": "Temps and Terrain",
+    "source": "02 - Desert Life Temps and Terrain.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/desert-life/page-02.webp",
+    "title": "Animals & Plants",
+    "source": "03 - Desert Life Animals & Plants.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/desert-life/page-03.webp",
+    "title": "Herbivores",
+    "source": "04 - Desert Life - Herbivores.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/desert-life/page-04.webp",
+    "title": "Carnivores",
+    "source": "05 - Desert Life - Carnivores.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/desert-life/page-05.webp",
+    "title": "Apex Predators",
+    "source": "06 - Desert life - APEX Predators.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/desert-life/page-06.webp",
+    "title": "Ecosystem",
+    "source": "07 - Desert Life - ECOSYSTEM.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/desert-life/page-07.webp",
+    "title": "Environment",
+    "source": "08 - Desert Life - ENVIRONMENT.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/desert-life/page-08.webp",
+    "title": "Endangered",
+    "source": "09 - Desert Life - ENDANGERED.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/desert-life/page-09.webp",
+    "title": "Survival",
+    "source": "10 - Desert Life SURVIVAL.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/desert-life/page-10.webp",
+    "title": "Requirements",
+    "source": "11- Desert Life - REQUIREMENTS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "ocean-life",
+  "name": "Ocean Life",
+  "group": "animal-habitats",
+  "slot": [
+   2,
+   1
+  ],
+  "badge": "/content/keys/ocean-life/badge.webp",
+  "badgeSource": "CK Ocean Life Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/ocean-life/page-00.webp",
+    "title": "Cover",
+    "source": "01 - Ocean Life - COVER.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/ocean-life/page-01.webp",
+    "title": "Temps & Terrain",
+    "source": "02 - Ocean Life - Temps & Terrain.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/ocean-life/page-02.webp",
+    "title": "Animals & Plants",
+    "source": "03 - Ocean Life - Animals & Plants.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/ocean-life/page-03.webp",
+    "title": "Herbivores",
+    "source": "04 - Ocean Life - Herbivores.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/ocean-life/page-04.webp",
+    "title": "Carnivores",
+    "source": "05 - Ocean Life - Carnivores.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/ocean-life/page-05.webp",
+    "title": "Apex Predators",
+    "source": "06 - Ocean Life - APEX Predators.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/ocean-life/page-06.webp",
+    "title": "Ecosystem",
+    "source": "07 - Ocean Life - ECOSYSTEM.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/ocean-life/page-07.webp",
+    "title": "Environment",
+    "source": "08 - Ocean Life - ENVIRONMENT.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/ocean-life/page-08.webp",
+    "title": "Endangered",
+    "source": "09 - Ocean Life - ENDANGERED.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/ocean-life/page-09.webp",
+    "title": "Survival",
+    "source": "10 - Ocean Life - SURVIVAL.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/ocean-life/page-10.webp",
+    "title": "Requirements",
+    "source": "11- Ocean Life - REQUIREMENTS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "jurassic-life",
+  "name": "Jurassic Life",
+  "group": "animal-habitats",
+  "slot": [
+   2,
+   2
+  ],
+  "badge": "/content/keys/jurassic-life/badge.webp",
+  "badgeSource": "CK Jurassic Life Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/jurassic-life/page-00.webp",
+    "title": "Cover",
+    "source": "01 - Jurassic Life - COVER.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/jurassic-life/page-01.webp",
+    "title": "Temps & Terrain",
+    "source": "02 - Jurassic Life - Temps & Terrain.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/jurassic-life/page-02.webp",
+    "title": "Animals & Plants",
+    "source": "03 - Jurassic Life - Animals & Plants.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/jurassic-life/page-03.webp",
+    "title": "Herbivores",
+    "source": "04 - Jurassic Life - Herbivores.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/jurassic-life/page-04.webp",
+    "title": "Carnivores",
+    "source": "05 - Jurassic Life - Carnivores.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/jurassic-life/page-05.webp",
+    "title": "Apex Predators",
+    "source": "06 - Jurassic Life - APEX Predators.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/jurassic-life/page-06.webp",
+    "title": "Extinction",
+    "source": "07 - Jurassic Life - EXTINCTION.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/jurassic-life/page-07.webp",
+    "title": "Discovery",
+    "source": "08 - Jurassic Life - DISCOVERY.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/jurassic-life/page-08.webp",
+    "title": "Understand",
+    "source": "09 - Jurassic Life - UNDERSTAND.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/jurassic-life/page-09.webp",
+    "title": "Requirements",
+    "source": "10 - Jurassic Life - REQUIREMENTS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "pottery",
+  "name": "Pottery",
+  "group": "crafts",
+  "slot": [
+   0,
+   0
+  ],
+  "badge": "/content/keys/pottery/badge.webp",
+  "badgeSource": "CK Pottery Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/pottery/page-00.webp",
+    "title": "Cover",
+    "source": "01 - Pottery COVER.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/pottery/page-01.webp",
+    "title": "Joys & Benefits",
+    "source": "02 - Pottery JOYS & BENEFITS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/pottery/page-02.webp",
+    "title": "Equipment & Supplies",
+    "source": "03 - Pottery EQUIPMENT & SUPPLIES.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/pottery/page-03.webp",
+    "title": "Safety",
+    "source": "04 - Pottery SAFETY.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/pottery/page-04.webp",
+    "title": "Inspiration",
+    "source": "05 - Pottery INSPIRATION.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/pottery/page-05.webp",
+    "title": "How To Start",
+    "source": "06 - Pottery HOW TO START.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/pottery/page-06.webp",
+    "title": "How To Improve",
+    "source": "07 - Pottery HOW TO IMPROVE.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/pottery/page-07.webp",
+    "title": "Clean & Organized",
+    "source": "08 - Pottery CLEAN & ORGANIZED.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/pottery/page-08.webp",
+    "title": "Expert Level",
+    "source": "09 - Pottery EXPERT LEVEL.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/pottery/page-09.webp",
+    "title": "Your 1st Project",
+    "source": "10 - Pottery YOUR 1ST PROJECT.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/pottery/page-10.webp",
+    "title": "Requirements",
+    "source": "11- Pottery REQUIREMENTS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "woodworking",
+  "name": "Woodworking",
+  "group": "crafts",
+  "slot": [
+   0,
+   1
+  ],
+  "badge": "/content/keys/woodworking/badge.webp",
+  "badgeSource": "CK Woodworking Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/woodworking/page-00.webp",
+    "title": "Cover",
+    "source": "01 - Woodworking COVER.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/woodworking/page-01.webp",
+    "title": "Joys & Benefits",
+    "source": "02 - Woodworking JOYS & BENEFITS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/woodworking/page-02.webp",
+    "title": "Equipment & Supplies",
+    "source": "03 - Woodworking EQUIPMENT & SUPPLIES.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/woodworking/page-03.webp",
+    "title": "Safety",
+    "source": "04 - Woodworking SAFETY.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/woodworking/page-04.webp",
+    "title": "Inspiration",
+    "source": "05 - Woodworking INSPIRATION.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/woodworking/page-05.webp",
+    "title": "How To Start",
+    "source": "06 - Woodworking HOW TO START.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/woodworking/page-06.webp",
+    "title": "How To Improve",
+    "source": "07 - Woodworking HOW TO IMPROVE.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/woodworking/page-07.webp",
+    "title": "Clean & Organized",
+    "source": "08 - Woodworking CLEAN & ORGANIZED.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/woodworking/page-08.webp",
+    "title": "Expert Level",
+    "source": "09 - Woodworking EXPERT LEVEL.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/woodworking/page-09.webp",
+    "title": "Your 1st Project",
+    "source": "10 - Woodworking YOUR 1ST PROJECT.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/woodworking/page-10.webp",
+    "title": "Requirements",
+    "source": "11 - Woodworking REQUIREMENTS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "metal-work",
+  "name": "Metal Work",
+  "group": "crafts",
+  "slot": [
+   0,
+   2
+  ],
+  "badge": "/content/keys/metal-work/badge.webp",
+  "badgeSource": "CK Metal Work Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/metal-work/page-00.webp",
+    "title": "Cover",
+    "source": "01 - Metal Work  COVER.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/metal-work/page-01.webp",
+    "title": "Joys & Benefits",
+    "source": "02 - Metal Work JOYS & BENEFITS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/metal-work/page-02.webp",
+    "title": "Equip & Supply",
+    "source": "03 - Metal Work EQUIP & SUPPLY.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/metal-work/page-03.webp",
+    "title": "Safety",
+    "source": "04 - Metal Work SAFETY.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/metal-work/page-04.webp",
+    "title": "Inspiration",
+    "source": "05 - Metal Work INSPIRATION.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/metal-work/page-05.webp",
+    "title": "How To Start",
+    "source": "06 - Metal Work HOW TO START.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/metal-work/page-06.webp",
+    "title": "How To Improve",
+    "source": "07 - Metal Work HOW TO IMPROVE.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/metal-work/page-07.webp",
+    "title": "Clean & Organized",
+    "source": "08 - Metal Work CLEAN & ORGANIZED.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/metal-work/page-08.webp",
+    "title": "Expert Level",
+    "source": "09 - Metal Work EXPERT LEVEL.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/metal-work/page-09.webp",
+    "title": "Your 1st Project",
+    "source": "10 - Metal Work YOUR 1ST PROJECT.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/metal-work/page-10.webp",
+    "title": "Requirements",
+    "source": "11- Metal Work REQUIREMENTS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "sewing",
+  "name": "Sewing",
+  "group": "crafts",
+  "slot": [
+   1,
+   0
+  ],
+  "badge": "/content/keys/sewing/badge.webp",
+  "badgeSource": "CK Sewing Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/sewing/page-00.webp",
+    "title": "Cover",
+    "source": "01 - Sewing COVER.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/sewing/page-01.webp",
+    "title": "Joys & Benefits",
+    "source": "02 - Sewing JOYS & BENEFITS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/sewing/page-02.webp",
+    "title": "Equip & Supplies",
+    "source": "03 - Sewing EQUIP & SUPPLIES.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/sewing/page-03.webp",
+    "title": "Sewing Machines",
+    "source": "04 - Sewing SEWING MACHINES.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/sewing/page-04.webp",
+    "title": "Safety",
+    "source": "05 - Sewing SAFETY.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/sewing/page-05.webp",
+    "title": "Inspiration",
+    "source": "06 - Sewing INSPIRATION.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/sewing/page-06.webp",
+    "title": "How To Start",
+    "source": "07 - Sewing HOW TO START.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/sewing/page-07.webp",
+    "title": "How To Improve",
+    "source": "08 - Sewing HOW TO IMPROVE.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/sewing/page-08.webp",
+    "title": "Clean & Organized",
+    "source": "09 - Sewing CLEAN & ORGANIZED.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/sewing/page-09.webp",
+    "title": "Expert Level",
+    "source": "10 - Sewing EXPERT LEVEL.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/sewing/page-10.webp",
+    "title": "Your 1st Project",
+    "source": "11 - Sewing YOUR 1ST PROJECT.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/sewing/page-11.webp",
+    "title": "Requirements \u2014 Part 1",
+    "source": "12 - Sewing REQUIREMENTS A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/sewing/page-12.webp",
+    "title": "Requirements \u2014 Part 2",
+    "source": "13 - Sewing REQUIREMENTS B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "quilting",
+  "name": "Quilting",
+  "group": "crafts",
+  "slot": [
+   1,
+   1
+  ],
+  "badge": "/content/keys/quilting/badge.webp",
+  "badgeSource": "CK Quilting Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/quilting/page-00.webp",
+    "title": "Cover",
+    "source": "01 - Quilting COVER.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/quilting/page-01.webp",
+    "title": "Joys & Benefits",
+    "source": "02 - Quilting JOYS & BENEFITS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/quilting/page-02.webp",
+    "title": "Equip & Supplies",
+    "source": "03 - Quilting EQUIP & SUPPLIY.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/quilting/page-03.webp",
+    "title": "Safety",
+    "source": "04 - Quilting SAFETY.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/quilting/page-04.webp",
+    "title": "Inspiration",
+    "source": "05 - Quilting INSPIRATION.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/quilting/page-05.webp",
+    "title": "How To Start",
+    "source": "06 - Quilting HOW TO START.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/quilting/page-06.webp",
+    "title": "How To Improve",
+    "source": "07 - Quilting HOW TO IMPROVE.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/quilting/page-07.webp",
+    "title": "Clean & Organized",
+    "source": "08 - Quilting CLEAN & ORGANIZED.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/quilting/page-08.webp",
+    "title": "Expert Level",
+    "source": "09 - Quilting EXPERT LEVEL.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/quilting/page-09.webp",
+    "title": "Your 1st Project",
+    "source": "10 - Quilting YOUR 1ST PROJECT.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/quilting/page-10.webp",
+    "title": "Requirements",
+    "source": "11- Quilting REQUIREMENTS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "weaving",
+  "name": "Weaving",
+  "group": "crafts",
+  "slot": [
+   1,
+   2
+  ],
+  "badge": "/content/keys/weaving/badge.webp",
+  "badgeSource": "CK Weaving Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/weaving/page-00.webp",
+    "title": "Cover",
+    "source": "01 - Weaving Cover.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/weaving/page-01.webp",
+    "title": "Joys & Benefits",
+    "source": "02 - Weaving JOYS & BENEFITS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/weaving/page-02.webp",
+    "title": "Equipment & Supplies",
+    "source": "03 - Weaving EQUIPMENT & SUPPLIES.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/weaving/page-03.webp",
+    "title": "Safety",
+    "source": "04 - Weaving SAFETY.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/weaving/page-04.webp",
+    "title": "Inspiration",
+    "source": "05 - Weaving INSPIRATION.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/weaving/page-05.webp",
+    "title": "How To Start",
+    "source": "06 - Weaving HOW TO START.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/weaving/page-06.webp",
+    "title": "How To Improve",
+    "source": "07 - Weaving HOW TO IMPROVE.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/weaving/page-07.webp",
+    "title": "Clean & Organized",
+    "source": "08 - Weaving CLEAN & ORGANIZED.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/weaving/page-08.webp",
+    "title": "Expert Level",
+    "source": "09 - Weaving EXPERT LEVEL.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/weaving/page-09.webp",
+    "title": "Your 1st Project",
+    "source": "10 - Weaving YOUR 1ST PROJECT.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/weaving/page-10.webp",
+    "title": "Requirements",
+    "source": "11 - Weaving REQUIREMENTS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "leatherwork",
+  "name": "Leatherwork",
+  "group": "crafts",
+  "slot": [
+   2,
+   0
+  ],
+  "badge": "/content/keys/leatherwork/badge.webp",
+  "badgeSource": "CK Leatherwork Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/leatherwork/page-00.webp",
+    "title": "Cover",
+    "source": "01 - Leatherwork COVER.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/leatherwork/page-01.webp",
+    "title": "Joys & Benefits",
+    "source": "02 - Leatherwork JOYS & BENEFITS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/leatherwork/page-02.webp",
+    "title": "Equip & Supply",
+    "source": "03 - Leatherwork EQUIP & SUPPLY.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/leatherwork/page-03.webp",
+    "title": "Safety",
+    "source": "04 - Leatherwork SAFETY.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/leatherwork/page-04.webp",
+    "title": "Inspiration",
+    "source": "05 - Leatherwork INSPIRATION.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/leatherwork/page-05.webp",
+    "title": "How To Start",
+    "source": "06 - Leatherwork HOW TO START.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/leatherwork/page-06.webp",
+    "title": "How To Improve",
+    "source": "07 - Leatherwork HOW TO IMPROVE.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/leatherwork/page-07.webp",
+    "title": "Clean & Organized",
+    "source": "08 - Leatherwork CLEAN & ORGANIZED.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/leatherwork/page-08.webp",
+    "title": "Expert Level",
+    "source": "09 - Leatherwork EXPERT LEVEL.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/leatherwork/page-09.webp",
+    "title": "Your 1st Project",
+    "source": "10 - Leatherwork YOUR 1ST PROJECT.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/leatherwork/page-10.webp",
+    "title": "Requirements",
+    "source": "11 - Leatherwork REQUIREMENTS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "beading",
+  "name": "Beading",
+  "group": "crafts",
+  "slot": [
+   2,
+   1
+  ],
+  "badge": "/content/keys/beading/badge.webp",
+  "badgeSource": "CK Beading Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/beading/page-00.webp",
+    "title": "Cover",
+    "source": "01 - Beading COVER.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/beading/page-01.webp",
+    "title": "Joys & Benefits",
+    "source": "02 - Beading JOYS & BENEFITS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/beading/page-02.webp",
+    "title": "Equip & Supplies",
+    "source": "03 - Beading EQUIP & SUPPLIES.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/beading/page-03.webp",
+    "title": "Safety",
+    "source": "04 - Beading SAFETY.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/beading/page-04.webp",
+    "title": "Inspiration",
+    "source": "05 - Beading INSPIRATION.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/beading/page-05.webp",
+    "title": "How To Start",
+    "source": "06 - Beading HOW TO START.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/beading/page-06.webp",
+    "title": "How To Improve",
+    "source": "07 - Beading HOW TO IMPROVE.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/beading/page-07.webp",
+    "title": "Clean & Organized",
+    "source": "08 - Beading CLEAN & ORGANIZED.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/beading/page-08.webp",
+    "title": "Expert Level",
+    "source": "09 - Beading EXPERT LEVEL.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/beading/page-09.webp",
+    "title": "Your 1st Project",
+    "source": "10 - Beading YOUR 1ST PROJECT.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/beading/page-10.webp",
+    "title": "Requirements",
+    "source": "11 - Beading REQUIREMENTS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "origami",
+  "name": "Origami",
+  "group": "crafts",
+  "slot": [
+   2,
+   2
+  ],
+  "badge": "/content/keys/origami/badge.webp",
+  "badgeSource": "CK Origami Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/origami/page-00.webp",
+    "title": "Cover",
+    "source": "01 - Origami COVER.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/origami/page-01.webp",
+    "title": "Joys & Benefits",
+    "source": "02 - Origami JOYS & BENEFITS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/origami/page-02.webp",
+    "title": "Supplies",
+    "source": "03 - Origami SUPPLIES.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/origami/page-03.webp",
+    "title": "Safety",
+    "source": "04 - Origami SAFETY.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/origami/page-04.webp",
+    "title": "Inspiration",
+    "source": "05 - Origami INSPIRATION.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/origami/page-05.webp",
+    "title": "How To Start",
+    "source": "06 - Origami HOW TO START.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/origami/page-06.webp",
+    "title": "How To Improve",
+    "source": "07 - Origami HOW TO IMPROVE.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/origami/page-07.webp",
+    "title": "Clean & Organized",
+    "source": "08 - Origami CLEAN & ORGANIZED.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/origami/page-08.webp",
+    "title": "Expert Level",
+    "source": "09 - Origami EXPERT LEVEL.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/origami/page-09.webp",
+    "title": "Your 1st Project",
+    "source": "10 - Origami YOUR 1ST PROJECT.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/origami/page-10.webp",
+    "title": "Requirements",
+    "source": "11- Origami REQUIREMENTS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "singing",
+  "name": "Singing",
+  "group": "performing-arts",
+  "slot": [
+   0,
+   1
+  ],
+  "badge": "/content/keys/singing/badge.webp",
+  "badgeSource": "CK SINGING Badge image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/singing/page-00.webp",
+    "title": "Cover",
+    "source": "01 - SINGING - COVER.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/singing/page-01.webp",
+    "title": "Joys & Benefits",
+    "source": "02 - SINGING - JOYS & BENEFITS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/singing/page-02.webp",
+    "title": "Explore",
+    "source": "03 - SINGING EXPLORE.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/singing/page-03.webp",
+    "title": "Skills & Drills",
+    "source": "04 - SINGING SKILLS & DRILLS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/singing/page-04.webp",
+    "title": "Practice Songs",
+    "source": "05 - SINGING PRACTICE SONGS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/singing/page-05.webp",
+    "title": "Record Voice",
+    "source": "06 - SINGING RECORD VOICE.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/singing/page-06.webp",
+    "title": "Performing",
+    "source": "07 - SINGING - PERFORMING.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/singing/page-07.webp",
+    "title": "Range & Volume",
+    "source": "08 - SINGING RANGE & VOLUME.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/singing/page-08.webp",
+    "title": "Harmonize",
+    "source": "09 - SINGING HARMONIZE.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/singing/page-09.webp",
+    "title": "Choir",
+    "source": "10 - SINGING CHOIR.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/singing/page-10.webp",
+    "title": "Karaoke",
+    "source": "11- SINGING KARAOKE.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/singing/page-11.webp",
+    "title": "Requirements \u2014 Part 1",
+    "source": "12- SINGING REQUIREMENTS A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/singing/page-12.webp",
+    "title": "Requirements \u2014 Part 2",
+    "source": "13 - SINGING REQUIREMENTS B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "brass-instruments",
+  "name": "Brass Instruments",
+  "group": "performing-arts",
+  "slot": [
+   1,
+   0
+  ],
+  "badge": "/content/keys/brass-instruments/badge.webp",
+  "badgeSource": "CK Brass Instruments badge image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/brass-instruments/page-00.webp",
+    "title": "Cover",
+    "source": "01 - Brass COVER PAGE.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/brass-instruments/page-01.webp",
+    "title": "Joys & Benefits",
+    "source": "02 - Brass JOYS & BENEFITS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/brass-instruments/page-02.webp",
+    "title": "Types Of Brass",
+    "source": "03 - Brass TYPES OF BRASS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/brass-instruments/page-03.webp",
+    "title": "How To Play",
+    "source": "04 - Brass HOW TO PLAY.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/brass-instruments/page-04.webp",
+    "title": "Trumpet Notes",
+    "source": "05 - Brass TRUMPET NOTES.png",
+    "width": 427,
+    "height": 640,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/brass-instruments/page-05.webp",
+    "title": "Trombone",
+    "source": "06 - Brass TROMBONE.png",
+    "width": 427,
+    "height": 640,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/brass-instruments/page-06.webp",
+    "title": "French Horn",
+    "source": "07 - Brass FRENCH HORN.png",
+    "width": 427,
+    "height": 640,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/brass-instruments/page-07.webp",
+    "title": "Tuba",
+    "source": "08 - Brass TUBA.png",
+    "width": 427,
+    "height": 640,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/brass-instruments/page-08.webp",
+    "title": "Songs",
+    "source": "09 - Brass SONGS.png",
+    "width": 427,
+    "height": 640,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/brass-instruments/page-09.webp",
+    "title": "Bands",
+    "source": "10 - Brass BANDS.png",
+    "width": 427,
+    "height": 640,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/brass-instruments/page-10.webp",
+    "title": "Maintenance",
+    "source": "11 - Brass MAINTENANCE.png",
+    "width": 427,
+    "height": 640,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/brass-instruments/page-11.webp",
+    "title": "Resources",
+    "source": "12 - Brass RESOURCES.png",
+    "width": 427,
+    "height": 640,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/brass-instruments/page-12.webp",
+    "title": "Requirements \u2014 Part 1",
+    "source": "13 - Brass REQUIREMENTS A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/brass-instruments/page-13.webp",
+    "title": "Requirements \u2014 Part 2",
+    "source": "14 - Brass REQUIREMENTS B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "geocaching",
+  "name": "Geocaching",
+  "group": "additional",
+  "slot": null,
+  "badge": "/content/keys/geocaching/badge.webp",
+  "badgeSource": "CK Geocaching badge image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/geocaching/page-00.webp",
+    "title": "Cover",
+    "source": "Pg 1 - Geocaching Cover.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/geocaching/page-01.webp",
+    "title": "Intro & Basics",
+    "source": "Pg 2 - Geocaching Intro & Basics.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/geocaching/page-02.webp",
+    "title": "Equipment",
+    "source": "Pg 3 - Geocaching Equipment.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/geocaching/page-03.webp",
+    "title": "Navigation",
+    "source": "Pg 4 - Geocaching Navigation.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/geocaching/page-04.webp",
+    "title": "Etiquette",
+    "source": "Pg 5 - Geocaching Etiquette.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/geocaching/page-05.webp",
+    "title": "Swag",
+    "source": "Pg 6 - Geocaching SWAG.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/geocaching/page-06.webp",
+    "title": "Safety",
+    "source": "Pg 7 - Geocaching Safety.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/geocaching/page-07.webp",
+    "title": "Hazards",
+    "source": "Pg 8 - Geocaching Hazards.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/geocaching/page-08.webp",
+    "title": "Fun",
+    "source": "Pg 9 - Geocaching Fun.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/geocaching/page-09.webp",
+    "title": "Challenge",
+    "source": "Pg 10 - Geocaching Challenge.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/geocaching/page-10.webp",
+    "title": "Requirements \u2014 Part 1",
+    "source": "Pg 11 - Geocaching Requirements A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/geocaching/page-11.webp",
+    "title": "Requirements \u2014 Part 2",
+    "source": "Pg 12 - Geocaching Requirements B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "savanna-life",
+  "name": "Savanna Life",
+  "group": "additional",
+  "slot": null,
+  "badge": "/content/keys/savanna-life/badge.webp",
+  "badgeSource": "CK Savanna Life Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/savanna-life/page-00.webp",
+    "title": "Cover",
+    "source": "01 - Savanna Life - COVER.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/savanna-life/page-01.webp",
+    "title": "Temps & Terrain",
+    "source": "02 - Savanna Life - TEMPS & TERRAIN.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/savanna-life/page-02.webp",
+    "title": "Animals & Plants",
+    "source": "03 - Savanna Life - ANIMALS & PLANTS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/savanna-life/page-03.webp",
+    "title": "Herbivores",
+    "source": "04 - Savanna Life - HERBIVORES.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/savanna-life/page-04.webp",
+    "title": "Carnivores",
+    "source": "05 - Savanna Life - CARNIVORES.png",
+    "width": 1024,
+    "height": 1535,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/savanna-life/page-05.webp",
+    "title": "Apex Predators",
+    "source": "06 - Savanna Life - APEX PREDATORS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/savanna-life/page-06.webp",
+    "title": "Ecosystem",
+    "source": "07 - Savanna Life - ECOSYSTEM.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/savanna-life/page-07.webp",
+    "title": "Environment",
+    "source": "08 - Savanna Life - ENVIRONMENT.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/savanna-life/page-08.webp",
+    "title": "Endangered",
+    "source": "09 - Savanna Life - ENDANGERED.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/savanna-life/page-09.webp",
+    "title": "Survival",
+    "source": "10 - Savanna Life - SURVIVAL.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/savanna-life/page-10.webp",
+    "title": "Requirements",
+    "source": "11 - Savanna Life - REQUIREMENTS.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ },
+ {
+  "id": "reading",
+  "name": "Reading",
+  "group": "additional",
+  "slot": null,
+  "badge": "/content/keys/reading/badge.webp",
+  "badgeSource": "CK Reading Badge Image.png",
+  "badgeChoice": "only design",
+  "pages": [
+   {
+    "file": "/content/keys/reading/page-00.webp",
+    "title": "Cover",
+    "source": "Pg 1 - Reading Cover.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": true,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/reading/page-01.webp",
+    "title": "Joy & Benefits",
+    "source": "Pg 2 - Reading Joy & Benefits.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/reading/page-02.webp",
+    "title": "Explore",
+    "source": "Pg 3 - Reading Explore.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/reading/page-03.webp",
+    "title": "Fantasy",
+    "source": "Pg 4 - Reading Fantasy.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/reading/page-04.webp",
+    "title": "Sci Fi",
+    "source": "Pg 5 - Reading Sci Fi.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/reading/page-05.webp",
+    "title": "Mystery",
+    "source": "Pg 6 - Reading Mystery.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/reading/page-06.webp",
+    "title": "Romance",
+    "source": "Pg 7 - Reading Romance.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/reading/page-07.webp",
+    "title": "Thriller & Horror",
+    "source": "Pg 8 - Reading Thriller & Horro.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/reading/page-08.webp",
+    "title": "Historical Fiction",
+    "source": "Pg 9 - Reading Historical Fiction.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/reading/page-09.webp",
+    "title": "Biographies",
+    "source": "Pg 10 - Reading Biographies.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/reading/page-10.webp",
+    "title": "Self-Help",
+    "source": "Pg 11 - Reading Self-Help.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/reading/page-11.webp",
+    "title": "History",
+    "source": "Pg 12 - Reading History.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/reading/page-12.webp",
+    "title": "Library Card",
+    "source": "Pg 13 - Reading Liabrary Card.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/reading/page-13.webp",
+    "title": "Digital Books",
+    "source": "Pg 14 - Reading Digital Books.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/reading/page-14.webp",
+    "title": "Treasure Hunt",
+    "source": "Pg 15 - Reading Treasure Hunt.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/reading/page-15.webp",
+    "title": "Wisdom",
+    "source": "Pg 16 - Reading Wisdom.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": false
+   },
+   {
+    "file": "/content/keys/reading/page-16.webp",
+    "title": "Requirements \u2014 Part 1",
+    "source": "Pg 17 - Reading Requirements A.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   },
+   {
+    "file": "/content/keys/reading/page-17.webp",
+    "title": "Requirements \u2014 Part 2",
+    "source": "Pg 18 - Reading Requirements B.png",
+    "width": 1024,
+    "height": 1536,
+    "cover": false,
+    "requirements": true
+   }
+  ]
+ }
+]

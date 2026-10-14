@@ -1,6 +1,6 @@
 // My progress (topic 15, DEC-017): the Trophy Case design on the member's own lesson history.
-import { keys } from "./data.js";
-import { GROUPS, keyDates, groupDates, keyProgress } from "./achievements.js";
+import { keys, groups } from "./data.js";
+import { keyDates, groupDates, keyProgress } from "./achievements.js";
 
 const escape = value => String(value ?? "").replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -12,6 +12,7 @@ const sheet = key => key.icon.sheet === 1 ? "covenantyouthprogram3/Group 1 - Req
 // The Key's own artwork, cropped from its group poster, inside an earned / in-progress / not-started ring.
 export function keyArt(key, size, state) {
   const inner = size - (state === "earned" ? 8 : 6);
+  if (key.icon.image) return `<span class="tc-ring ${state}" style="width:${size}px;height:${size}px"><img class="tc-art" src="${key.icon.image}" alt="" aria-hidden="true" loading="lazy" style="width:${inner}px;height:${inner}px"></span>`;
   return `<span class="tc-ring ${state}" style="width:${size}px;height:${size}px"><span class="tc-art" aria-hidden="true" style="width:${inner}px;height:${inner}px;--sheet:url('../${sheet(key)}.png');--col:${key.icon.col};--row:${key.icon.row};--k:${(inner / 96).toFixed(4)};--h:${inner / 2}px"></span></span>`;
 }
 
@@ -19,7 +20,7 @@ let metric = "keys";
 export function progressPageView({ user, completions, now = new Date() }) {
   const year = now.getFullYear(), thisMonth = now.getMonth();
   const done = new Set(completions.map(item => item.lessonId));
-  const earned = keyDates(completions), groups = groupDates(earned);
+  const earned = keyDates(completions), completedGroups = groupDates(earned);
   const stateOf = key => earned.has(key.id) ? "earned" : keyProgress(key, done).done ? "progress" : "none";
   const inProgress = keys.filter(key => stateOf(key) === "progress");
   const lessonsThisYear = completions.filter(item => new Date(item.completedAt).getFullYear() === year);
@@ -40,10 +41,10 @@ export function progressPageView({ user, completions, now = new Date() }) {
   const busiest = lessonMonths.indexOf(Math.max(...lessonMonths));
   const firstKey = keysThisYear[0] && keys.find(item => item.id === keysThisYear[0][0]);
 
-  const groupCards = GROUPS.map(group => {
+  const groupCards = groups.filter(group => group.keys.length).map(group => {
     const count = group.keys.filter(key => earned.has(key.id)).length;
     const badges = group.keys.map(key => { const state = stateOf(key), p = keyProgress(key, done); return `<a class="tc-badge" href="${keyUrl(key)}" aria-label="${escape(key.name)}, ${state === "earned" ? "earned" : state === "progress" ? `in progress, ${p.done} of ${p.total} lessons` : "not started"}">${keyArt(key, 84, state)}<strong${state === "none" ? ' style="color:#4A524C"' : ""}>${escape(key.name)}</strong><small>${state === "earned" ? "Earned" : state === "progress" ? `In progress · ${p.done}/${p.total}` : "Not started"}</small></a>`; }).join("");
-    return `<div class="tc-card"><div class="tc-group-head"><h3>${escape(group.name)}</h3><span>${count} of ${group.keys.length} Keys earned${groups.has(group.id) ? ` · Group complete ${shortDate(groups.get(group.id))}` : ""}</span></div><div class="tc-badges">${badges}</div></div>`;
+    return `<div class="tc-card"><div class="tc-group-head"><h3>${escape(group.name)}</h3><span>${count} of ${group.keys.length} Keys earned${completedGroups.has(group.id) ? ` · Group complete ${shortDate(completedGroups.get(group.id))}` : ""}${group.size && group.keys.length < group.size ? ` · ${group.size - group.keys.length} more coming` : ""}</span></div><div class="tc-badges">${badges}</div></div>`;
   }).join("");
 
   // Milestones: small markers, never styled like Keys.
@@ -52,7 +53,7 @@ export function progressPageView({ user, completions, now = new Date() }) {
   const fiveInYear = [...byYear.values()].map(list => list[4]).filter(Boolean).sort()[0];
   const lessonMonthKeys = [...new Set(completions.map(item => item.completedAt.slice(0, 7)))].sort();
   let threeMonths = null; for (let i = 2; i < lessonMonthKeys.length && !threeMonths; i++) { const [a, b, c] = lessonMonthKeys.slice(i - 2, i + 1).map(m => { const [y, mo] = m.split("-").map(Number); return y * 12 + mo; }); if (b === a + 1 && c === b + 1) threeMonths = `${lessonMonthKeys[i]}-15`; }
-  const firstGroup = [...groups.values()].sort()[0];
+  const firstGroup = [...completedGroups.values()].sort()[0];
   const milestone = (name, at) => at ? `<div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F3D2B" stroke-width="2" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg><span><b>${name}</b><small>${new Date(at).toLocaleDateString("en-US", { month: "short", year: "numeric" })}</small></span></div>` : `<div class="not"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8E968F" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle></svg><span><b>${name}</b><small>Not yet</small></span></div>`;
 
   return `<div class="tc">
@@ -66,7 +67,7 @@ export function progressPageView({ user, completions, now = new Date() }) {
 <div class="tc-chart"><div class="tc-bars" style="grid-template-columns:repeat(12,minmax(44px,1fr));height:200px;min-width:600px">${bars}</div><div class="tc-bar-labels" style="grid-template-columns:repeat(12,minmax(44px,1fr));min-width:600px">${labels}</div></div>
 <div class="tc-review"><div><span>Keys this year</span><b>${keysThisYear.length}</b></div><div><span>Lessons this year</span><b>${lessonsThisYear.length}</b></div><div><span>Most active month</span><b>${lessonsThisYear.length ? LONG[busiest] : "—"}</b></div><div><span>First Key of the year</span><b>${firstKey ? escape(firstKey.name) : "—"}</b></div></div></section>
 <section aria-labelledby="tc-all" style="display:flex;flex-direction:column;gap:24px"><div class="tc-head" style="margin:0"><h2 class="tc-h2" id="tc-all">All Keys</h2><div class="tc-legend"><span><i class="e"></i>Earned</span><span><i class="p"></i>In progress</span><span><i class="n"></i>Not started</span></div></div>${groupCards}
-<p class="tc-empty">Five themed groups (Sports, Outdoors, Animal Habitats, Crafts, Performing Arts) will appear here when their lessons are added.</p></section>
+</section>
 <section aria-labelledby="tc-milestones"><h2 class="tc-h2" id="tc-milestones">Milestones</h2><p class="tc-sub" style="margin-bottom:16px">Small markers along the way. Keys are the real achievement.</p><div class="tc-milestones">${milestone("First Key earned", allEarned[0])}${milestone("5 Keys in a year", fiveInYear)}${milestone("Lessons 3 months in a row", threeMonths)}${milestone("First Group complete", firstGroup)}</div></section>
 </div></div>`;
 }
