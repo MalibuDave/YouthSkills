@@ -56,6 +56,10 @@ export function openAccountDb(path) {
   migrate(db);
   db.exec(`CREATE TABLE IF NOT EXISTS sessions(token_hash TEXT PRIMARY KEY, user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE, expires_at TEXT NOT NULL);
     CREATE TABLE IF NOT EXISTS lesson_completions(user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE, lesson_id TEXT NOT NULL, completed_at TEXT NOT NULL, PRIMARY KEY(user_id,lesson_id));
+    CREATE TABLE IF NOT EXISTS activity_minutes(user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE, day TEXT NOT NULL, key_id TEXT NOT NULL DEFAULT '', minutes INTEGER NOT NULL, PRIMARY KEY(user_id,day,key_id));
+    CREATE TABLE IF NOT EXISTS logins(id INTEGER PRIMARY KEY, user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE, at TEXT NOT NULL);
+    CREATE TABLE IF NOT EXISTS weekly_goals(user_id INTEGER PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE, minutes INTEGER NOT NULL);
+    CREATE TABLE IF NOT EXISTS key_revisits(user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE, key_id TEXT NOT NULL, day TEXT NOT NULL, PRIMARY KEY(user_id,key_id,day));
     CREATE TABLE IF NOT EXISTS membership_events(id INTEGER PRIMARY KEY, user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE, ward_id INTEGER NOT NULL REFERENCES wards(id), from_status TEXT, to_status TEXT NOT NULL, actor_id INTEGER REFERENCES users(id) ON DELETE SET NULL, note TEXT, created_at TEXT NOT NULL);`);
   // Wards are hand-seeded for the beta (topic 11 §2); members cannot create them.
   if(!db.prepare("SELECT id FROM wards LIMIT 1").get()){
@@ -187,5 +191,27 @@ export function openAccountDb(path) {
     logEvent(id,ward.id,user.status,"pending",id);
     return profile(id);
   };
-  return {db,wards,profile,register,wardQueue,decide,changeWard,verifyEmail,resendVerification,login,createSession,userForSession,destroySession,savePhoto,recordLesson,completions,membershipEvents};
+
+  // Learning activity (topic 16, DEC-017): active minutes per local day and Key, sign-ins,
+  // weekly goals, and revisits of earned Keys. Days are the member's local calendar date.
+  const DAY_RE=/^\d{4}-\d{2}-\d{2}$/,GOALS=[30,60,90,120,180],DAILY_CAP=720;
+  const nearToday=day=>{if(!DAY_RE.test(String(day)))return false;const t=Date.parse(`${day}T12:00:00Z`);return Number.isFinite(t)&&Math.abs(t-Date.now())<=36*3600000;};
+  const addActivity=(id,day,keyId,minutes=1)=>{
+    if(!nearToday(day))fail("Activity must be for today.");
+    const used=db.prepare("SELECT COALESCE(SUM(minutes),0) AS n FROM activity_minutes WHERE user_id=? AND day=?").get(id,day).n;
+    const add=Math.max(0,Math.min(Number(minutes)||0,5,DAILY_CAP-used));
+    if(add)db.prepare("INSERT INTO activity_minutes(user_id,day,key_id,minutes) VALUES(?,?,?,?) ON CONFLICT(user_id,day,key_id) DO UPDATE SET minutes=minutes+excluded.minutes").run(id,day,keyId||"",add);
+    return add;
+  };
+  const recordRevisit=(id,keyId,day)=>{if(!nearToday(day))fail("Activity must be for today.");db.prepare("INSERT OR IGNORE INTO key_revisits(user_id,key_id,day) VALUES(?,?,?)").run(id,keyId,day);};
+  const setGoal=(id,minutes)=>{if(!GOALS.includes(Number(minutes)))fail(`Choose a weekly goal of ${GOALS.join(", ")} minutes.`);db.prepare("INSERT INTO weekly_goals(user_id,minutes) VALUES(?,?) ON CONFLICT(user_id) DO UPDATE SET minutes=excluded.minutes").run(id,Number(minutes));return Number(minutes);};
+  const activity=id=>({
+    days:db.prepare("SELECT day,SUM(minutes) AS minutes FROM activity_minutes WHERE user_id=? GROUP BY day ORDER BY day").all(id),
+    byKey:db.prepare("SELECT key_id AS keyId,SUM(minutes) AS minutes FROM activity_minutes WHERE user_id=? AND key_id!='' GROUP BY key_id").all(id),
+    revisits:db.prepare("SELECT key_id AS keyId,day FROM key_revisits WHERE user_id=? ORDER BY day").all(id),
+    goal:db.prepare("SELECT minutes FROM weekly_goals WHERE user_id=?").get(id)?.minutes??60,
+    goals:GOALS
+  });
+  const recordLogin=(id,at=now())=>{db.prepare("INSERT INTO logins(user_id,at) VALUES(?,?)").run(id,at);};
+  return {db,wards,profile,register,wardQueue,decide,changeWard,addActivity,recordRevisit,setGoal,activity,recordLogin,verifyEmail,resendVerification,login,createSession,userForSession,destroySession,savePhoto,recordLesson,completions,membershipEvents};
 }

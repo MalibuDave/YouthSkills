@@ -1,0 +1,21 @@
+/* Bishopric reporting (DEC-017). Adapted from the approved bishopric-reporting mock. */
+.rp{padding:36px 0 64px;color:#10293a}.rp h1{font:700 clamp(40px,5vw,60px)/1.05 Georgia,serif;margin:6px 0 14px}.rp h2{font:700 28px Georgia,serif;margin:2px 0 6px}
+.rp-intro{max-width:760px;font-size:18px;line-height:1.6;color:#52636c;margin:0 0 28px}
+.rp-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:22px}.rp-stats div{background:#fff;border:1px solid #e3e3dc;border-radius:16px;padding:22px}.rp-stats b{display:block;font:700 36px Georgia,serif}.rp-stats span{display:block;color:#40545f}.rp-stats small{display:block;margin-top:10px;color:#3c6b4f;font-size:13px}
+.rp-grid{display:grid;gap:22px;margin-bottom:22px}.rp-grid.two{grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr))}.rp-grid .rp-card{margin:0}
+.rp-card{background:#fff;border:1px solid #e3e3dc;border-radius:18px;padding:26px;margin-bottom:22px;min-width:0}
+.rp-kicker{font-size:12px;letter-spacing:.14em;font-weight:800;color:#9a6c20;margin:0}.rp-muted{color:#52636c;margin:0 0 18px}.rp-foot{font-size:13px;color:#52636c;border-top:1px solid #e8ece8;padding-top:12px;margin:14px 0 0}
+.rp-head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:flex-start}
+.rp-big{font:700 34px Georgia,serif;color:#205c42;margin:4px 0 8px}
+.rp-toggle{display:flex;background:#f1f3ef;border-radius:12px;padding:4px}.rp-toggle button{border:0;background:none;padding:8px 14px;min-height:40px;border-radius:9px;font:700 15px Arial,sans-serif;color:#173b35;cursor:pointer}.rp-toggle button[aria-pressed=true]{background:#205c42;color:#fff}
+.rp-chart{overflow-x:auto}.rp-bars{display:grid;gap:8px;align-items:end;border-bottom:1px solid #d9ddd5;min-width:max-content}.rp-bars>div{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:6px;height:100%}.rp-bars b{font-size:13px;color:#24343c}.rp-bars i{display:block;width:78%;border-radius:5px 5px 0 0}
+.rp-green{background:linear-gradient(#5a9b78,#2e6d4c)}.rp-gold{background:linear-gradient(#dcb26b,#a8752a)}.rp-pale{background:#b9d6c3}.rp-zero{background:#e3dfd2}
+.rp-labels{display:grid;gap:8px;margin-top:8px;min-width:max-content}.rp-labels span{text-align:center;font-size:13px;color:#52636c;white-space:nowrap}
+.rp-types{display:flex;flex-direction:column;gap:12px}.rp-types div{display:grid;grid-template-columns:150px 1fr 40px;gap:12px;align-items:center}.rp-type-track{height:12px;background:#ecefe9;border-radius:6px;overflow:hidden}.rp-type-track i{display:block;height:100%;background:#b98a36;border-radius:6px}.rp-types b{text-align:right}
+.rp-notes{list-style:none;padding:0;margin:14px 0 0;color:#40545f}.rp-notes li{padding:9px 0;border-top:1px solid #e8ece8}
+.rp-filters{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.rp-filters select,.rp-filters input{min-height:44px;border:1px solid #c9d0c6;border-radius:10px;padding:0 12px;font:inherit;background:#fff}.rp-filters input{min-width:220px}.rp-filters span{color:#52636c;font-size:14px}
+.rp-table-wrap{overflow:auto;max-height:560px;border:1px solid #e3e3dc;border-radius:12px;margin-top:8px}.rp-table{width:100%;border-collapse:collapse;font-size:15px}.rp-table th,.rp-table td{padding:11px 14px;text-align:left;border-bottom:1px solid #eef0ec;white-space:nowrap}.rp-table thead th{position:sticky;top:0;background:#edf3ec;font-size:13px;color:#24343c}.rp-table tbody th{font-weight:700}
+.rp-link{border:0;background:none;color:#205c42;font:700 15px Arial,sans-serif;cursor:pointer;padding:6px 0;min-height:36px}.rp-detail td{background:#fafbf8;white-space:normal}.rp-detail ul{list-style:none;margin:0;padding:0;columns:2 260px}.rp-detail li{display:flex;justify-content:space-between;gap:12px;padding:5px 0;break-inside:avoid;max-width:320px}.rp-detail p{margin:8px 0 0;font-size:13px;color:#52636c}
+.rp-visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.rp button:focus-visible,.rp select:focus-visible,.rp input:focus-visible{outline:3px solid #e5aa28;outline-offset:2px}
+@media(max-width:560px){.rp-types div{grid-template-columns:110px 1fr 32px}.rp-filters input{min-width:0;flex:1}}

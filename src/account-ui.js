@@ -19,6 +19,7 @@ const legacyProgress=()=>new Promise(resolve=>{
 const applySession=result=>{state.user=result.user;state.completions=result.completions||[];setProgressAccount(state.user?.id,state.completions);};
 export async function loadAccount(){try{const [session,wardList]=await Promise.all([request("/api/session"),request("/api/wards")]);applySession(session);state.wards=wardList.wards;}catch{state.error="Account service is unavailable. Your lesson wireframe still works.";}state.ready=true;}
 export function currentAccount(){return state.user;}
+export function accountCompletions(){return state.completions;}
 export function accountReady(){return state.ready;}
 export async function saveLessonToAccount(lessonId){if(!state.user)return;try{const result=await request("/api/completions","POST",{lessonId});state.completions=result.completions;}catch{state.message="This lesson was saved in this browser, but account sync did not finish.";}}
 const field=(label,name,type="text",extra="",required=true)=>`<label class="account-field">${label}<input name="${name}" type="${type}" ${extra}${required?" required":""}></label>`;

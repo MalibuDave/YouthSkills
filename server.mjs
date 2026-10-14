@@ -4,10 +4,12 @@ import { mkdirSync } from "node:fs";
 import { extname, join, normalize, sep, dirname } from "node:path";
 import { pathToFileURL } from "node:url";
 import { openAccountDb } from "./src/account-db.js";
-import { allLessons } from "./src/data.js";
+import { allLessons, keys } from "./src/data.js";
+import { wardReport } from "./src/report.js";
 const root = process.cwd();
 const types = {".html":"text/html; charset=utf-8",".js":"text/javascript; charset=utf-8",".css":"text/css; charset=utf-8",".png":"image/png"};
-const validLessons=new Set(allLessons.map(item=>item.id));
+const validLessons=new Set(allLessons.map(item=>item.id)),validKeys=new Set(keys.map(key=>key.id));
+const keyEarned=(completions,keyId)=>{const key=keys.find(item=>item.id===keyId),done=new Set(completions.map(item=>item.lessonId));return Boolean(key)&&key.lessons.filter(lesson=>!lesson.optional).every(lesson=>done.has(lesson.id));};
 const json=(response,status,data)=>{response.writeHead(status,{"Content-Type":"application/json; charset=utf-8","Cache-Control":"no-store"});response.end(JSON.stringify(data));};
 const cookie=request=>{const raw=request.headers.cookie||"";const found=raw.split(";").map(item=>item.trim()).find(item=>item.startsWith("cy_session="));return found?.slice(11)||"";};
 const sessionCookie=(token,request)=>`cy_session=${token}; HttpOnly; SameSite=Lax; Path=/; Max-Age=${token?2592000:0}${request.headers["x-forwarded-proto"]==="https"?"; Secure":""}`;
@@ -32,6 +34,7 @@ const server=createServer(async (request,response) => {
     if(request.method==="POST"&&pathname==="/api/verify-email")return json(response,200,{user:accounts.verifyEmail((await readBody(request)).token)});
     if(request.method==="POST"&&pathname==="/api/login"){
       const body=await readBody(request),user=accounts.login(body.email,body.password),token=accounts.createSession(user.id);
+      accounts.recordLogin(user.id);
       response.setHeader("Set-Cookie",sessionCookie(token,request));return json(response,200,{user,completions:accounts.completions(user.id)});
     }
     if(request.method==="POST"&&pathname==="/api/logout"){
@@ -40,17 +43,22 @@ const server=createServer(async (request,response) => {
     if(!current)return json(response,401,{error:"Sign in to continue."});
     if(request.method==="POST"&&pathname==="/api/resend-verification")return json(response,200,{verifyLink:`#/account/verify/${accounts.resendVerification(current.id)}`});
     if(request.method==="POST"&&pathname==="/api/change-ward")return json(response,200,{user:accounts.changeWard(current.id,(await readBody(request)).wardId)});
+    if(request.method==="GET"&&pathname==="/api/bishopric/report"){if(current.role!=="bishopric"||current.status!=="active")return json(response,403,{error:"Bishopric access required."});return json(response,200,wardReport(accounts.db,current.wardId,{months:12}));}
     if(request.method==="GET"&&pathname==="/api/bishopric/queue")return json(response,200,accounts.wardQueue(current));
     if(request.method==="POST"&&pathname==="/api/bishopric/decision"){const body=await readBody(request);return json(response,200,accounts.decide(current,body.userId,body.status,body.note));}
     if(request.method==="POST"&&pathname==="/api/photo")return json(response,200,{user:accounts.savePhoto(current.id,(await readBody(request)).photoData??null)});
     // Lessons, Keys, and progress are only for Active members (topic 11 §4).
-    if((pathname==="/api/completions"||pathname==="/api/import-progress")&&current.status!=="active")return json(response,403,{error:"Lessons open once your ward approves your account."});
+    if((pathname==="/api/completions"||pathname==="/api/import-progress"||pathname.startsWith("/api/activity"))&&current.status!=="active")return json(response,403,{error:"Lessons open once your ward approves your account."});
     if(request.method==="POST"&&pathname==="/api/completions"){
       const body=await readBody(request);
       if(!validLessons.has(body.lessonId))return json(response,400,{error:"Unknown lesson."});
       accounts.recordLesson(current.id,body.lessonId,new Date().toISOString());
       return json(response,200,{completions:accounts.completions(current.id)});
     }
+    if(request.method==="GET"&&pathname==="/api/activity")return json(response,200,accounts.activity(current.id));
+    if(request.method==="POST"&&pathname==="/api/activity/ping"){const body=await readBody(request);if(body.keyId&&!validKeys.has(body.keyId))return json(response,400,{error:"Unknown Key."});return json(response,200,{added:accounts.addActivity(current.id,body.day,body.keyId||"",1)});}
+    if(request.method==="POST"&&pathname==="/api/activity/revisit"){const body=await readBody(request);if(!keyEarned(accounts.completions(current.id),body.keyId))return json(response,400,{error:"Only earned Keys can be revisited."});accounts.recordRevisit(current.id,body.keyId,body.day);return json(response,200,{ok:true});}
+    if(request.method==="POST"&&pathname==="/api/activity/goal")return json(response,200,{goal:accounts.setGoal(current.id,(await readBody(request)).minutes)});
     if(request.method==="POST"&&pathname==="/api/import-progress"){
       const body=await readBody(request);
       if(!Array.isArray(body.completions)||body.completions.length>100)return json(response,400,{error:"Choose valid progress to import."});

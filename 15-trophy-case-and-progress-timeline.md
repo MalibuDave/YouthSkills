@@ -5,6 +5,8 @@ Related: 01 (Keys as collectible badges), 06 (completion rules), 07 (reporting p
 **Mockup:** "Trophy Case Mockup" canvas, artboard **Progress page** — https://claude.ai/artifact/Li73nisc6MBGUfonhT2r3Z (private; share from the page's Share menu). Standalone mockup, not part of the site code. A browser-openable copy is in the repo as `progress-page-mock.html` (fictional sample data), shown in the wireframe at `#/progress-preview` for Active members (DEC-015).
 
 ## Status
+**Built (Oct 13, DEC-017):** this page now runs on each member's real data at `#/progress`.
+
 Direction approved by Dave (Oct 7). Next: review with Bishop Porter, then spec for build.
 
 ## What the mockup shows

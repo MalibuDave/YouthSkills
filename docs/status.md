@@ -1,6 +1,6 @@
 # Project status
 
-_Last updated: 2026-10-13 (real approval queue and seeded demo ward, DEC-016)._
+_Last updated: 2026-10-13 (Progress, My Activity and reporting on real data, DEC-017)._
 
 Covenant Youth is a working wireframe, not a production youth platform. See the
 [README](../README.md) for what it does, [architecture.md](architecture.md) for
@@ -46,7 +46,7 @@ Other decisions still needed:
 
 ## Known limits
 
-- The Progress preview and My Activity pages show a fictional youth. Building them from real data needs Key completion timestamps on the server (topic 15) and a decision on how learning time is measured (topic 16).
+- Learning minutes, sign-ins and revisits are new youth personal data (DEC-017). Add them to the topic 10 data map with a retention rule before any real use.
 
 - Sign-in gating is client-side only. Static lesson images are reachable by URL
   and need server-side authorization before they can be treated as private.
@@ -55,7 +55,7 @@ Other decisions still needed:
 
 ## Recommended next work
 
-1. Demo part 2: Progress page, My Activity and Bishopric reporting on real (seeded) data, then a full walkthrough. The approval queue is done (DEC-016); a site-admin step to grant bishopric requests is still needed outside the demo.
+1. Full demo walkthrough with Dave, then present to Bishop Porter. Ask him the DEC-017 measurement questions (time as the signal, daily streaks and Sundays, spiritual Keys, who sees activity) and topic 07's question about per-youth reporting. A site-admin step to grant bishopric requests is still needed outside the demo.
 2. Obtain approved content and separate badge artwork for the themed groups.
 3. Define the production identity and consent model before adding real
    notifications or using real youth data.

@@ -25,6 +25,9 @@ The demo runs on its own database, `data/demo.sqlite`, so your normal accounts i
 - **Youth:** 50 active youth with a year of lesson history, such as `ava.dalton@example.test`. Bishopric tools lists every youth and their email.
 - **Approval queue:** 4 Pending, 1 See Bishopric, 1 Wrong Ward, 1 Rejected
 - **Password for every account:** `carwash1234`
+- **History:** about a year of lessons, daily learning minutes, sign-ins, weekly goals and Key revisits, ending today. Run `npm run demo:reset` (or `node scripts/demo.mjs --reset`) shortly before presenting so streaks and "this week" are current.
+
+On Windows PowerShell, if `npm` is blocked, use `node scripts/demo.mjs` and `node scripts/demo.mjs --reset`.
 
 All people are fictional and every email uses the reserved `example.test` domain. Because the password is shared, run the demo only on your own computer or behind a private link.
 
@@ -53,7 +56,7 @@ The public home route (`#/`) shows Covenant Youth information, account creation,
 
 The **Bishopric reporting concepts preview** at `#/bishopric-reporting` is also available only to signed-in, active Bishopric accounts. It embeds the unchanged `bishopric-reporting-mock.html` page with fictional results for a year and 50 youth. Its figures do not come from the local account database. Both Bishopric mock HTML files are access-controlled by the local server.
 
-The **Progress preview** (`#/progress-preview`) and **My Activity** (`#/my-activity`) pages show the approved designs from topics 15 and 16 to signed-in, active members. They embed `progress-page-mock.html` and `my-activity-mock.html` with a fictional youth's data; **My progress** still shows the member's own progress. Both mock files are access-controlled by the local server.
+**My progress** (`#/progress`) and **My Activity** (`#/my-activity`) show each signed-in, active member's own Keys, year, streaks, learning time, weekly goal and badges (topics 15 and 16, DEC-017). Learning time counts only while the member is active on a Key or lesson page. **Reporting** (`#/bishopric-reporting`) shows the bishopric their ward's last 12 months.
 
 If an older preview is still running on port 4173, set `PORT` to `4174` before running the server and use the Profile page's import button to bring over its browser-only completion records. The local `progress-bridge.html` page supports that one-time preview transition.
 

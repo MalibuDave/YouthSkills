@@ -5,8 +5,9 @@
 //   history · 7 more youth in the approval queue (4 Pending, 1 See Bishopric,
 //   1 Wrong Ward, 1 Rejected).
 //
-// The output is deterministic for a given day, and all dates are relative to `now`,
-// so the year of history always ends today.
+// The output is the same on every reset (fixed seed), and all dates are relative to `now`,
+// so the year of history always ends today. Besides lessons it seeds daily learning
+// minutes per Key, sign-ins, weekly goals, and a few revisits of earned Keys.
 import { rmSync, existsSync } from "node:fs";
 import { openAccountDb } from "../src/account-db.js";
 import { keys } from "../src/data.js";
@@ -14,6 +15,7 @@ import { keys } from "../src/data.js";
 export const DEMO_PASSWORD = "carwash1234";
 export const DEMO_WARD = "Maple Grove Ward";
 const DAY = 86400000;
+const SEED = 20261013;
 
 const BISHOPRIC = [
   ["Robert", "Hale", "bishop@example.test", "Bishop"],
@@ -34,6 +36,7 @@ function random(seed) {
 
 // Afternoon/evening in the Pacific time zone (22:00–04:59 UTC), so activity looks like after-school use.
 const atEvening = (rng, day) => { const d = new Date(day); d.setUTCHours(22 + rng.int(0, 6), rng.int(0, 59), rng.int(0, 59), 0); return d; };
+const notAfter = (date, limit) => new Date(Math.min(date.getTime(), limit.getTime()));
 
 // How a youth works through lessons over the year.
 const PROFILES = [
@@ -60,7 +63,9 @@ export function seedDemo(dbPath, { now = new Date(), reset = true } = {}) {
   const accounts = openAccountDb(dbPath);
   const { db } = accounts;
   const today = new Date(now); today.setUTCHours(12, 0, 0, 0);
-  const rng = random(Number(today.toISOString().slice(0, 10).replaceAll("-", "")));
+  // Fixed seeds: the same people and history pattern on every reset, whatever the date.
+  const rng = random(SEED);
+  const arng = random(SEED + 7); // activity has its own sequence so people and lessons stay stable
   const iso = date => new Date(date).toISOString();
   const yearsAgoBirth = (age, monthBack) => { const d = new Date(today); d.setUTCMonth(d.getUTCMonth() - monthBack); return { birthYear: d.getUTCFullYear() - age, birthMonth: d.getUTCMonth() + 1 }; };
 
@@ -90,6 +95,14 @@ export function seedDemo(dbPath, { now = new Date(), reset = true } = {}) {
     // Lesson order a youth follows: Keys in a shuffled order, lessons within a Key in sequence.
     const lessonSequence = () => rng.shuffle(keys).flatMap(key => key.lessons.filter(lesson => !lesson.optional || rng.next() < 0.3).map(lesson => lesson.id));
     const record = db.prepare("INSERT INTO lesson_completions(user_id,lesson_id,completed_at) VALUES(?,?,?)");
+    const minutes = db.prepare("INSERT INTO activity_minutes(user_id,day,key_id,minutes) VALUES(?,?,?,?) ON CONFLICT(user_id,day,key_id) DO UPDATE SET minutes=minutes+excluded.minutes");
+    const login = db.prepare("INSERT INTO logins(user_id,at) VALUES(?,?)");
+    const revisit = db.prepare("INSERT OR IGNORE INTO key_revisits(user_id,key_id,day) VALUES(?,?,?)");
+    const goal = db.prepare("INSERT INTO weekly_goals(user_id,minutes) VALUES(?,?)");
+    const keyOfLesson = new Map(keys.flatMap(key => key.lessons.map(lesson => [lesson.id, key.id])));
+    // Activity is stored by the member's local day; the demo ward is on Pacific time.
+    const pacificDay = ms => new Date(ms - 7 * 3600000).toISOString().slice(0, 10);
+    const BASE = { high: 0.35, steady: 0.22, bursty: 0.05, light: 0.06, lapsed: 0.15 };
 
     // 50 Active youth with a year of history.
     let index = 0;
@@ -97,7 +110,7 @@ export function seedDemo(dbPath, { now = new Date(), reset = true } = {}) {
     for (const profile of rng.shuffle(profiles)) {
       const [firstName, lastName, email] = names[index++];
       const id = register({ ...yearsAgoBirth(rng.int(14, 17), rng.int(0, 11)), firstName, lastName, email, ...parents(lastName) });
-      const joined = atEvening(rng, today.getTime() - rng.int(366, 395) * DAY);
+      const joined = atEvening(rng, today.getTime() - rng.int(332, 362) * DAY);
       const verified = new Date(joined.getTime() + rng.int(5, 90) * 60000);
       const approved = atEvening(rng, verified.getTime() + rng.int(1, 5) * DAY);
       finish(id, { status: "active", created: joined, verified, changed: approved });
@@ -107,7 +120,39 @@ export function seedDemo(dbPath, { now = new Date(), reset = true } = {}) {
       const start = approved.getTime() + DAY, end = today.getTime() - (profile.name === "light" ? 3 : 0) * DAY;
       const sequence = lessonSequence().slice(0, rng.int(...profile.lessons));
       const dates = completionDays(rng, profile.name, sequence.length, start, end).map(day => Math.min(Math.max(day, start), end)).sort((a, b) => a - b);
-      sequence.forEach((lessonId, i) => { const at = atEvening(rng, dates[i]); record.run(id, lessonId, iso(Math.min(at.getTime(), now.getTime() - 60000))); });
+      const finished = sequence.map((lessonId, i) => { const at = Math.min(atEvening(rng, dates[i]).getTime(), now.getTime() - 60000); record.run(id, lessonId, iso(at)); return { lessonId, at }; });
+      // A year of learning minutes: dense around lesson completions, lighter in between,
+      // attributed to the Key the youth was working on that day.
+      goal.run(id, arng.pick([30, 60, 60, 90]));
+      const byDay = new Map(); for (const item of finished) byDay.set(pacificDay(item.at), [...(byDay.get(pacificDay(item.at)) || []), item]);
+      const lastWork = finished.length ? finished.at(-1).at : start;
+      let pointer = 0;
+      for (let t = start; t <= today.getTime(); t += DAY) {
+        const day = pacificDay(t + 6 * 3600000);
+        if (day > pacificDay(now.getTime())) break;
+        while (pointer < finished.length && pacificDay(finished[pointer].at) < day) pointer++;
+        const doneToday = byDay.get(day) || [];
+        const nearest = finished.reduce((min, item) => Math.min(min, Math.abs(item.at - t) / DAY), Infinity);
+        let p = nearest <= 2 ? 0.7 : BASE[profile.name];
+        if (profile.name === "lapsed" && t > lastWork + 5 * DAY) p = 0;
+        // Recent weeks are busier so a demo shows current streaks and this week's minutes.
+        const RECENT = { high: 0.9, steady: 0.65, bursty: 0.4, light: 0.3, lapsed: 0 };
+        if (today.getTime() - t < (profile.name === "high" ? 21 : 10) * DAY && profile.name !== "lapsed") p = Math.max(p, RECENT[profile.name]);
+        if (!doneToday.length && arng.next() > p) continue;
+        const workingOn = keyOfLesson.get((finished[pointer] || finished.at(-1) || { lessonId: "" }).lessonId) || "";
+        minutes.run(id, day, workingOn, arng.int(6, 30));
+        for (const item of doneToday) minutes.run(id, day, keyOfLesson.get(item.lessonId), arng.int(10, 25));
+        const signedIn = new Date(`${day}T${String(15 + arng.int(0, 5)).padStart(2, "0")}:${String(arng.int(0, 59)).padStart(2, "0")}:00-07:00`);
+        if (signedIn.getTime() < now.getTime()) { login.run(id, iso(signedIn)); if (arng.next() < 0.15) login.run(id, iso(signedIn.getTime() + arng.int(60, 180) * 60000)); }
+      }
+      // Some youth go back to Keys they've already earned.
+      const doneIds = new Set(finished.map(item => item.lessonId));
+      for (const key of keys) {
+        const lessons = key.lessons.filter(lesson => !lesson.optional);
+        if (!lessons.every(lesson => doneIds.has(lesson.id))) continue;
+        const at = Math.max(...finished.filter(item => keyOfLesson.get(item.lessonId) === key.id).map(item => item.at));
+        if (arng.next() < 0.25 && at + 3 * DAY < now.getTime()) revisit.run(id, key.id, pacificDay(at + arng.int(3, Math.max(4, Math.floor((now.getTime() - at) / DAY) - 1)) * DAY));
+      }
     }
 
     // Newer youth waiting in the approval queue.
@@ -119,18 +164,18 @@ export function seedDemo(dbPath, { now = new Date(), reset = true } = {}) {
     for (const item of queue) {
       const [firstName, lastName, email] = names[index++];
       const id = register({ ...yearsAgoBirth(rng.int(13, 16), rng.int(0, 11)), firstName, lastName, email, ...parents(lastName) });
-      const joined = atEvening(rng, today.getTime() - item.daysAgo * DAY), verified = new Date(joined.getTime() + 20 * 60000);
+      const joined = notAfter(atEvening(rng, today.getTime() - item.daysAgo * DAY), new Date(now.getTime() - 3 * 3600000)), verified = new Date(joined.getTime() + 20 * 60000);
       event.run(id, wardId, null, "unverified", id, null, iso(joined));
       event.run(id, wardId, "unverified", "pending", id, null, iso(verified));
       let changed = verified;
-      if (item.status !== "pending") { changed = atEvening(rng, joined.getTime() + 2 * DAY); event.run(id, wardId, "pending", item.status, approver(), item.note || null, iso(changed)); }
+      if (item.status !== "pending") { changed = notAfter(atEvening(rng, joined.getTime() + 2 * DAY), new Date(now.getTime() - 3600000)); event.run(id, wardId, "pending", item.status, approver(), item.note || null, iso(changed)); }
       finish(id, { status: item.status, created: joined, verified, changed });
     }
     // One rejected request, with the note the youth sees.
     {
       const [firstName, lastName, email] = names[index++];
       const id = register({ ...yearsAgoBirth(15, 4), firstName, lastName, email, ...parents(lastName) });
-      const joined = atEvening(rng, today.getTime() - 20 * DAY), verified = new Date(joined.getTime() + 15 * 60000), changed = atEvening(rng, joined.getTime() + 3 * DAY);
+      const joined = atEvening(rng, today.getTime() - 20 * DAY), verified = new Date(joined.getTime() + 15 * 60000), changed = notAfter(atEvening(rng, joined.getTime() + 3 * DAY), new Date(now.getTime() - 3600000));
       event.run(id, wardId, null, "unverified", id, null, iso(joined));
       event.run(id, wardId, "unverified", "pending", id, null, iso(verified));
       event.run(id, wardId, "pending", "rejected", leaders[0], "Please talk with Bishop Hale before we approve your account.", iso(changed));
@@ -140,6 +185,8 @@ export function seedDemo(dbPath, { now = new Date(), reset = true } = {}) {
   } catch (error) { db.exec("ROLLBACK"); db.close(); throw error; }
   const summary = db.prepare("SELECT status,role,COUNT(*) AS n FROM users GROUP BY status,role ORDER BY role,status").all();
   const lessons = db.prepare("SELECT COUNT(*) AS n FROM lesson_completions").get().n;
+  const activity = db.prepare("SELECT COUNT(DISTINCT user_id||day) AS days, SUM(minutes) AS minutes FROM activity_minutes").get();
+  const logins = db.prepare("SELECT COUNT(*) AS n FROM logins").get().n;
   db.close();
-  return { summary, lessons };
+  return { summary, lessons, activeDays: activity.days, minutes: activity.minutes, logins };
 }
